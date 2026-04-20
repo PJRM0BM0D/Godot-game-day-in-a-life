@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://diygwv781k3tm"]
+
+[ext_resource type="Texture2D" uid="uid://cfik88yli3bs2" path="res://assets/orb thing.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://b1af7w0tdi6cl" path="res://scenes/scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://bx4rex83bm32i" path="res://scenes/scripts/player_camera.gd" id="3_x46as"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(24, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("1_3vyb7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D" unique_id=953621829]
+collision_layer = 5
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860355135]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_g2els")
+
+[node name="Player Sprite" type="AnimatedSprite2D" parent="." unique_id=92428035]
+unique_name_in_owner = true
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_sh265")
+animation = &"idle"
+
+[node name="player camera" type="Camera2D" parent="." unique_id=49269904]
+position = Vector2(0, -20)
+zoom = Vector2(2, 2)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+script = ExtResource("3_x46as")
+
+[node name="jump buffer timer" type="Timer" parent="." unique_id=288856756]
+wait_time = 0.3
+one_shot = true
+
+[node name="coyote timer" type="Timer" parent="." unique_id=2147911]
+wait_time = 0.15
+one_shot = true
+
+[connection signal="timeout" from="jump buffer timer" to="." method="_on_jump_buffer_timer_timeout"]
+[connection signal="timeout" from="coyote timer" to="." method="_on_coyote_timer_timeout"]
