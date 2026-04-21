@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cuxhfhvqrn062"]
+
+[ext_resource type="Script" uid="uid://cqvvjoo1m2bbw" path="res://scenes/start_button.gd" id="1_he1sj"]
+[ext_resource type="Script" uid="uid://dh1lsudsdi2o" path="res://scenes/options_button.gd" id="2_r2jwc"]
+[ext_resource type="Script" uid="uid://bqqkj6hk4xyfp" path="res://scenes/credits_button.gd" id="3_hm208"]
+
+[node name="Start Screen" type="Control" unique_id=1520903698]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=270293837]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 184.0
+offset_right = 756.0
+offset_bottom = 184.0
+grow_horizontal = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer" unique_id=1115753944]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer2" unique_id=126812560]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer2/ColorRect" unique_id=610643716]
+custom_minimum_size = Vector2(50, 75)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 360.0
+offset_bottom = 79.0
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer2" unique_id=869688959]
+custom_minimum_size = Vector2(360, 180)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="start button" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer" unique_id=1706402732]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Start"
+script = ExtResource("1_he1sj")
+
+[node name="options button" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer" unique_id=1937532961]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "options"
+script = ExtResource("2_r2jwc")
+
+[node name="credits button" type="Button" parent="CenterContainer/VBoxContainer2/VBoxContainer" unique_id=1277420704]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "credits"
+script = ExtResource("3_hm208")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer2/VBoxContainer/start button" to="CenterContainer/VBoxContainer2/VBoxContainer/start button" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer2/VBoxContainer/options button" to="CenterContainer/VBoxContainer2/VBoxContainer/options button" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer2/VBoxContainer/credits button" to="CenterContainer/VBoxContainer2/VBoxContainer/credits button" method="_on_pressed"]
