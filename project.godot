@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="day in life assignement"
-run/main_scene="uid://c7jph8qp5ixyi"
+run/main_scene="uid://cuxhfhvqrn062"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
