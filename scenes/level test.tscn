@@ -19,6 +19,13 @@ sources/1 = SubResource("TileSetAtlasSource_an84l")
 
 [node name="Node2D" type="Node2D" unique_id=157838979]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1347468820]
+offset_left = -19376.0
+offset_top = -7856.0
+offset_right = 17800.0
+offset_bottom = 7312.0
+color = Color(0, 0.7490196, 1, 1)
+
 [node name="bus" parent="." unique_id=953621829 instance=ExtResource("2_an84l")]
 position = Vector2(475, 366)
 

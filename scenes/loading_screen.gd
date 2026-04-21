@@ -15,7 +15,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if currentlyloading:
 		ResourceLoader.load_threaded_get_status(currentlyloading,progress)
-		print(progress)
+		#print(progress)
 		loadprogress.emit(progress[0])
 		if progress[0] == 1:
 			newscene = ResourceLoader.load_threaded_get(currentlyloading)

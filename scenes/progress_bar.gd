@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 func _progress_update(amount):
 	value = amount
-	print(value)
+	#print(value)
 
 
 func _on_loading_screen_loadprogress(amount: Variant) -> void:
