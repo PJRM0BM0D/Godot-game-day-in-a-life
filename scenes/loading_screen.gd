@@ -4,6 +4,8 @@ var currentlyloading = String()
 var progress = []
 var newscene 
 
+signal loadprogress(amount)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -14,9 +16,13 @@ func _process(delta: float) -> void:
 	if currentlyloading:
 		ResourceLoader.load_threaded_get_status(currentlyloading,progress)
 		print(progress)
+		loadprogress.emit(progress[0])
 		if progress[0] == 1:
 			newscene = ResourceLoader.load_threaded_get(currentlyloading)
 			_load_complete()
+			currentlyloading = ""
+	
+	
 		
 
 func _on_load_start(scene):
