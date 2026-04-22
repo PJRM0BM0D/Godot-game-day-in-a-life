@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://c7jph8qp5ixyi"]
 
-[ext_resource type="PackedScene" uid="uid://cbhiqt1libriv" path="res://scenes/bus.tscn" id="2_an84l"]
+[ext_resource type="PackedScene" uid="uid://cbhiqt1libriv" path="res://scenes/2d/bus.tscn" id="2_an84l"]
 [ext_resource type="Texture2D" uid="uid://dp4bo73vli8fb" path="res://assets/road sprites.png" id="2_eywp4"]
-[ext_resource type="PackedScene" uid="uid://c6nqyhggkl8va" path="res://scenes/obstacle.tscn" id="3_an84l"]
+[ext_resource type="PackedScene" uid="uid://c6nqyhggkl8va" path="res://scenes/2d/obstacle.tscn" id="3_an84l"]
+[ext_resource type="PackedScene" uid="uid://bkojeq2hohqqj" path="res://scenes/2d/level_exit.tscn" id="4_w1im6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_an84l"]
 texture = ExtResource("2_eywp4")
@@ -58,3 +59,6 @@ collision_mask = 4
 position = Vector2(2224, 496)
 collision_layer = 4
 collision_mask = 4
+
+[node name="level exit" parent="." unique_id=1072067619 instance=ExtResource("4_w1im6")]
+position = Vector2(-368, 496)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cuxhfhvqrn062"]
 
-[ext_resource type="Script" uid="uid://diia87bwge7d5" path="res://scenes/scripts/button manager.gd" id="1_tx5wa"]
+[ext_resource type="Script" uid="uid://diia87bwge7d5" path="res://scenes/scripts/button manager.gd" id="1_aqjl8"]
 
 [node name="Start Screen" type="Control" unique_id=1520903698]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tx5wa")
+script = ExtResource("1_aqjl8")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=270293837]
 layout_mode = 0
