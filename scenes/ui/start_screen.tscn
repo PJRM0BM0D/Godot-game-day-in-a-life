@@ -12,12 +12,18 @@ grow_vertical = 2
 script = ExtResource("1_aqjl8")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=270293837]
-layout_mode = 0
-offset_left = 396.0
-offset_top = 184.0
-offset_right = 756.0
-offset_bottom = 184.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -129.5
+offset_right = 180.0
+offset_bottom = 129.5
 grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer" unique_id=1115753944]
 layout_mode = 2
@@ -33,7 +39,9 @@ layout_mode = 0
 offset_top = 4.0
 offset_right = 360.0
 offset_bottom = 79.0
-text = "Title"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "game"
 horizontal_alignment = 1
 vertical_alignment = 1
 

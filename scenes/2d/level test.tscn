@@ -18,7 +18,7 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_an84l")
 
-[node name="Node2D" type="Node2D" unique_id=157838979]
+[node name="level test" type="Node2D" unique_id=157838979]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1347468820]
 offset_left = -19376.0
