@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://xx5qpmoo8gjq"]
 
-[ext_resource type="Script" uid="uid://bp8n3qywv5cd1" path="res://scenes/loading_screen.gd" id="1_ep5rh"]
-[ext_resource type="Script" uid="uid://cr3aetbkfiwhy" path="res://scenes/progress_bar.gd" id="2_hprjd"]
+[ext_resource type="Script" uid="uid://bp8n3qywv5cd1" path="res://scenes/scripts/loading_screen.gd" id="1_ep5rh"]
+[ext_resource type="Script" uid="uid://cr3aetbkfiwhy" path="res://scenes/scripts/progress_bar.gd" id="2_hprjd"]
 
 [node name="loading screen" type="Control" unique_id=1778812122]
 layout_mode = 3

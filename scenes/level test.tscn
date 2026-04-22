@@ -45,7 +45,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="obstacle4" parent="." unique_id=390057638 instance=ExtResource("3_an84l")]
-position = Vector2(1392, 496)
+position = Vector2(1744, 464)
 collision_layer = 4
 collision_mask = 4
 
@@ -55,6 +55,6 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="obstacle3" parent="." unique_id=747191976 instance=ExtResource("3_an84l")]
-position = Vector2(1360, 496)
+position = Vector2(2224, 496)
 collision_layer = 4
 collision_mask = 4
