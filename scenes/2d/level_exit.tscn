@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://bkojeq2hohqqj"]
 
-[ext_resource type="Script" uid="uid://blg7k0qjaoate" path="res://scenes/2d/level_exit.gd" id="1_07kgy"]
+[ext_resource type="Texture2D" uid="uid://bi02mhxx16oag" path="res://assets/bus stop.png" id="2_ljea8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3r0wq"]
-size = Vector2(32, 32)
+size = Vector2(16, 64)
 
 [node name="level exit" type="Area2D" unique_id=1072067619]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("1_07kgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587033735]
 shape = SubResource("RectangleShape2D_3r0wq")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399760594]
+texture_filter = 1
+texture = ExtResource("2_ljea8")

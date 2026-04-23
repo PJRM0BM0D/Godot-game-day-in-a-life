@@ -32,6 +32,7 @@ func _on_options_button_pressed() -> void:
 
 func _on_credits_button_pressed() -> void:
 	print("credits")
+	get_tree().change_scene_to_file("res://scenes/ui/credits.tscn")
 
 
 func _on_exit_button_pressed() -> void:

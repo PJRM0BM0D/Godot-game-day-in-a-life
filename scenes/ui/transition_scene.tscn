@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://u2awipxy3y8e"]
+
+[ext_resource type="Script" uid="uid://je2ek075ysiv" path="res://transition_scene.gd" id="1_cdnif"]
+
+[node name="transition scene" type="Control" unique_id=1266362894]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cdnif")

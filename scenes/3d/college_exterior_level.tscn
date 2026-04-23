@@ -21,6 +21,8 @@ size = Vector2(10, 10)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5qibc"]
 data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2bys0"]
+
 [node name="college exterior level" type="Node3D" unique_id=1323389214]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1524517151]
@@ -39,3 +41,8 @@ mesh = SubResource("PlaneMesh_4ysop")
 shape = SubResource("ConcavePolygonShape3D_5qibc")
 
 [node name="CharacterBody3D" parent="." unique_id=439481167 instance=ExtResource("1_5qibc")]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=463048873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0954003, 1.8003787)
+billboard = 1
+texture = SubResource("CompressedTexture2D_2bys0")

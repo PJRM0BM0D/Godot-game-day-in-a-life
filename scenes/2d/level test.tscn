@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://c7jph8qp5ixyi"]
 
+[ext_resource type="Script" uid="uid://lvul2mttucat" path="res://scenes/2d/level_test.gd" id="1_j3txl"]
 [ext_resource type="PackedScene" uid="uid://cbhiqt1libriv" path="res://scenes/2d/bus.tscn" id="2_an84l"]
 [ext_resource type="Texture2D" uid="uid://dp4bo73vli8fb" path="res://assets/road sprites.png" id="2_eywp4"]
 [ext_resource type="PackedScene" uid="uid://c6nqyhggkl8va" path="res://scenes/2d/obstacle.tscn" id="3_an84l"]
@@ -19,6 +20,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_an84l")
 
 [node name="level test" type="Node2D" unique_id=157838979]
+script = ExtResource("1_j3txl")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1347468820]
 offset_left = -19376.0
@@ -61,4 +63,6 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="level exit" parent="." unique_id=1072067619 instance=ExtResource("4_w1im6")]
-position = Vector2(-368, 496)
+position = Vector2(-368, 480)
+
+[connection signal="body_entered" from="level exit" to="." method="_on_level_exit_body_entered"]
