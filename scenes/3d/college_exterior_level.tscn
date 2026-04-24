@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6wdxtkjmot26"]
 
 [ext_resource type="PackedScene" uid="uid://bl0tg4768tmgi" path="res://scenes/3d/3d player.tscn" id="1_5qibc"]
+[ext_resource type="Texture2D" uid="uid://ccon350eqv558" path="res://assets/bus stop.png" id="2_1wt3m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5qibc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,7 +22,9 @@ size = Vector2(10, 10)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5qibc"]
 data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2bys0"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1wt3m"]
+height = 2.4536133
+radius = 0.1
 
 [node name="college exterior level" type="Node3D" unique_id=1323389214]
 
@@ -42,7 +45,15 @@ shape = SubResource("ConcavePolygonShape3D_5qibc")
 
 [node name="CharacterBody3D" parent="." unique_id=439481167 instance=ExtResource("1_5qibc")]
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=463048873]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0954003, 1.8003787)
-billboard = 1
-texture = SubResource("CompressedTexture2D_2bys0")
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2007053603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1092511, 2.813172)
+pixel_size = 0.035
+billboard = 2
+texture_filter = 2
+texture = ExtResource("2_1wt3m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D" unique_id=642918675]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D" unique_id=1875671339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0769043, 0)
+shape = SubResource("CylinderShape3D_1wt3m")
