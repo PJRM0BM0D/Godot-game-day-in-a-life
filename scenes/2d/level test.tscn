@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c7jph8qp5ixyi"]
 
-[ext_resource type="Script" uid="uid://lvul2mttucat" path="res://scenes/2d/level_test.gd" id="1_j3txl"]
+[ext_resource type="Script" uid="uid://lvul2mttucat" path="res://scenes/scripts/level_test.gd" id="1_j3txl"]
 [ext_resource type="PackedScene" uid="uid://cbhiqt1libriv" path="res://scenes/2d/bus.tscn" id="2_an84l"]
 [ext_resource type="Texture2D" uid="uid://dp4bo73vli8fb" path="res://assets/road sprites.png" id="2_eywp4"]
 [ext_resource type="PackedScene" uid="uid://c6nqyhggkl8va" path="res://scenes/2d/obstacle.tscn" id="3_an84l"]

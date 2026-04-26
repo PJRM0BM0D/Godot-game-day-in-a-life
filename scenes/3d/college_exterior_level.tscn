@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://c6wdxtkjmot26"]
 
 [ext_resource type="PackedScene" uid="uid://bl0tg4768tmgi" path="res://scenes/3d/3d player.tscn" id="1_5qibc"]
+[ext_resource type="Texture2D" uid="uid://8qu0b54jjd4j" path="res://assets/ground test sprite.png" id="1_ireko"]
 [ext_resource type="Texture2D" uid="uid://ccon350eqv558" path="res://assets/bus stop.png" id="2_1wt3m"]
+[ext_resource type="PackedScene" uid="uid://kaccgkwr1851" path="res://scenes/3d/platform_3d.tscn" id="4_cbe6s"]
+[ext_resource type="PackedScene" uid="uid://cv7hqwfxaiuyp" path="res://scenes/3d/pepsi.tscn" id="5_odgis"]
+[ext_resource type="Material" uid="uid://qf3ekny536l1" path="res://assets/materials/glow.tres" id="6_1ot7s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5qibc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,15 +20,41 @@ sky = SubResource("Sky_ubeli")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_4ysop"]
-size = Vector2(10, 10)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ireko"]
+load_path = "res://.godot/imported/ground test sprite.png-dbc815538c53baafd7889bf44abfb094.s3tc.ctex"
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5qibc"]
-data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ireko"]
+albedo_texture = SubResource("CompressedTexture2D_ireko")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wt3m"]
+albedo_texture = ExtResource("1_ireko")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4ysop"]
+material = SubResource("StandardMaterial3D_1wt3m")
+size = Vector2(100, 100)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1wt3m"]
+data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1wt3m"]
 height = 2.4536133
 radius = 0.1
+
+[sub_resource type="BoxMesh" id="BoxMesh_ireko"]
+size = Vector3(1, 35, 45)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cbe6s"]
+data = PackedVector3Array(-0.5, 17.5, 22.5, 0.5, 17.5, 22.5, -0.5, -17.5, 22.5, 0.5, 17.5, 22.5, 0.5, -17.5, 22.5, -0.5, -17.5, 22.5, 0.5, 17.5, -22.5, -0.5, 17.5, -22.5, 0.5, -17.5, -22.5, -0.5, 17.5, -22.5, -0.5, -17.5, -22.5, 0.5, -17.5, -22.5, 0.5, 17.5, 22.5, 0.5, 17.5, -22.5, 0.5, -17.5, 22.5, 0.5, 17.5, -22.5, 0.5, -17.5, -22.5, 0.5, -17.5, 22.5, -0.5, 17.5, -22.5, -0.5, 17.5, 22.5, -0.5, -17.5, -22.5, -0.5, 17.5, 22.5, -0.5, -17.5, 22.5, -0.5, -17.5, -22.5, 0.5, 17.5, 22.5, -0.5, 17.5, 22.5, 0.5, 17.5, -22.5, -0.5, 17.5, 22.5, -0.5, 17.5, -22.5, 0.5, 17.5, -22.5, -0.5, -17.5, 22.5, 0.5, -17.5, 22.5, -0.5, -17.5, -22.5, 0.5, -17.5, 22.5, 0.5, -17.5, -22.5, -0.5, -17.5, -22.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_38nca"]
+material = ExtResource("6_1ot7s")
+top_radius = 1.0
+bottom_radius = 0.0
+height = 3.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_enp83"]
+material = ExtResource("6_1ot7s")
+height = 4.0
 
 [node name="college exterior level" type="Node3D" unique_id=1323389214]
 
@@ -32,28 +62,119 @@ radius = 0.1
 environment = SubResource("Environment_42lwa")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1668072661]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.49433643, -0.49536926, 0.7143114, -2.4909708e-08, 0.82173645, 0.5698677, -0.8692707, 0.28170633, -0.40621427, 0, 2.7989557, 0)
 shadow_enabled = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=56474042]
+[node name="ground" type="StaticBody3D" parent="." unique_id=56474042]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1386828615]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground" unique_id=1386828615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.816544, 0, 0)
+material_override = SubResource("StandardMaterial3D_ireko")
 mesh = SubResource("PlaneMesh_4ysop")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=504059149]
-shape = SubResource("ConcavePolygonShape3D_5qibc")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground" unique_id=141695347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.816544, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_1wt3m")
 
-[node name="CharacterBody3D" parent="." unique_id=439481167 instance=ExtResource("1_5qibc")]
+[node name="player" parent="." unique_id=439481167 instance=ExtResource("1_5qibc")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2007053603]
+[node name="bus stop" type="Sprite3D" parent="." unique_id=2007053603]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1092511, 2.813172)
 pixel_size = 0.035
 billboard = 2
 texture_filter = 2
 texture = ExtResource("2_1wt3m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D" unique_id=642918675]
+[node name="StaticBody3D" type="StaticBody3D" parent="bus stop" unique_id=642918675]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D" unique_id=1875671339]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bus stop/StaticBody3D" unique_id=1875671339]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0769043, 0)
 shape = SubResource("CylinderShape3D_1wt3m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1823687593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.131087, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1581447141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.03125, 16.988392, -22.531979)
+mesh = SubResource("BoxMesh_ireko")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=771268985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.03125, 16.988392, -22.531979)
+shape = SubResource("ConcavePolygonShape3D_cbe6s")
+
+[node name="platforms" type="Node" parent="." unique_id=1550153155]
+
+[node name="platform 3d" parent="platforms" unique_id=1286736453 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5231905, 0.44474983, 0)
+
+[node name="platform 3d2" parent="platforms" unique_id=433695349 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.73599, 1.3169384, 0)
+
+[node name="platform 3d3" parent="platforms" unique_id=735652783 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.031654, 1.9264603, 0)
+
+[node name="platform 3d4" parent="platforms" unique_id=233491828 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.653126, 3.378549, -4.7683716e-07)
+
+[node name="platform 3d5" parent="platforms" unique_id=507725330 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.535774, 4.062268, -4.7683716e-07)
+
+[node name="platform 3d6" parent="platforms" unique_id=385420651 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.339523, 4.062268, -4.2647676)
+
+[node name="platform 3d7" parent="platforms" unique_id=828520202 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.97584, 5.1277485, -9.417949)
+
+[node name="platform 3d8" parent="platforms" unique_id=1350035792 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.03491, 5.935496, -13.029965)
+
+[node name="platform 3d9" parent="platforms" unique_id=938469998 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.03491, 8.174238, -17.413551)
+
+[node name="platform 3d10" parent="platforms" unique_id=194069001 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.03491, 10.142255, -21.772728)
+
+[node name="platform 3d11" parent="platforms" unique_id=1333279267 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.083256, 11.096278, -24.590368)
+
+[node name="platform 3d12" parent="platforms" unique_id=1825204040 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.083256, 12.280474, -28.906855)
+
+[node name="platform 3d13" parent="platforms" unique_id=2072471810 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.083256, 12.863096, -33.75679)
+
+[node name="platform 3d14" parent="platforms" unique_id=799396325 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45718, 12.863096, -33.621094)
+
+[node name="platform 3d15" parent="platforms" unique_id=462765196 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45718, 13.794043, -28.943178)
+
+[node name="platform 3d16" parent="platforms" unique_id=1655340990 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45718, 14.927053, -24.344204)
+
+[node name="platform 3d17" parent="platforms" unique_id=550588859 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45718, 14.927053, -18.160244)
+
+[node name="platform 3d18" parent="platforms" unique_id=1530932039 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45718, 16.264877, -15.165665)
+
+[node name="platform 3d19" parent="platforms" unique_id=162315535 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45718, 16.264877, -9.291866)
+
+[node name="platform 3d20" parent="platforms" unique_id=1933193508 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45718, 18.155935, -5.1601753)
+
+[node name="platform 3d21" parent="platforms" unique_id=1630370472 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45718, 18.155935, -0.33883667)
+
+[node name="pepsi" parent="." unique_id=242125393 instance=ExtResource("5_odgis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.484585, 19.086388, -0.32580203)
+
+[node name="arrow" type="MeshInstance3D" parent="pepsi" unique_id=1534045608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5717983, 0)
+mesh = SubResource("CylinderMesh_38nca")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="pepsi/arrow" unique_id=1582116789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4065456, 0)
+mesh = SubResource("CylinderMesh_enp83")

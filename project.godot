@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 
 folder_colors={
 "res://assets/": "teal",
+"res://assets/materials/": "gray",
 "res://scenes/": "purple",
 "res://scenes/2d/": "blue",
 "res://scenes/3d/": "red",
@@ -98,4 +99,5 @@ backward={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
