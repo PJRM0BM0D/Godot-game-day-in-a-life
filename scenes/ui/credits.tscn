@@ -1,5 +1,12 @@
 [gd_scene format=3 uid="uid://c3cvfndhq60ng"]
 
+[ext_resource type="Script" uid="uid://dydocg7jhnxd2" path="res://scenes/ui/credits.gd" id="1_oap8i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gcfse"]
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_oap8i"]
+
 [node name="credits" type="Control" unique_id=1970624418]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_oap8i")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=520707883]
 layout_mode = 1
@@ -16,3 +24,60 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 1, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1581151488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=787211416]
+layout_mode = 2
+
+[node name="credits" type="Label" parent="CenterContainer/VBoxContainer" unique_id=7754630]
+z_index = 1
+layout_mode = 2
+text = " Credits "
+label_settings = SubResource("LabelSettings_gcfse")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits" unique_id=1880778358]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="credits2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=819958814]
+z_index = 1
+layout_mode = 2
+text = "made by: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits2" unique_id=314155262]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="return button" type="Button" parent="." unique_id=572237472]
+layout_mode = 1
+offset_right = 271.0
+offset_bottom = 31.0
+text = "RETURN TO MAIN MENU"
+
+[connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]

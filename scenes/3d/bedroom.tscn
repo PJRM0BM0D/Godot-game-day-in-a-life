@@ -258,9 +258,9 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="text/text 1/CenterContainer" unique_id=764089245]
 layout_mode = 2
-text = "Use [WASD] or [ARROW KEYS] to move
-Use [Q] and [E] to turn
-Press [SPACE] to jump"
+text = "Use [WASD] or [ARROW KEYS] to Move
+Use [MOUSE] to Look
+Press [SPACE] to Jump"
 horizontal_alignment = 1
 vertical_alignment = 1
 
