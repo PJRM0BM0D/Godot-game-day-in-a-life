@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ck3hc15tvxmkg"]
 
+[ext_resource type="Script" uid="uid://872u3d8bn0k7" path="res://scenes/scripts/bedroom level control.gd" id="1_68os3"]
 [ext_resource type="PackedScene" uid="uid://bl0tg4768tmgi" path="res://scenes/3d/3d player.tscn" id="1_b7dpx"]
 [ext_resource type="Material" uid="uid://bsli3ihrs3sow" path="res://assets/materials/wall mat.tres" id="2_dqel4"]
 [ext_resource type="Texture2D" uid="uid://dmm1xf3lg0by3" path="res://assets/tree.png" id="3_xc6jc"]
@@ -101,7 +102,21 @@ size = Vector2(100, 100)
 [sub_resource type="ViewportTexture" id="ViewportTexture_dqel4"]
 viewport_path = NodePath("text/text 1")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rr33i"]
+size = Vector3(2, 3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68os3"]
+albedo_color = Color(0.41, 0.19133334, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sr5xl"]
+material = SubResource("StandardMaterial3D_68os3")
+size = Vector3(2, 3, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ocrod"]
+size = Vector3(0.5, 0.125, 0.02)
+
 [node name="bedroom" type="Node3D" unique_id=1180297541]
+script = ExtResource("1_68os3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=856081688]
 environment = SubResource("Environment_s7f36")
@@ -1438,3 +1453,22 @@ pixel_size = 0.05
 billboard = 2
 texture_filter = 2
 texture = ExtResource("5_rr33i")
+
+[node name="exit collider" type="Area3D" parent="." unique_id=692871074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.398172)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="exit collider" unique_id=428154034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5029896, 0)
+shape = SubResource("BoxShape3D_rr33i")
+
+[node name="door" type="MeshInstance3D" parent="exit collider" unique_id=599998950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5023015, -0.51261234)
+mesh = SubResource("BoxMesh_sr5xl")
+
+[node name="handle" type="MeshInstance3D" parent="exit collider/door" unique_id=300612494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58281994, -0.21373355, 0.13533974)
+mesh = SubResource("BoxMesh_ocrod")
+
+[connection signal="body_entered" from="exit collider" to="." method="_on_exit_collider_body_entered"]
