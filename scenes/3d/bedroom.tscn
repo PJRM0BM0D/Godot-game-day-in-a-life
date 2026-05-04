@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bl0tg4768tmgi" path="res://scenes/3d/3d player.tscn" id="1_b7dpx"]
 [ext_resource type="Material" uid="uid://bsli3ihrs3sow" path="res://assets/materials/wall mat.tres" id="2_dqel4"]
+[ext_resource type="Texture2D" uid="uid://dmm1xf3lg0by3" path="res://assets/tree.png" id="3_xc6jc"]
+[ext_resource type="Texture2D" uid="uid://c7nbr3pci74a3" path="res://assets/large bush.png" id="4_qkx5o"]
+[ext_resource type="Texture2D" uid="uid://bwojdgr5qs4wo" path="res://assets/small bush.png" id="5_rr33i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_udco7"]
 sky_top_color = Color(0.44, 0.77599996, 1, 1)
@@ -18,6 +21,12 @@ background_mode = 2
 sky = SubResource("Sky_agp5y")
 tonemap_mode = 2
 glow_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.4392157, 0.7764706, 1, 1)
+fog_density = 1.0
+fog_sky_affect = 0.22
+fog_height_density = -3.9184
+fog_depth_curve = 7.9999948
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l01ym"]
 albedo_color = Color(0.37, 0.37, 0.37, 1)
@@ -81,6 +90,13 @@ size = Vector2(4, 2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dqel4"]
 data = PackedVector3Array(2, -1, 0, -2, -1, 0, 2, 1, 0, -2, -1, 0, -2, 1, 0, 2, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkx5o"]
+albedo_color = Color(0, 0.5764706, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qkx5o"]
+material = SubResource("StandardMaterial3D_qkx5o")
+size = Vector2(100, 100)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_dqel4"]
 viewport_path = NodePath("text/text 1")
@@ -208,6 +224,10 @@ mesh = SubResource("QuadMesh_xc6jc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/window/window wall side3" unique_id=1122648025]
 shape = SubResource("ConcavePolygonShape3D_dqel4")
 
+[node name="grass" type="MeshInstance3D" parent="geometry" unique_id=1776786010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17423487, 0)
+mesh = SubResource("PlaneMesh_qkx5o")
+
 [node name="text" type="Node" parent="." unique_id=319324681]
 
 [node name="text 1" type="SubViewport" parent="text" unique_id=1108570192]
@@ -234,10 +254,1187 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6
 texture = SubResource("ViewportTexture_dqel4")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1639647125]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.669442, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.0882015, 0)
 light_color = Color(1, 0.7411765, 0.28235295, 1)
 light_energy = 1.5
 light_specular = 1.5
 shadow_enabled = true
 omni_range = 15.0
 omni_attenuation = 0.5
+
+[node name="trees" type="Node3D" parent="." unique_id=732845052]
+
+[node name="type a" type="Node3D" parent="trees" unique_id=311525907]
+
+[node name="tree" type="Sprite3D" parent="trees/type a" unique_id=719340704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.3602133, 33.198868)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree2" type="Sprite3D" parent="trees/type a" unique_id=712298769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4780455, 4.3602133, 33.198868)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree3" type="Sprite3D" parent="trees/type a" unique_id=1344193798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2547984, 4.3602133, 28.960667)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree4" type="Sprite3D" parent="trees/type a" unique_id=2022903555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.406608, 4.3602133, 25.476385)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree5" type="Sprite3D" parent="trees/type a" unique_id=893221091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6380086, 4.3602133, 27.521364)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree6" type="Sprite3D" parent="trees/type a" unique_id=1082121557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.184228, 4.3602133, 21.325666)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree7" type="Sprite3D" parent="trees/type a" unique_id=827281343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3769817, 4.3602133, 18.068037)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree8" type="Sprite3D" parent="trees/type a" unique_id=1247820250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.801537, 4.3602133, 24.872944)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree9" type="Sprite3D" parent="trees/type a" unique_id=1548656281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.985405, 4.3602133, 32.870506)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree10" type="Sprite3D" parent="trees/type a" unique_id=857645390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.861624, 4.3602133, 13.994503)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree11" type="Sprite3D" parent="trees/type a" unique_id=1012531552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.935026, 4.3602133, 15.307258)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree12" type="Sprite3D" parent="trees/type a" unique_id=59794365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.147043, 4.3602133, 20.030811)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree13" type="Sprite3D" parent="trees/type a" unique_id=1200303299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.019748, 4.3602133, 26.95558)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree14" type="Sprite3D" parent="trees/type a" unique_id=2005130095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3526106, 4.360214, 38.327477)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree15" type="Sprite3D" parent="trees/type a" unique_id=1146765316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2417154, 4.360214, 40.686596)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree16" type="Sprite3D" parent="trees/type a" unique_id=242488082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.488767, 4.360214, 18.67054)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree17" type="Sprite3D" parent="trees/type a" unique_id=1025884146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.183703, 4.360214, 9.243731)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree18" type="Sprite3D" parent="trees/type a" unique_id=9372244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.442536, 4.3602123, 7.006014)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree19" type="Sprite3D" parent="trees/type a" unique_id=265295124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.941714, 4.3602123, 30.931007)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="tree20" type="Sprite3D" parent="trees/type a" unique_id=1774610485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.470327, 4.3602123, 23.826323)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("3_xc6jc")
+
+[node name="type b" type="Node3D" parent="trees" unique_id=2097642713]
+
+[node name="tree21" type="Sprite3D" parent="trees/type b" unique_id=895752995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.027, 47.009)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree22" type="Sprite3D" parent="trees/type b/tree21" unique_id=1611634347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree23" type="Sprite3D" parent="trees/type b/tree21" unique_id=1720622950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree24" type="Sprite3D" parent="trees/type b/tree21" unique_id=1357230407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree25" type="Sprite3D" parent="trees/type b/tree21" unique_id=1271300680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree26" type="Sprite3D" parent="trees/type b/tree21" unique_id=1903314240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree27" type="Sprite3D" parent="trees/type b/tree21" unique_id=717620766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree22" type="Sprite3D" parent="trees/type b" unique_id=1036078711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5, 4.027, 47.009)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree22" type="Sprite3D" parent="trees/type b/tree22" unique_id=208353887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree23" type="Sprite3D" parent="trees/type b/tree22" unique_id=1368435661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree24" type="Sprite3D" parent="trees/type b/tree22" unique_id=578697301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree25" type="Sprite3D" parent="trees/type b/tree22" unique_id=1766809103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree26" type="Sprite3D" parent="trees/type b/tree22" unique_id=321338345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree27" type="Sprite3D" parent="trees/type b/tree22" unique_id=331656024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree23" type="Sprite3D" parent="trees/type b" unique_id=471424290]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -46.737244, 4.027, 34.573486)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree22" type="Sprite3D" parent="trees/type b/tree23" unique_id=2027962557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree23" type="Sprite3D" parent="trees/type b/tree23" unique_id=2130255916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree24" type="Sprite3D" parent="trees/type b/tree23" unique_id=923656700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree25" type="Sprite3D" parent="trees/type b/tree23" unique_id=852105039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree26" type="Sprite3D" parent="trees/type b/tree23" unique_id=9244271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree27" type="Sprite3D" parent="trees/type b/tree23" unique_id=2108870607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree24" type="Sprite3D" parent="trees/type b" unique_id=123472126]
+transform = Transform3D(0, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 0, -48.737244, 4.027, 10.573486)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree22" type="Sprite3D" parent="trees/type b/tree24" unique_id=198969645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree23" type="Sprite3D" parent="trees/type b/tree24" unique_id=1132946030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree24" type="Sprite3D" parent="trees/type b/tree24" unique_id=809270809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree25" type="Sprite3D" parent="trees/type b/tree24" unique_id=375708599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree26" type="Sprite3D" parent="trees/type b/tree24" unique_id=1849022222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree27" type="Sprite3D" parent="trees/type b/tree24" unique_id=480211688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree25" type="Sprite3D" parent="trees/type b" unique_id=418991284]
+transform = Transform3D(0.86602527, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602527, 25.262756, 4.027, 45.573486)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree22" type="Sprite3D" parent="trees/type b/tree25" unique_id=1167535639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree23" type="Sprite3D" parent="trees/type b/tree25" unique_id=2132339462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree24" type="Sprite3D" parent="trees/type b/tree25" unique_id=1924989547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree25" type="Sprite3D" parent="trees/type b/tree25" unique_id=1800756259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree26" type="Sprite3D" parent="trees/type b/tree25" unique_id=589945968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree27" type="Sprite3D" parent="trees/type b/tree25" unique_id=1967522866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree26" type="Sprite3D" parent="trees/type b" unique_id=2071740237]
+transform = Transform3D(-1.1920929e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -1.1920929e-07, 45.262756, 4.027, 32.573486)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree22" type="Sprite3D" parent="trees/type b/tree26" unique_id=59804118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree23" type="Sprite3D" parent="trees/type b/tree26" unique_id=1822433938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree24" type="Sprite3D" parent="trees/type b/tree26" unique_id=488080176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree25" type="Sprite3D" parent="trees/type b/tree26" unique_id=618612702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree26" type="Sprite3D" parent="trees/type b/tree26" unique_id=1150223649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="tree27" type="Sprite3D" parent="trees/type b/tree26" unique_id=618602224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_qkx5o")
+
+[node name="bushes" type="Node3D" parent="trees" unique_id=2079297351]
+
+[node name="bush" type="Sprite3D" parent="trees/bushes" unique_id=236221348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4791156, 21.251556)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush2" type="Sprite3D" parent="trees/bushes" unique_id=891159608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.240604, 0.4791156, 23.308899)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush3" type="Sprite3D" parent="trees/bushes" unique_id=1607541941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3799348, 0.4791156, 22.504847)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush4" type="Sprite3D" parent="trees/bushes" unique_id=633445084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037608147, 0.4791156, 24.506723)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush5" type="Sprite3D" parent="trees/bushes" unique_id=1339343506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.784665, 0.4791156, 19.82007)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush6" type="Sprite3D" parent="trees/bushes" unique_id=733364628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1586485, 0.4791156, 19.258856)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush7" type="Sprite3D" parent="trees/bushes" unique_id=1737634630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.956593, 0.4791156, 25.727186)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush8" type="Sprite3D" parent="trees/bushes" unique_id=580693267]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.075773, 0.4791156, 22.180029)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush9" type="Sprite3D" parent="trees/bushes" unique_id=1702818712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8351688, 0.4791156, 24.237371)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush10" type="Sprite3D" parent="trees/bushes" unique_id=1857506622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.455708, 0.4791156, 23.43332)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush11" type="Sprite3D" parent="trees/bushes" unique_id=585697927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0381646, 0.4791156, 25.435196)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush12" type="Sprite3D" parent="trees/bushes" unique_id=64116407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2911077, 0.4791156, 20.748543)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush13" type="Sprite3D" parent="trees/bushes" unique_id=1059602752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.234421, 0.4791156, 20.187328)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush14" type="Sprite3D" parent="trees/bushes" unique_id=1004838346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1191797, 0.4791156, 26.655659)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush15" type="Sprite3D" parent="trees/bushes" unique_id=597284060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4217744, 0.4791156, 30.521257)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush16" type="Sprite3D" parent="trees/bushes" unique_id=1628637338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.662378, 0.4791156, 32.578598)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush17" type="Sprite3D" parent="trees/bushes" unique_id=1864222779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0418396, 0.4791156, 31.774548)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush18" type="Sprite3D" parent="trees/bushes" unique_id=2071708815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4593825, 0.4791156, 33.776424)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush19" type="Sprite3D" parent="trees/bushes" unique_id=1350130630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.20644, 0.4791156, 29.089771)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush20" type="Sprite3D" parent="trees/bushes" unique_id=1244411792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2631264, 0.4791156, 28.528557)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush21" type="Sprite3D" parent="trees/bushes" unique_id=93578580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.378367, 0.4791156, 34.996887)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush22" type="Sprite3D" parent="trees/bushes" unique_id=334461875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6082644, 0.4791156, 30.890474)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush23" type="Sprite3D" parent="trees/bushes" unique_id=1661162251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6323395, 0.4791156, 32.947815)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush24" type="Sprite3D" parent="trees/bushes" unique_id=1270898138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.988199, 0.4791156, 32.143764)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush25" type="Sprite3D" parent="trees/bushes" unique_id=2051085267]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5706563, 0.4791156, 34.14564)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush26" type="Sprite3D" parent="trees/bushes" unique_id=1414987791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82359886, 0.4791156, 29.458988)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush27" type="Sprite3D" parent="trees/bushes" unique_id=1361670207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7669125, 0.4791156, 28.897774)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush28" type="Sprite3D" parent="trees/bushes" unique_id=116783804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3483286, 0.4791156, 35.366104)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush29" type="Sprite3D" parent="trees/bushes" unique_id=1457012294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.408442, 0.4791156, 29.482061)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush30" type="Sprite3D" parent="trees/bushes" unique_id=751993767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.167838, 0.4791156, 31.539402)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush31" type="Sprite3D" parent="trees/bushes" unique_id=1608891644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.788377, 0.4791156, 30.735352)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush32" type="Sprite3D" parent="trees/bushes" unique_id=1678572416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.370834, 0.4791156, 32.73723)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush33" type="Sprite3D" parent="trees/bushes" unique_id=941373155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.623776, 0.4791156, 28.050575)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush34" type="Sprite3D" parent="trees/bushes" unique_id=840911985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.56709, 0.4791156, 27.48936)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush35" type="Sprite3D" parent="trees/bushes" unique_id=1160709775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.451849, 0.4791156, 33.95769)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush36" type="Sprite3D" parent="trees/bushes" unique_id=1987607159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.099558, 0.4791156, 18.092562)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush37" type="Sprite3D" parent="trees/bushes" unique_id=2029734762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.858954, 0.4791156, 20.149902)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush38" type="Sprite3D" parent="trees/bushes" unique_id=111769203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.479492, 0.4791156, 19.345852)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush39" type="Sprite3D" parent="trees/bushes" unique_id=1281435877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.061951, 0.4791156, 21.347729)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush40" type="Sprite3D" parent="trees/bushes" unique_id=1654205717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.314893, 0.4791156, 16.661076)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush41" type="Sprite3D" parent="trees/bushes" unique_id=1752353382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.258205, 0.4791156, 16.099861)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush42" type="Sprite3D" parent="trees/bushes" unique_id=266039573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.142965, 0.4791156, 22.568192)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush43" type="Sprite3D" parent="trees/bushes" unique_id=1740086624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.275509, 0.47911608, 13.240269)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush44" type="Sprite3D" parent="trees/bushes" unique_id=418291034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0349054, 0.47911608, 15.297609)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush45" type="Sprite3D" parent="trees/bushes" unique_id=2086918916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.655443, 0.47911608, 14.493559)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush46" type="Sprite3D" parent="trees/bushes" unique_id=155150433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.237902, 0.47911608, 16.495436)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush47" type="Sprite3D" parent="trees/bushes" unique_id=876822971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.490844, 0.47911608, 11.808783)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush48" type="Sprite3D" parent="trees/bushes" unique_id=1004834393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.434156, 0.47911608, 11.247568)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush49" type="Sprite3D" parent="trees/bushes" unique_id=1204183031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3189163, 0.47911608, 17.715899)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush50" type="Sprite3D" parent="trees/bushes" unique_id=291213789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3453884, 0.47911608, 15.170744)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush51" type="Sprite3D" parent="trees/bushes" unique_id=1337693078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.585992, 0.47911608, 17.228085)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush52" type="Sprite3D" parent="trees/bushes" unique_id=656079702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.965454, 0.47911608, 16.424034)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush53" type="Sprite3D" parent="trees/bushes" unique_id=965161333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3829956, 0.47911608, 18.42591)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush54" type="Sprite3D" parent="trees/bushes" unique_id=1124867461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1300535, 0.47911608, 13.739258)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush55" type="Sprite3D" parent="trees/bushes" unique_id=296289950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.186741, 0.47911608, 13.178043)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush56" type="Sprite3D" parent="trees/bushes" unique_id=1144269206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.301981, 0.47911608, 19.646374)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush57" type="Sprite3D" parent="trees/bushes" unique_id=545818296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1145, 0.47911608, 23.656683)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush58" type="Sprite3D" parent="trees/bushes" unique_id=1874809938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3551035, 0.47911608, 25.714024)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush59" type="Sprite3D" parent="trees/bushes" unique_id=1709848010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7345657, 0.47911608, 24.909973)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush60" type="Sprite3D" parent="trees/bushes" unique_id=882308856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.152107, 0.47911608, 26.91185)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush61" type="Sprite3D" parent="trees/bushes" unique_id=667077930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.899165, 0.47911608, 22.225197)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush62" type="Sprite3D" parent="trees/bushes" unique_id=1320108031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9558525, 0.47911608, 21.663982)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush63" type="Sprite3D" parent="trees/bushes" unique_id=783819710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.071093, 0.47911608, 28.132313)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush64" type="Sprite3D" parent="trees/bushes" unique_id=410110757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.413338, 0.47911608, 37.95694)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush65" type="Sprite3D" parent="trees/bushes" unique_id=564600789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.653941, 0.47911608, 40.01428)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush66" type="Sprite3D" parent="trees/bushes" unique_id=1194230942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0334034, 0.47911608, 39.210228)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush67" type="Sprite3D" parent="trees/bushes" unique_id=771517816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.450945, 0.47911608, 41.212105)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush68" type="Sprite3D" parent="trees/bushes" unique_id=1193200670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.198003, 0.47911608, 36.52545)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush69" type="Sprite3D" parent="trees/bushes" unique_id=194760378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25469, 0.47911608, 35.964237)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush70" type="Sprite3D" parent="trees/bushes" unique_id=427780928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.36993, 0.47911608, 42.432568)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush71" type="Sprite3D" parent="trees/bushes" unique_id=1846610861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0066442, 0.47911704, 38.880825)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush72" type="Sprite3D" parent="trees/bushes" unique_id=20614998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2339592, 0.47911704, 40.938164)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush73" type="Sprite3D" parent="trees/bushes" unique_id=477414213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3865786, 0.47911704, 40.134113)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush74" type="Sprite3D" parent="trees/bushes" unique_id=2088694865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96903706, 0.47911704, 42.13599)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush75" type="Sprite3D" parent="trees/bushes" unique_id=2115480879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7780209, 0.47911704, 37.449337)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush76" type="Sprite3D" parent="trees/bushes" unique_id=1363564401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1652918, 0.47911704, 36.888123)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush77" type="Sprite3D" parent="trees/bushes" unique_id=824917203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9499483, 0.47911704, 43.356453)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush78" type="Sprite3D" parent="trees/bushes" unique_id=659341993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.822506, 0.47911704, 34.537292)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush79" type="Sprite3D" parent="trees/bushes" unique_id=1927936807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.063108, 0.47911704, 36.59463)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush80" type="Sprite3D" parent="trees/bushes" unique_id=667234191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.44257, 0.47911704, 35.79058)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush81" type="Sprite3D" parent="trees/bushes" unique_id=1127807881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.860111, 0.47911704, 37.792458)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush82" type="Sprite3D" parent="trees/bushes" unique_id=1017227190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.60717, 0.47911704, 33.105804)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush83" type="Sprite3D" parent="trees/bushes" unique_id=1647441003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.663857, 0.47911704, 32.54459)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush84" type="Sprite3D" parent="trees/bushes" unique_id=2013814154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.779099, 0.47911704, 39.01292)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush85" type="Sprite3D" parent="trees/bushes" unique_id=1187147970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.22925, 0.47911704, 24.984373)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush86" type="Sprite3D" parent="trees/bushes" unique_id=594614270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.469852, 0.47911704, 27.041712)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush87" type="Sprite3D" parent="trees/bushes" unique_id=458616088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.849314, 0.47911704, 26.237661)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush88" type="Sprite3D" parent="trees/bushes" unique_id=1714972611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.266855, 0.47911704, 28.239538)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush89" type="Sprite3D" parent="trees/bushes" unique_id=619578841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.013914, 0.47911704, 23.552885)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush90" type="Sprite3D" parent="trees/bushes" unique_id=642932976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0706, 0.47911704, 22.99167)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush91" type="Sprite3D" parent="trees/bushes" unique_id=680452210]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.185843, 0.47911704, 29.460001)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush92" type="Sprite3D" parent="trees/bushes" unique_id=1794411426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.66622, 0.47911704, 32.626762)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush93" type="Sprite3D" parent="trees/bushes" unique_id=352870903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.425617, 0.47911704, 34.6841)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush94" type="Sprite3D" parent="trees/bushes" unique_id=998581705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.046156, 0.47911704, 33.88005)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush95" type="Sprite3D" parent="trees/bushes" unique_id=1492447898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.628614, 0.47911704, 35.881927)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush96" type="Sprite3D" parent="trees/bushes" unique_id=627937158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.881556, 0.47911704, 31.195274)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush97" type="Sprite3D" parent="trees/bushes" unique_id=582680597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.82487, 0.47911704, 30.63406)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush98" type="Sprite3D" parent="trees/bushes" unique_id=55427223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.709627, 0.47911704, 37.10239)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush99" type="Sprite3D" parent="trees/bushes" unique_id=90550269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.28147, 0.47911704, 22.408928)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush100" type="Sprite3D" parent="trees/bushes" unique_id=836542052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.040867, 0.47911704, 24.466267)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush101" type="Sprite3D" parent="trees/bushes" unique_id=1539013147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.661406, 0.47911704, 23.662216)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush102" type="Sprite3D" parent="trees/bushes" unique_id=1296958955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.243864, 0.47911704, 25.664093)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush103" type="Sprite3D" parent="trees/bushes" unique_id=2107952236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.496805, 0.47911704, 20.97744)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush104" type="Sprite3D" parent="trees/bushes" unique_id=965663331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.440119, 0.47911704, 20.416225)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
+
+[node name="bush105" type="Sprite3D" parent="trees/bushes" unique_id=1373226379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.324877, 0.47911704, 26.884556)
+pixel_size = 0.05
+billboard = 2
+texture_filter = 2
+texture = ExtResource("5_rr33i")
