@@ -1,14 +1,30 @@
 extends CharacterBody3D
 
+var sensitivity = 0.005
+@onready var head: Node3D = $"head"
+@onready var player_camera: Camera3D = $head/Camera3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 6.5
-const rotsense = 2
+#const rotsense = 0
 
 #jump stuff
 var doublejumpenabled = false
 var maxdoublej = 1
 var doublejumped = 0
+
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
+	elif event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * sensitivity)
+		player_camera.rotate_x(-event.relative.y * sensitivity)
+		player_camera.rotation.x = clamp(player_camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -39,9 +55,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
-	var input_rotate := Input.get_axis("rotate left","rotate right")
-	if input_rotate:
-		rotate_y(-(input_rotate * rotsense * delta))
+#	var input_rotate := Input.get_axis("rotate left","rotate right")
+#	if input_rotate:
+#		rotate_y(-(input_rotate * rotsense * delta))
 
 	move_and_slide()
 
