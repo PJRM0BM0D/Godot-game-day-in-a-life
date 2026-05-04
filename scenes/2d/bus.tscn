@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cbhiqt1libriv"]
 
 [ext_resource type="Script" uid="uid://b1af7w0tdi6cl" path="res://scenes/scripts/player.gd" id="1_ff36x"]
-[ext_resource type="Texture2D" uid="uid://qw5ko5pnbtx8" path="res://assets/bus.png" id="2_8154j"]
+[ext_resource type="Texture2D" uid="uid://s5dxcyvkfpgd" path="res://assets/bus.png" id="2_8154j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(162, 77)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_38u8m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_862sm"]
 atlas = ExtResource("2_8154j")
 region = Rect2(0, 0, 164, 78)
 
@@ -14,7 +14,7 @@ region = Rect2(0, 0, 164, 78)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_38u8m")
+"texture": SubResource("AtlasTexture_862sm")
 }],
 "loop": true,
 "name": &"default",

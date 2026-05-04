@@ -4,8 +4,11 @@
 [ext_resource type="Material" uid="uid://bsli3ihrs3sow" path="res://assets/materials/wall mat.tres" id="2_dqel4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_udco7"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0.44, 0.77599996, 1, 1)
+sky_horizon_color = Color(0.25882354, 0.34901962, 0.30980393, 1)
+sky_curve = 0.42426482
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_curve = 0.03363587
 
 [sub_resource type="Sky" id="Sky_agp5y"]
 sky_material = SubResource("ProceduralSkyMaterial_udco7")
@@ -25,6 +28,18 @@ size = Vector2(10, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7wi7q"]
 data = PackedVector3Array(5, 0, 10, -5, 0, 10, 5, 0, -10, -5, 0, 10, -5, 0, -10, 5, 0, -10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_akglk"]
+size = Vector3(10, 0.25, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sr5xl"]
+data = PackedVector3Array(-5, 0.125, 10, 5, 0.125, 10, -5, -0.125, 10, 5, 0.125, 10, 5, -0.125, 10, -5, -0.125, 10, 5, 0.125, -10, -5, 0.125, -10, 5, -0.125, -10, -5, 0.125, -10, -5, -0.125, -10, 5, -0.125, -10, 5, 0.125, 10, 5, 0.125, -10, 5, -0.125, 10, 5, 0.125, -10, 5, -0.125, -10, 5, -0.125, 10, -5, 0.125, -10, -5, 0.125, 10, -5, -0.125, -10, -5, 0.125, 10, -5, -0.125, 10, -5, -0.125, -10, 5, 0.125, 10, -5, 0.125, 10, 5, 0.125, -10, -5, 0.125, 10, -5, 0.125, -10, 5, 0.125, -10, -5, -0.125, 10, 5, -0.125, 10, -5, -0.125, -10, 5, -0.125, 10, 5, -0.125, -10, -5, -0.125, -10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_68os3"]
+size = Vector3(10, 1, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_akglk"]
+data = PackedVector3Array(-5, 0.5, 0.5, 5, 0.5, 0.5, -5, -0.5, 0.5, 5, 0.5, 0.5, 5, -0.5, 0.5, -5, -0.5, 0.5, 5, 0.5, -0.5, -5, 0.5, -0.5, 5, -0.5, -0.5, -5, 0.5, -0.5, -5, -0.5, -0.5, 5, -0.5, -0.5, 5, 0.5, 0.5, 5, 0.5, -0.5, 5, -0.5, 0.5, 5, 0.5, -0.5, 5, -0.5, -0.5, 5, -0.5, 0.5, -5, 0.5, -0.5, -5, 0.5, 0.5, -5, -0.5, -0.5, -5, 0.5, 0.5, -5, -0.5, 0.5, -5, -0.5, -0.5, 5, 0.5, 0.5, -5, 0.5, 0.5, 5, 0.5, -0.5, -5, 0.5, 0.5, -5, 0.5, -0.5, 5, 0.5, -0.5, -5, -0.5, 0.5, 5, -0.5, 0.5, -5, -0.5, -0.5, 5, -0.5, 0.5, 5, -0.5, -0.5, -5, -0.5, -0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dqel4"]
 material = ExtResource("2_dqel4")
@@ -64,6 +79,12 @@ metallic_specular = 1.0
 material = SubResource("StandardMaterial3D_dqel4")
 size = Vector2(4, 2)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dqel4"]
+data = PackedVector3Array(2, -1, 0, -2, -1, 0, 2, 1, 0, -2, -1, 0, -2, 1, 0, 2, 1, 0)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dqel4"]
+viewport_path = NodePath("text/text 1")
+
 [node name="bedroom" type="Node3D" unique_id=1180297541]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=856081688]
@@ -74,8 +95,9 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="CharacterBody3D" parent="." unique_id=439481167 instance=ExtResource("1_b7dpx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.8261536, 0, 6.7342653)
 
-[node name="geometry" type="Node" parent="." unique_id=523255947]
+[node name="geometry" type="Node3D" parent="." unique_id=1319144876]
 
 [node name="floor" type="StaticBody3D" parent="geometry" unique_id=1326530055]
 
@@ -84,6 +106,25 @@ mesh = SubResource("PlaneMesh_4muxq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/floor" unique_id=1460079034]
 shape = SubResource("ConcavePolygonShape3D_7wi7q")
+
+[node name="roof" type="StaticBody3D" parent="geometry" unique_id=1605352230]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/roof" unique_id=1888500851]
+mesh = SubResource("BoxMesh_akglk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/roof" unique_id=2007172173]
+shape = SubResource("ConcavePolygonShape3D_sr5xl")
+
+[node name="jump barrier" type="StaticBody3D" parent="geometry" unique_id=1212480385]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/jump barrier" unique_id=1130687581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5136142, 0)
+mesh = SubResource("BoxMesh_68os3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/jump barrier" unique_id=833238968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5136142, 0)
+shape = SubResource("ConcavePolygonShape3D_akglk")
 
 [node name="long wall" type="StaticBody3D" parent="geometry" unique_id=1306790537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
@@ -118,7 +159,7 @@ mesh = SubResource("BoxMesh_qkx5o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4522977, 0)
 shape = SubResource("ConcavePolygonShape3D_rr33i")
 
-[node name="window" type="Node" parent="geometry" unique_id=2005167092]
+[node name="window" type="Node3D" parent="geometry" unique_id=1244188703]
 
 [node name="window wall base" type="StaticBody3D" parent="geometry/window" unique_id=696677282]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 10.002)
@@ -163,3 +204,40 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/window/window wall side3" unique_id=812056078]
 mesh = SubResource("QuadMesh_xc6jc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/window/window wall side3" unique_id=1122648025]
+shape = SubResource("ConcavePolygonShape3D_dqel4")
+
+[node name="text" type="Node" parent="." unique_id=319324681]
+
+[node name="text 1" type="SubViewport" parent="text" unique_id=1108570192]
+transparent_bg = true
+size = Vector2i(512, 256)
+
+[node name="CenterContainer" type="CenterContainer" parent="text/text 1" unique_id=827922720]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="text/text 1/CenterContainer" unique_id=764089245]
+layout_mode = 2
+text = "Use [WASD] or [ARROW KEYS] to move
+Use [Q] and [E] to turn
+Press [SPACE] to jump"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text 1 display" type="Sprite3D" parent="text" unique_id=364885313]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.671355, 2.2393603, 6.705162)
+texture = SubResource("ViewportTexture_dqel4")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1639647125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.669442, 0)
+light_color = Color(1, 0.7411765, 0.28235295, 1)
+light_energy = 1.5
+light_specular = 1.5
+shadow_enabled = true
+omni_range = 15.0
+omni_attenuation = 0.5
