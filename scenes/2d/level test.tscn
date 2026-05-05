@@ -3,7 +3,10 @@
 [ext_resource type="Script" uid="uid://lvul2mttucat" path="res://scenes/scripts/level_test.gd" id="1_j3txl"]
 [ext_resource type="PackedScene" uid="uid://cbhiqt1libriv" path="res://scenes/2d/bus.tscn" id="2_an84l"]
 [ext_resource type="Texture2D" uid="uid://dp4bo73vli8fb" path="res://assets/road sprites.png" id="2_eywp4"]
+[ext_resource type="Texture2D" uid="uid://dmm1xf3lg0by3" path="res://assets/tree.png" id="2_ierey"]
+[ext_resource type="Texture2D" uid="uid://c7nbr3pci74a3" path="res://assets/large bush.png" id="3_84yot"]
 [ext_resource type="PackedScene" uid="uid://c6nqyhggkl8va" path="res://scenes/2d/obstacle.tscn" id="3_an84l"]
+[ext_resource type="Texture2D" uid="uid://bwojdgr5qs4wo" path="res://assets/small bush.png" id="4_3svye"]
 [ext_resource type="PackedScene" uid="uid://bkojeq2hohqqj" path="res://scenes/2d/level_exit.tscn" id="4_w1im6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_an84l"]
@@ -22,12 +25,1605 @@ sources/1 = SubResource("TileSetAtlasSource_an84l")
 [node name="level test" type="Node2D" unique_id=157838979]
 script = ExtResource("1_j3txl")
 
-[node name="sky" type="ColorRect" parent="." unique_id=1347468820]
+[node name="background" type="Node2D" parent="." unique_id=793704159]
+z_index = -1
+
+[node name="sky" type="ColorRect" parent="background" unique_id=1347468820]
 offset_left = -19376.0
 offset_top = -7856.0
 offset_right = 17800.0
 offset_bottom = 7312.0
 color = Color(0, 0.7490196, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="background" unique_id=178279860]
+texture_filter = 1
+position = Vector2(688, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D2" type="Sprite2D" parent="background" unique_id=1902642713]
+texture_filter = 1
+position = Vector2(792, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D3" type="Sprite2D" parent="background" unique_id=1417796279]
+texture_filter = 1
+position = Vector2(912, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D4" type="Sprite2D" parent="background" unique_id=1626818552]
+texture_filter = 1
+position = Vector2(1088, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D5" type="Sprite2D" parent="background" unique_id=983750294]
+texture_filter = 1
+position = Vector2(1216, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D6" type="Sprite2D" parent="background" unique_id=1012946681]
+position = Vector2(984, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D7" type="Sprite2D" parent="background" unique_id=887094820]
+texture_filter = 1
+position = Vector2(1120, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D8" type="Sprite2D" parent="background" unique_id=240842555]
+texture_filter = 1
+position = Vector2(1048, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D9" type="Sprite2D" parent="background" unique_id=316019193]
+texture_filter = 1
+position = Vector2(848, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D10" type="Sprite2D" parent="background" unique_id=1208641998]
+texture_filter = 1
+position = Vector2(624, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D11" type="Sprite2D" parent="background" unique_id=754074607]
+texture_filter = 1
+position = Vector2(880, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D12" type="Sprite2D" parent="background" unique_id=745238553]
+texture_filter = 1
+position = Vector2(928, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D13" type="Sprite2D" parent="background" unique_id=1244761844]
+texture_filter = 1
+position = Vector2(832, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D14" type="Sprite2D" parent="background" unique_id=971095229]
+texture_filter = 1
+position = Vector2(808, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D15" type="Sprite2D" parent="background" unique_id=1273139159]
+texture_filter = 1
+position = Vector2(968, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D16" type="Sprite2D" parent="background" unique_id=712671087]
+texture_filter = 1
+position = Vector2(1008, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D17" type="Sprite2D" parent="background" unique_id=1339797796]
+texture_filter = 1
+position = Vector2(1072, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D18" type="Sprite2D" parent="background" unique_id=1688099556]
+texture_filter = 1
+position = Vector2(1160, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D19" type="Sprite2D" parent="background" unique_id=62264515]
+texture_filter = 1
+position = Vector2(1032, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D20" type="Sprite2D" parent="background" unique_id=2019662459]
+texture_filter = 1
+position = Vector2(936, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D21" type="Sprite2D" parent="background" unique_id=760649189]
+texture_filter = 1
+position = Vector2(824, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D22" type="Sprite2D" parent="background" unique_id=1079477297]
+texture_filter = 1
+position = Vector2(768, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D23" type="Sprite2D" parent="background" unique_id=928076573]
+texture_filter = 1
+position = Vector2(752, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D24" type="Sprite2D" parent="background" unique_id=268215229]
+texture_filter = 1
+position = Vector2(736, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D25" type="Sprite2D" parent="background" unique_id=1415746127]
+texture_filter = 1
+position = Vector2(744, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D26" type="Sprite2D" parent="background" unique_id=1246658288]
+texture_filter = 1
+position = Vector2(704, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D27" type="Sprite2D" parent="background" unique_id=525262540]
+texture_filter = 1
+position = Vector2(672, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D28" type="Sprite2D" parent="background" unique_id=627635896]
+texture_filter = 1
+position = Vector2(656, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D29" type="Sprite2D" parent="background" unique_id=614139801]
+texture_filter = 1
+position = Vector2(664, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D30" type="Sprite2D" parent="background" unique_id=1180906228]
+texture_filter = 1
+position = Vector2(600, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D31" type="Sprite2D" parent="background" unique_id=1453853521]
+texture_filter = 1
+position = Vector2(1184, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D32" type="Sprite2D" parent="background" unique_id=160568354]
+texture_filter = 1
+position = Vector2(1224, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D33" type="Sprite2D" parent="background" unique_id=137911876]
+texture_filter = 1
+position = Vector2(1344, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D34" type="Sprite2D" parent="background" unique_id=751847756]
+texture_filter = 1
+position = Vector2(1448, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D35" type="Sprite2D" parent="background" unique_id=1930426508]
+texture_filter = 1
+position = Vector2(1568, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D36" type="Sprite2D" parent="background" unique_id=1895061523]
+texture_filter = 1
+position = Vector2(1744, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D37" type="Sprite2D" parent="background" unique_id=251544187]
+texture_filter = 1
+position = Vector2(1872, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D38" type="Sprite2D" parent="background" unique_id=957211835]
+position = Vector2(1640, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D39" type="Sprite2D" parent="background" unique_id=1741770445]
+texture_filter = 1
+position = Vector2(1776, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D40" type="Sprite2D" parent="background" unique_id=126029047]
+texture_filter = 1
+position = Vector2(1704, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D41" type="Sprite2D" parent="background" unique_id=419765820]
+texture_filter = 1
+position = Vector2(1504, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D42" type="Sprite2D" parent="background" unique_id=989792013]
+texture_filter = 1
+position = Vector2(1280, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D43" type="Sprite2D" parent="background" unique_id=1123471635]
+texture_filter = 1
+position = Vector2(1536, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D44" type="Sprite2D" parent="background" unique_id=776250646]
+texture_filter = 1
+position = Vector2(1584, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D45" type="Sprite2D" parent="background" unique_id=360676830]
+texture_filter = 1
+position = Vector2(1488, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D46" type="Sprite2D" parent="background" unique_id=1472837783]
+texture_filter = 1
+position = Vector2(1464, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D47" type="Sprite2D" parent="background" unique_id=586924026]
+texture_filter = 1
+position = Vector2(1624, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D48" type="Sprite2D" parent="background" unique_id=842760343]
+texture_filter = 1
+position = Vector2(1664, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D49" type="Sprite2D" parent="background" unique_id=672138941]
+texture_filter = 1
+position = Vector2(1728, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D50" type="Sprite2D" parent="background" unique_id=1353595158]
+texture_filter = 1
+position = Vector2(1816, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D51" type="Sprite2D" parent="background" unique_id=1489006637]
+texture_filter = 1
+position = Vector2(1688, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D52" type="Sprite2D" parent="background" unique_id=1885320741]
+texture_filter = 1
+position = Vector2(1592, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D53" type="Sprite2D" parent="background" unique_id=54722165]
+texture_filter = 1
+position = Vector2(1480, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D54" type="Sprite2D" parent="background" unique_id=609804447]
+texture_filter = 1
+position = Vector2(1424, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D55" type="Sprite2D" parent="background" unique_id=705093780]
+texture_filter = 1
+position = Vector2(1408, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D56" type="Sprite2D" parent="background" unique_id=278905260]
+texture_filter = 1
+position = Vector2(1392, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D57" type="Sprite2D" parent="background" unique_id=1394779319]
+texture_filter = 1
+position = Vector2(1400, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D58" type="Sprite2D" parent="background" unique_id=53028083]
+texture_filter = 1
+position = Vector2(1360, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D59" type="Sprite2D" parent="background" unique_id=677623572]
+texture_filter = 1
+position = Vector2(1328, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D60" type="Sprite2D" parent="background" unique_id=830595825]
+texture_filter = 1
+position = Vector2(1312, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D61" type="Sprite2D" parent="background" unique_id=705937038]
+texture_filter = 1
+position = Vector2(1320, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D62" type="Sprite2D" parent="background" unique_id=1494771686]
+texture_filter = 1
+position = Vector2(1256, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D63" type="Sprite2D" parent="background" unique_id=454639751]
+texture_filter = 1
+position = Vector2(1840, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D64" type="Sprite2D" parent="background" unique_id=460054827]
+texture_filter = 1
+position = Vector2(1880, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D65" type="Sprite2D" parent="background" unique_id=139195293]
+texture_filter = 1
+position = Vector2(2000, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D66" type="Sprite2D" parent="background" unique_id=921827834]
+texture_filter = 1
+position = Vector2(2104, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D67" type="Sprite2D" parent="background" unique_id=587049103]
+texture_filter = 1
+position = Vector2(2224, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D68" type="Sprite2D" parent="background" unique_id=118737717]
+texture_filter = 1
+position = Vector2(2400, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D69" type="Sprite2D" parent="background" unique_id=1893441901]
+texture_filter = 1
+position = Vector2(2528, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D70" type="Sprite2D" parent="background" unique_id=1727228157]
+position = Vector2(2296, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D71" type="Sprite2D" parent="background" unique_id=1100028003]
+texture_filter = 1
+position = Vector2(2432, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D72" type="Sprite2D" parent="background" unique_id=1646386472]
+texture_filter = 1
+position = Vector2(2360, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D73" type="Sprite2D" parent="background" unique_id=1610702427]
+texture_filter = 1
+position = Vector2(2160, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D74" type="Sprite2D" parent="background" unique_id=1621996981]
+texture_filter = 1
+position = Vector2(1936, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D75" type="Sprite2D" parent="background" unique_id=1712180226]
+texture_filter = 1
+position = Vector2(2192, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D76" type="Sprite2D" parent="background" unique_id=302466037]
+texture_filter = 1
+position = Vector2(2240, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D77" type="Sprite2D" parent="background" unique_id=1002745018]
+texture_filter = 1
+position = Vector2(2144, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D78" type="Sprite2D" parent="background" unique_id=697794454]
+texture_filter = 1
+position = Vector2(2120, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D79" type="Sprite2D" parent="background" unique_id=570564308]
+texture_filter = 1
+position = Vector2(2280, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D80" type="Sprite2D" parent="background" unique_id=336231605]
+texture_filter = 1
+position = Vector2(2320, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D81" type="Sprite2D" parent="background" unique_id=27016238]
+texture_filter = 1
+position = Vector2(2384, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D82" type="Sprite2D" parent="background" unique_id=372560857]
+texture_filter = 1
+position = Vector2(2472, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D83" type="Sprite2D" parent="background" unique_id=1717173445]
+texture_filter = 1
+position = Vector2(2344, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D84" type="Sprite2D" parent="background" unique_id=258798346]
+texture_filter = 1
+position = Vector2(2248, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D85" type="Sprite2D" parent="background" unique_id=1627453894]
+texture_filter = 1
+position = Vector2(2136, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D86" type="Sprite2D" parent="background" unique_id=1024024955]
+texture_filter = 1
+position = Vector2(2080, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D87" type="Sprite2D" parent="background" unique_id=1979327448]
+texture_filter = 1
+position = Vector2(2064, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D88" type="Sprite2D" parent="background" unique_id=1571468726]
+texture_filter = 1
+position = Vector2(2048, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D89" type="Sprite2D" parent="background" unique_id=1588886134]
+texture_filter = 1
+position = Vector2(2056, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D90" type="Sprite2D" parent="background" unique_id=872810797]
+texture_filter = 1
+position = Vector2(2016, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D91" type="Sprite2D" parent="background" unique_id=1263495539]
+texture_filter = 1
+position = Vector2(1984, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D92" type="Sprite2D" parent="background" unique_id=194082129]
+texture_filter = 1
+position = Vector2(1968, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D93" type="Sprite2D" parent="background" unique_id=1469231325]
+texture_filter = 1
+position = Vector2(1976, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D94" type="Sprite2D" parent="background" unique_id=1541669563]
+texture_filter = 1
+position = Vector2(1912, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D95" type="Sprite2D" parent="background" unique_id=1851551183]
+texture_filter = 1
+position = Vector2(2496, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D96" type="Sprite2D" parent="background" unique_id=1365643574]
+texture_filter = 1
+position = Vector2(2536, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D97" type="Sprite2D" parent="background" unique_id=1686954570]
+texture_filter = 1
+position = Vector2(2680, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D98" type="Sprite2D" parent="background" unique_id=507525602]
+texture_filter = 1
+position = Vector2(2784, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D99" type="Sprite2D" parent="background" unique_id=61242631]
+texture_filter = 1
+position = Vector2(2904, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D100" type="Sprite2D" parent="background" unique_id=1829000743]
+texture_filter = 1
+position = Vector2(3080, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D101" type="Sprite2D" parent="background" unique_id=2079320441]
+texture_filter = 1
+position = Vector2(3208, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D102" type="Sprite2D" parent="background" unique_id=2067608983]
+position = Vector2(2976, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D103" type="Sprite2D" parent="background" unique_id=1451669385]
+texture_filter = 1
+position = Vector2(3112, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D104" type="Sprite2D" parent="background" unique_id=695916143]
+texture_filter = 1
+position = Vector2(3040, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D105" type="Sprite2D" parent="background" unique_id=1673423029]
+texture_filter = 1
+position = Vector2(2840, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D106" type="Sprite2D" parent="background" unique_id=214882316]
+texture_filter = 1
+position = Vector2(2616, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D107" type="Sprite2D" parent="background" unique_id=28321705]
+texture_filter = 1
+position = Vector2(2872, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D108" type="Sprite2D" parent="background" unique_id=2003634754]
+texture_filter = 1
+position = Vector2(2920, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D109" type="Sprite2D" parent="background" unique_id=2042662947]
+texture_filter = 1
+position = Vector2(2824, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D110" type="Sprite2D" parent="background" unique_id=860692585]
+texture_filter = 1
+position = Vector2(2800, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D111" type="Sprite2D" parent="background" unique_id=135134411]
+texture_filter = 1
+position = Vector2(2960, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D112" type="Sprite2D" parent="background" unique_id=864403376]
+texture_filter = 1
+position = Vector2(3000, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D113" type="Sprite2D" parent="background" unique_id=56107669]
+texture_filter = 1
+position = Vector2(3064, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D114" type="Sprite2D" parent="background" unique_id=970301703]
+texture_filter = 1
+position = Vector2(3152, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D115" type="Sprite2D" parent="background" unique_id=887350826]
+texture_filter = 1
+position = Vector2(3024, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D116" type="Sprite2D" parent="background" unique_id=1186536652]
+texture_filter = 1
+position = Vector2(2928, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D117" type="Sprite2D" parent="background" unique_id=2001713615]
+texture_filter = 1
+position = Vector2(2816, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D118" type="Sprite2D" parent="background" unique_id=1498319063]
+texture_filter = 1
+position = Vector2(2760, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D119" type="Sprite2D" parent="background" unique_id=194029377]
+texture_filter = 1
+position = Vector2(2744, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D120" type="Sprite2D" parent="background" unique_id=526116081]
+texture_filter = 1
+position = Vector2(2728, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D121" type="Sprite2D" parent="background" unique_id=3680703]
+texture_filter = 1
+position = Vector2(2736, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D122" type="Sprite2D" parent="background" unique_id=1013730004]
+texture_filter = 1
+position = Vector2(2696, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D123" type="Sprite2D" parent="background" unique_id=44602447]
+texture_filter = 1
+position = Vector2(2664, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D124" type="Sprite2D" parent="background" unique_id=209653641]
+texture_filter = 1
+position = Vector2(2648, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D125" type="Sprite2D" parent="background" unique_id=208920486]
+texture_filter = 1
+position = Vector2(2656, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D126" type="Sprite2D" parent="background" unique_id=2075119412]
+texture_filter = 1
+position = Vector2(2592, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D127" type="Sprite2D" parent="background" unique_id=1626354849]
+texture_filter = 1
+position = Vector2(3176, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D128" type="Sprite2D" parent="background" unique_id=895627854]
+texture_filter = 1
+position = Vector2(3216, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D129" type="Sprite2D" parent="background" unique_id=628732134]
+texture_filter = 1
+position = Vector2(3328, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D130" type="Sprite2D" parent="background" unique_id=2025012563]
+texture_filter = 1
+position = Vector2(3432, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D131" type="Sprite2D" parent="background" unique_id=1302632423]
+texture_filter = 1
+position = Vector2(3552, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D132" type="Sprite2D" parent="background" unique_id=1192348317]
+texture_filter = 1
+position = Vector2(3728, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D133" type="Sprite2D" parent="background" unique_id=1104936571]
+texture_filter = 1
+position = Vector2(3856, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D134" type="Sprite2D" parent="background" unique_id=969016806]
+position = Vector2(3624, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D135" type="Sprite2D" parent="background" unique_id=984689062]
+texture_filter = 1
+position = Vector2(3760, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D136" type="Sprite2D" parent="background" unique_id=1148869627]
+texture_filter = 1
+position = Vector2(3688, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D137" type="Sprite2D" parent="background" unique_id=522075506]
+texture_filter = 1
+position = Vector2(3488, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D138" type="Sprite2D" parent="background" unique_id=1268249293]
+texture_filter = 1
+position = Vector2(3264, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D139" type="Sprite2D" parent="background" unique_id=1747094710]
+texture_filter = 1
+position = Vector2(3520, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D140" type="Sprite2D" parent="background" unique_id=1370393812]
+texture_filter = 1
+position = Vector2(3568, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D141" type="Sprite2D" parent="background" unique_id=1065878443]
+texture_filter = 1
+position = Vector2(3472, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D142" type="Sprite2D" parent="background" unique_id=1421602514]
+texture_filter = 1
+position = Vector2(3448, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D143" type="Sprite2D" parent="background" unique_id=2102778501]
+texture_filter = 1
+position = Vector2(3608, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D144" type="Sprite2D" parent="background" unique_id=1772220711]
+texture_filter = 1
+position = Vector2(3648, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D145" type="Sprite2D" parent="background" unique_id=1756494609]
+texture_filter = 1
+position = Vector2(3712, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D146" type="Sprite2D" parent="background" unique_id=2033517170]
+texture_filter = 1
+position = Vector2(3800, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D147" type="Sprite2D" parent="background" unique_id=1667507696]
+texture_filter = 1
+position = Vector2(3672, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D148" type="Sprite2D" parent="background" unique_id=729887366]
+texture_filter = 1
+position = Vector2(3576, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D149" type="Sprite2D" parent="background" unique_id=612023336]
+texture_filter = 1
+position = Vector2(3464, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D150" type="Sprite2D" parent="background" unique_id=1455877920]
+texture_filter = 1
+position = Vector2(3408, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D151" type="Sprite2D" parent="background" unique_id=1052502536]
+texture_filter = 1
+position = Vector2(3392, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D152" type="Sprite2D" parent="background" unique_id=92100152]
+texture_filter = 1
+position = Vector2(3376, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D153" type="Sprite2D" parent="background" unique_id=1004377042]
+texture_filter = 1
+position = Vector2(3384, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D154" type="Sprite2D" parent="background" unique_id=409665342]
+texture_filter = 1
+position = Vector2(3344, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D155" type="Sprite2D" parent="background" unique_id=1992550295]
+texture_filter = 1
+position = Vector2(3312, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D156" type="Sprite2D" parent="background" unique_id=1673074065]
+texture_filter = 1
+position = Vector2(3296, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D157" type="Sprite2D" parent="background" unique_id=2048530397]
+texture_filter = 1
+position = Vector2(3304, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D158" type="Sprite2D" parent="background" unique_id=1207611807]
+texture_filter = 1
+position = Vector2(3240, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D159" type="Sprite2D" parent="background" unique_id=1887805622]
+texture_filter = 1
+position = Vector2(3824, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D160" type="Sprite2D" parent="background" unique_id=1388734836]
+texture_filter = 1
+position = Vector2(3864, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D161" type="Sprite2D" parent="background" unique_id=465307812]
+texture_filter = 1
+position = Vector2(-2600, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D162" type="Sprite2D" parent="background" unique_id=1954999880]
+texture_filter = 1
+position = Vector2(-2496, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D163" type="Sprite2D" parent="background" unique_id=113312359]
+texture_filter = 1
+position = Vector2(-2376, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D164" type="Sprite2D" parent="background" unique_id=1836067725]
+texture_filter = 1
+position = Vector2(-2200, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D165" type="Sprite2D" parent="background" unique_id=603809147]
+texture_filter = 1
+position = Vector2(-2072, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D166" type="Sprite2D" parent="background" unique_id=946243864]
+position = Vector2(-2304, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D167" type="Sprite2D" parent="background" unique_id=411903151]
+texture_filter = 1
+position = Vector2(-2168, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D168" type="Sprite2D" parent="background" unique_id=83504303]
+texture_filter = 1
+position = Vector2(-2240, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D169" type="Sprite2D" parent="background" unique_id=1465199897]
+texture_filter = 1
+position = Vector2(-2440, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D170" type="Sprite2D" parent="background" unique_id=1674287703]
+texture_filter = 1
+position = Vector2(-2664, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D171" type="Sprite2D" parent="background" unique_id=2072468453]
+texture_filter = 1
+position = Vector2(-2408, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D172" type="Sprite2D" parent="background" unique_id=474577348]
+texture_filter = 1
+position = Vector2(-2360, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D173" type="Sprite2D" parent="background" unique_id=1105899624]
+texture_filter = 1
+position = Vector2(-2456, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D174" type="Sprite2D" parent="background" unique_id=158895920]
+texture_filter = 1
+position = Vector2(-2480, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D175" type="Sprite2D" parent="background" unique_id=736824016]
+texture_filter = 1
+position = Vector2(-2320, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D176" type="Sprite2D" parent="background" unique_id=963010155]
+texture_filter = 1
+position = Vector2(-2280, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D177" type="Sprite2D" parent="background" unique_id=1467286536]
+texture_filter = 1
+position = Vector2(-2216, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D178" type="Sprite2D" parent="background" unique_id=82092825]
+texture_filter = 1
+position = Vector2(-2128, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D179" type="Sprite2D" parent="background" unique_id=685546567]
+texture_filter = 1
+position = Vector2(-2256, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D180" type="Sprite2D" parent="background" unique_id=1064724252]
+texture_filter = 1
+position = Vector2(-2352, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D181" type="Sprite2D" parent="background" unique_id=1480168458]
+texture_filter = 1
+position = Vector2(-2464, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D182" type="Sprite2D" parent="background" unique_id=1984098058]
+texture_filter = 1
+position = Vector2(-2520, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D183" type="Sprite2D" parent="background" unique_id=172792784]
+texture_filter = 1
+position = Vector2(-2536, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D184" type="Sprite2D" parent="background" unique_id=1697205864]
+texture_filter = 1
+position = Vector2(-2552, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D185" type="Sprite2D" parent="background" unique_id=1418804754]
+texture_filter = 1
+position = Vector2(-2544, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D186" type="Sprite2D" parent="background" unique_id=777230975]
+texture_filter = 1
+position = Vector2(-2584, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D187" type="Sprite2D" parent="background" unique_id=665588534]
+texture_filter = 1
+position = Vector2(-2616, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D188" type="Sprite2D" parent="background" unique_id=104093901]
+texture_filter = 1
+position = Vector2(-2632, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D189" type="Sprite2D" parent="background" unique_id=1520887361]
+texture_filter = 1
+position = Vector2(-2624, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D190" type="Sprite2D" parent="background" unique_id=1536669719]
+texture_filter = 1
+position = Vector2(-2688, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D191" type="Sprite2D" parent="background" unique_id=40389212]
+texture_filter = 1
+position = Vector2(-2104, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D192" type="Sprite2D" parent="background" unique_id=239714031]
+texture_filter = 1
+position = Vector2(-2064, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D193" type="Sprite2D" parent="background" unique_id=2117301005]
+texture_filter = 1
+position = Vector2(-1944, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D194" type="Sprite2D" parent="background" unique_id=676536165]
+texture_filter = 1
+position = Vector2(-1840, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D195" type="Sprite2D" parent="background" unique_id=1423148668]
+texture_filter = 1
+position = Vector2(-1720, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D196" type="Sprite2D" parent="background" unique_id=816281409]
+texture_filter = 1
+position = Vector2(-1544, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D197" type="Sprite2D" parent="background" unique_id=180117814]
+texture_filter = 1
+position = Vector2(-1416, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D198" type="Sprite2D" parent="background" unique_id=714176517]
+position = Vector2(-1648, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D199" type="Sprite2D" parent="background" unique_id=7552533]
+texture_filter = 1
+position = Vector2(-1512, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D200" type="Sprite2D" parent="background" unique_id=483234747]
+texture_filter = 1
+position = Vector2(-1584, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D201" type="Sprite2D" parent="background" unique_id=1928502169]
+texture_filter = 1
+position = Vector2(-1784, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D202" type="Sprite2D" parent="background" unique_id=674295754]
+texture_filter = 1
+position = Vector2(-2008, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D203" type="Sprite2D" parent="background" unique_id=546652007]
+texture_filter = 1
+position = Vector2(-1752, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D204" type="Sprite2D" parent="background" unique_id=1774267927]
+texture_filter = 1
+position = Vector2(-1704, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D205" type="Sprite2D" parent="background" unique_id=969710468]
+texture_filter = 1
+position = Vector2(-1800, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D206" type="Sprite2D" parent="background" unique_id=1569719401]
+texture_filter = 1
+position = Vector2(-1824, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D207" type="Sprite2D" parent="background" unique_id=1189658886]
+texture_filter = 1
+position = Vector2(-1664, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D208" type="Sprite2D" parent="background" unique_id=2107447422]
+texture_filter = 1
+position = Vector2(-1624, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D209" type="Sprite2D" parent="background" unique_id=514590967]
+texture_filter = 1
+position = Vector2(-1560, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D210" type="Sprite2D" parent="background" unique_id=2014373632]
+texture_filter = 1
+position = Vector2(-1472, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D211" type="Sprite2D" parent="background" unique_id=1021580833]
+texture_filter = 1
+position = Vector2(-1600, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D212" type="Sprite2D" parent="background" unique_id=1837643596]
+texture_filter = 1
+position = Vector2(-1696, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D213" type="Sprite2D" parent="background" unique_id=1724727529]
+texture_filter = 1
+position = Vector2(-1808, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D214" type="Sprite2D" parent="background" unique_id=841860184]
+texture_filter = 1
+position = Vector2(-1864, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D215" type="Sprite2D" parent="background" unique_id=387649316]
+texture_filter = 1
+position = Vector2(-1880, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D216" type="Sprite2D" parent="background" unique_id=1534673572]
+texture_filter = 1
+position = Vector2(-1896, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D217" type="Sprite2D" parent="background" unique_id=1214096113]
+texture_filter = 1
+position = Vector2(-1888, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D218" type="Sprite2D" parent="background" unique_id=1807245852]
+texture_filter = 1
+position = Vector2(-1928, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D219" type="Sprite2D" parent="background" unique_id=326992108]
+texture_filter = 1
+position = Vector2(-1960, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D220" type="Sprite2D" parent="background" unique_id=523235254]
+texture_filter = 1
+position = Vector2(-1976, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D221" type="Sprite2D" parent="background" unique_id=580358798]
+texture_filter = 1
+position = Vector2(-1968, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D222" type="Sprite2D" parent="background" unique_id=1034510300]
+texture_filter = 1
+position = Vector2(-2032, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D223" type="Sprite2D" parent="background" unique_id=2024829546]
+texture_filter = 1
+position = Vector2(-1448, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D224" type="Sprite2D" parent="background" unique_id=48014496]
+texture_filter = 1
+position = Vector2(-1408, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D225" type="Sprite2D" parent="background" unique_id=1376354020]
+texture_filter = 1
+position = Vector2(-1288, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D226" type="Sprite2D" parent="background" unique_id=682952943]
+texture_filter = 1
+position = Vector2(-1184, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D227" type="Sprite2D" parent="background" unique_id=1946535424]
+texture_filter = 1
+position = Vector2(-1064, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D228" type="Sprite2D" parent="background" unique_id=1386349890]
+texture_filter = 1
+position = Vector2(-888, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D229" type="Sprite2D" parent="background" unique_id=255814816]
+texture_filter = 1
+position = Vector2(-760, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D230" type="Sprite2D" parent="background" unique_id=690588804]
+position = Vector2(-992, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D231" type="Sprite2D" parent="background" unique_id=1766732879]
+texture_filter = 1
+position = Vector2(-856, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D232" type="Sprite2D" parent="background" unique_id=2009477977]
+texture_filter = 1
+position = Vector2(-928, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D233" type="Sprite2D" parent="background" unique_id=1315471822]
+texture_filter = 1
+position = Vector2(-1128, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D234" type="Sprite2D" parent="background" unique_id=425961461]
+texture_filter = 1
+position = Vector2(-1352, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D235" type="Sprite2D" parent="background" unique_id=1190635470]
+texture_filter = 1
+position = Vector2(-1096, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D236" type="Sprite2D" parent="background" unique_id=1318730257]
+texture_filter = 1
+position = Vector2(-1048, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D237" type="Sprite2D" parent="background" unique_id=1129119425]
+texture_filter = 1
+position = Vector2(-1144, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D238" type="Sprite2D" parent="background" unique_id=1411934539]
+texture_filter = 1
+position = Vector2(-1168, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D239" type="Sprite2D" parent="background" unique_id=1713376337]
+texture_filter = 1
+position = Vector2(-1008, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D240" type="Sprite2D" parent="background" unique_id=1483658532]
+texture_filter = 1
+position = Vector2(-968, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D241" type="Sprite2D" parent="background" unique_id=1561084361]
+texture_filter = 1
+position = Vector2(-904, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D242" type="Sprite2D" parent="background" unique_id=807139107]
+texture_filter = 1
+position = Vector2(-816, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D243" type="Sprite2D" parent="background" unique_id=1035338813]
+texture_filter = 1
+position = Vector2(-944, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D244" type="Sprite2D" parent="background" unique_id=905498011]
+texture_filter = 1
+position = Vector2(-1040, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D245" type="Sprite2D" parent="background" unique_id=776446013]
+texture_filter = 1
+position = Vector2(-1152, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D246" type="Sprite2D" parent="background" unique_id=955707001]
+texture_filter = 1
+position = Vector2(-1208, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D247" type="Sprite2D" parent="background" unique_id=1762807697]
+texture_filter = 1
+position = Vector2(-1224, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D248" type="Sprite2D" parent="background" unique_id=1051559808]
+texture_filter = 1
+position = Vector2(-1240, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D249" type="Sprite2D" parent="background" unique_id=1579540243]
+texture_filter = 1
+position = Vector2(-1232, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D250" type="Sprite2D" parent="background" unique_id=875450686]
+texture_filter = 1
+position = Vector2(-1272, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D251" type="Sprite2D" parent="background" unique_id=406134964]
+texture_filter = 1
+position = Vector2(-1304, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D252" type="Sprite2D" parent="background" unique_id=1905267382]
+texture_filter = 1
+position = Vector2(-1320, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D253" type="Sprite2D" parent="background" unique_id=1562880286]
+texture_filter = 1
+position = Vector2(-1312, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D254" type="Sprite2D" parent="background" unique_id=1964576547]
+texture_filter = 1
+position = Vector2(-1376, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D255" type="Sprite2D" parent="background" unique_id=437325456]
+texture_filter = 1
+position = Vector2(-792, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D256" type="Sprite2D" parent="background" unique_id=1991841495]
+texture_filter = 1
+position = Vector2(-752, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D257" type="Sprite2D" parent="background" unique_id=1967416392]
+texture_filter = 1
+position = Vector2(-608, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D258" type="Sprite2D" parent="background" unique_id=636998006]
+texture_filter = 1
+position = Vector2(-504, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D259" type="Sprite2D" parent="background" unique_id=1981760479]
+texture_filter = 1
+position = Vector2(-384, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D260" type="Sprite2D" parent="background" unique_id=430869241]
+texture_filter = 1
+position = Vector2(-208, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D261" type="Sprite2D" parent="background" unique_id=878492292]
+texture_filter = 1
+position = Vector2(-80, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D262" type="Sprite2D" parent="background" unique_id=65584960]
+position = Vector2(-312, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D263" type="Sprite2D" parent="background" unique_id=2111776149]
+texture_filter = 1
+position = Vector2(-176, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D264" type="Sprite2D" parent="background" unique_id=1433912370]
+texture_filter = 1
+position = Vector2(-248, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D265" type="Sprite2D" parent="background" unique_id=2069383911]
+texture_filter = 1
+position = Vector2(-448, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D266" type="Sprite2D" parent="background" unique_id=376238054]
+texture_filter = 1
+position = Vector2(-672, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D267" type="Sprite2D" parent="background" unique_id=817894772]
+texture_filter = 1
+position = Vector2(-416, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D268" type="Sprite2D" parent="background" unique_id=384187660]
+texture_filter = 1
+position = Vector2(-368, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D269" type="Sprite2D" parent="background" unique_id=890463546]
+texture_filter = 1
+position = Vector2(-464, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D270" type="Sprite2D" parent="background" unique_id=534482957]
+texture_filter = 1
+position = Vector2(-488, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D271" type="Sprite2D" parent="background" unique_id=139089715]
+texture_filter = 1
+position = Vector2(-328, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D272" type="Sprite2D" parent="background" unique_id=260734919]
+texture_filter = 1
+position = Vector2(-288, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D273" type="Sprite2D" parent="background" unique_id=975214589]
+texture_filter = 1
+position = Vector2(-224, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D274" type="Sprite2D" parent="background" unique_id=557171347]
+texture_filter = 1
+position = Vector2(-136, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D275" type="Sprite2D" parent="background" unique_id=1426860826]
+texture_filter = 1
+position = Vector2(-264, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D276" type="Sprite2D" parent="background" unique_id=815034307]
+texture_filter = 1
+position = Vector2(-360, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D277" type="Sprite2D" parent="background" unique_id=1914360307]
+texture_filter = 1
+position = Vector2(-472, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D278" type="Sprite2D" parent="background" unique_id=1953528749]
+texture_filter = 1
+position = Vector2(-528, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D279" type="Sprite2D" parent="background" unique_id=2116402850]
+texture_filter = 1
+position = Vector2(-544, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D280" type="Sprite2D" parent="background" unique_id=489597126]
+texture_filter = 1
+position = Vector2(-560, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D281" type="Sprite2D" parent="background" unique_id=1550936412]
+texture_filter = 1
+position = Vector2(-552, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D282" type="Sprite2D" parent="background" unique_id=401162936]
+texture_filter = 1
+position = Vector2(-592, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D283" type="Sprite2D" parent="background" unique_id=523054351]
+texture_filter = 1
+position = Vector2(-624, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D284" type="Sprite2D" parent="background" unique_id=1467701724]
+texture_filter = 1
+position = Vector2(-640, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D285" type="Sprite2D" parent="background" unique_id=1482048007]
+texture_filter = 1
+position = Vector2(-632, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D286" type="Sprite2D" parent="background" unique_id=2019522209]
+texture_filter = 1
+position = Vector2(-696, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D287" type="Sprite2D" parent="background" unique_id=967037428]
+texture_filter = 1
+position = Vector2(-112, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D288" type="Sprite2D" parent="background" unique_id=11118315]
+texture_filter = 1
+position = Vector2(-72, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D289" type="Sprite2D" parent="background" unique_id=1602152799]
+texture_filter = 1
+position = Vector2(40, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D290" type="Sprite2D" parent="background" unique_id=810804236]
+texture_filter = 1
+position = Vector2(144, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D291" type="Sprite2D" parent="background" unique_id=316511699]
+texture_filter = 1
+position = Vector2(264, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D292" type="Sprite2D" parent="background" unique_id=1208908176]
+texture_filter = 1
+position = Vector2(440, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D293" type="Sprite2D" parent="background" unique_id=1350071951]
+texture_filter = 1
+position = Vector2(568, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D294" type="Sprite2D" parent="background" unique_id=1061236182]
+position = Vector2(336, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D295" type="Sprite2D" parent="background" unique_id=663854993]
+texture_filter = 1
+position = Vector2(472, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D296" type="Sprite2D" parent="background" unique_id=1877414865]
+texture_filter = 1
+position = Vector2(400, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D297" type="Sprite2D" parent="background" unique_id=754221607]
+texture_filter = 1
+position = Vector2(200, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D298" type="Sprite2D" parent="background" unique_id=29328463]
+texture_filter = 1
+position = Vector2(-24, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D299" type="Sprite2D" parent="background" unique_id=1025342520]
+texture_filter = 1
+position = Vector2(232, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D300" type="Sprite2D" parent="background" unique_id=1652848544]
+texture_filter = 1
+position = Vector2(280, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D301" type="Sprite2D" parent="background" unique_id=1703654599]
+texture_filter = 1
+position = Vector2(184, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D302" type="Sprite2D" parent="background" unique_id=1178096041]
+texture_filter = 1
+position = Vector2(160, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D303" type="Sprite2D" parent="background" unique_id=1113815560]
+texture_filter = 1
+position = Vector2(320, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D304" type="Sprite2D" parent="background" unique_id=400927738]
+texture_filter = 1
+position = Vector2(360, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D305" type="Sprite2D" parent="background" unique_id=2068273238]
+texture_filter = 1
+position = Vector2(424, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D306" type="Sprite2D" parent="background" unique_id=330171791]
+texture_filter = 1
+position = Vector2(512, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D307" type="Sprite2D" parent="background" unique_id=878461019]
+texture_filter = 1
+position = Vector2(384, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D308" type="Sprite2D" parent="background" unique_id=66618913]
+texture_filter = 1
+position = Vector2(288, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D309" type="Sprite2D" parent="background" unique_id=1920835479]
+texture_filter = 1
+position = Vector2(176, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D310" type="Sprite2D" parent="background" unique_id=1720053296]
+texture_filter = 1
+position = Vector2(120, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D311" type="Sprite2D" parent="background" unique_id=156078490]
+texture_filter = 1
+position = Vector2(104, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D312" type="Sprite2D" parent="background" unique_id=1476860029]
+texture_filter = 1
+position = Vector2(88, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D313" type="Sprite2D" parent="background" unique_id=204597907]
+texture_filter = 1
+position = Vector2(96, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D314" type="Sprite2D" parent="background" unique_id=1552678292]
+texture_filter = 1
+position = Vector2(56, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D315" type="Sprite2D" parent="background" unique_id=338282743]
+texture_filter = 1
+position = Vector2(24, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D316" type="Sprite2D" parent="background" unique_id=158007322]
+texture_filter = 1
+position = Vector2(8, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D317" type="Sprite2D" parent="background" unique_id=1684669643]
+texture_filter = 1
+position = Vector2(16, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D318" type="Sprite2D" parent="background" unique_id=731674819]
+texture_filter = 1
+position = Vector2(-48, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D319" type="Sprite2D" parent="background" unique_id=2125074737]
+texture_filter = 1
+position = Vector2(536, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D320" type="Sprite2D" parent="background" unique_id=1186838200]
+texture_filter = 1
+position = Vector2(576, 504)
+texture = ExtResource("4_3svye")
 
 [node name="bus" parent="." unique_id=953621829 instance=ExtResource("2_an84l")]
 position = Vector2(480, 464)

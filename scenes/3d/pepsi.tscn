@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cv7hqwfxaiuyp"]
 
+[ext_resource type="Script" uid="uid://cao4oow7aa0nu" path="res://scenes/3d/pepsi.gd" id="1_u4dwa"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7om8"]
 transparency = 1
 albedo_color = Color(1, 1, 1, 0.22745098)
@@ -28,12 +30,17 @@ height = 1.0
 
 [node name="pepsi" type="MeshInstance3D" unique_id=242125393]
 mesh = SubResource("CylinderMesh_u4dwa")
+script = ExtResource("1_u4dwa")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=57299930]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08238448, 0)
 mesh = SubResource("CylinderMesh_ytbrj")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1898357762]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1806613891]
 shape = SubResource("CylinderShape3D_m7om8")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

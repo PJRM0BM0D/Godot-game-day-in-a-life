@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_button_pressed() -> void:
-	print("start")
+	#print("start")
 	var instance = loadingscreen.instantiate()
 	add_child(instance)
 	var loader = get_node("loading screen")

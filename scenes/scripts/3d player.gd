@@ -72,3 +72,7 @@ func _jump_up():
 
 func _on_double_jump_activator_body_entered(body: Node3D) -> void:
 	doublejumpenabled = true
+
+
+func enable_double_jump():
+	doublejumpenabled = true

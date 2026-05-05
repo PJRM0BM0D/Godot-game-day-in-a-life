@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bi6fxmfuqvecv"]
+
+[ext_resource type="Script" uid="uid://dsdks7f4tjf7a" path="res://scenes/ui/ui_popup.gd" id="1_55lil"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_55lil"]
+font_size = 64
+
+[node name="ui popup" type="Label" unique_id=324879346]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_right = 90.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Double Jump unlocked!"
+label_settings = SubResource("LabelSettings_55lil")
+script = ExtResource("1_55lil")
+
+[node name="dissapear timer" type="Timer" parent="." unique_id=892855732]
+
+[connection signal="timeout" from="dissapear timer" to="." method="_on_dissapear_timer_timeout"]
