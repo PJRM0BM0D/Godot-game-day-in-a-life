@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cv7hqwfxaiuyp"]
 
-[ext_resource type="Script" uid="uid://cao4oow7aa0nu" path="res://scenes/3d/pepsi.gd" id="1_u4dwa"]
+[ext_resource type="Script" uid="uid://cao4oow7aa0nu" path="res://scenes/scripts/pepsi.gd" id="1_u4dwa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7om8"]
 transparency = 1

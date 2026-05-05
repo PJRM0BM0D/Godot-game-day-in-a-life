@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://c6wdxtkjmot26"]
 
 [ext_resource type="PackedScene" uid="uid://bl0tg4768tmgi" path="res://scenes/3d/3d player.tscn" id="1_5qibc"]
-[ext_resource type="Script" uid="uid://b3dgp5mgmn37f" path="res://scenes/3d/college_exterior_level.gd" id="1_enp83"]
+[ext_resource type="Script" uid="uid://b3dgp5mgmn37f" path="res://scenes/scripts/college_exterior_level.gd" id="1_enp83"]
 [ext_resource type="Texture2D" uid="uid://8qu0b54jjd4j" path="res://assets/ground test sprite.png" id="1_ireko"]
 [ext_resource type="Texture2D" uid="uid://ccon350eqv558" path="res://assets/bus stop.png" id="2_1wt3m"]
 [ext_resource type="Texture2D" uid="uid://bloutevg5iqwq" path="res://assets/cola advertiser.png" id="4_38nca"]
 [ext_resource type="PackedScene" uid="uid://kaccgkwr1851" path="res://scenes/3d/platform_3d.tscn" id="4_cbe6s"]
 [ext_resource type="PackedScene" uid="uid://cv7hqwfxaiuyp" path="res://scenes/3d/pepsi.tscn" id="5_odgis"]
 [ext_resource type="Material" uid="uid://qf3ekny536l1" path="res://assets/materials/glow.tres" id="6_1ot7s"]
+[ext_resource type="Texture2D" uid="uid://je6ln3njn7rr" path="res://assets/wood floors.png" id="9_8g7vp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5qibc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -60,11 +61,17 @@ height = 4.0
 [sub_resource type="ViewportTexture" id="ViewportTexture_enp83"]
 viewport_path = NodePath("cola text")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kui8i"]
+albedo_texture = ExtResource("9_8g7vp")
+
 [sub_resource type="BoxMesh" id="BoxMesh_1ot7s"]
 size = Vector3(0.25, 2, 2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_38nca"]
 data = PackedVector3Array(-0.125, 1, 1, 0.125, 1, 1, -0.125, -1, 1, 0.125, 1, 1, 0.125, -1, 1, -0.125, -1, 1, 0.125, 1, -1, -0.125, 1, -1, 0.125, -1, -1, -0.125, 1, -1, -0.125, -1, -1, 0.125, -1, -1, 0.125, 1, 1, 0.125, 1, -1, 0.125, -1, 1, 0.125, 1, -1, 0.125, -1, -1, 0.125, -1, 1, -0.125, 1, -1, -0.125, 1, 1, -0.125, -1, -1, -0.125, 1, 1, -0.125, -1, 1, -0.125, -1, -1, 0.125, 1, 1, -0.125, 1, 1, 0.125, 1, -1, -0.125, 1, 1, -0.125, 1, -1, 0.125, 1, -1, -0.125, -1, 1, 0.125, -1, 1, -0.125, -1, -1, 0.125, -1, 1, 0.125, -1, -1, -0.125, -1, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6piu2"]
+albedo_texture = ExtResource("9_8g7vp")
 
 [sub_resource type="LabelSettings" id="LabelSettings_enp83"]
 font_size = 12
@@ -216,6 +223,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.374638, 14.927053, -18.160
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="softlock railing" unique_id=1051809849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5019169, 1.4736786)
+material_override = SubResource("StandardMaterial3D_kui8i")
 mesh = SubResource("BoxMesh_1ot7s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="softlock railing" unique_id=442517856]
@@ -227,6 +235,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.524414, 14.927053, -18.160
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="softlock railing2" unique_id=1223860201]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5019169, 1.4736786)
+material_override = SubResource("StandardMaterial3D_6piu2")
 mesh = SubResource("BoxMesh_1ot7s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="softlock railing2" unique_id=836290266]
