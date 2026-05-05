@@ -24,6 +24,9 @@ func _input(event: InputEvent) -> void:
 		rotate_y(-event.relative.x * sensitivity)
 		player_camera.rotate_x(-event.relative.y * sensitivity)
 		player_camera.rotation.x = clamp(player_camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		
+	elif event.is_action_pressed("click"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func _physics_process(delta: float) -> void:

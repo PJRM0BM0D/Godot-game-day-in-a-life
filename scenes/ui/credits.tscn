@@ -58,13 +58,262 @@ color = Color(0, 0, 0, 1)
 [node name="credits2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=819958814]
 z_index = 1
 layout_mode = 2
-text = "made by: peter read"
+text = "lead developer: peter read"
 label_settings = SubResource("LabelSettings_oap8i")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
 [node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits2" unique_id=314155262]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits3" type="Label" parent="CenterContainer/VBoxContainer" unique_id=398623907]
+z_index = 1
+layout_mode = 2
+text = "asset artist: Peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits3" unique_id=279749132]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits4" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2100034262]
+z_index = 1
+layout_mode = 2
+text = "level designer: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits4" unique_id=1772787121]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits5" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2056383929]
+z_index = 1
+layout_mode = 2
+text = "ui designer: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits5" unique_id=538406057]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits6" type="Label" parent="CenterContainer/VBoxContainer" unique_id=312250961]
+z_index = 1
+layout_mode = 2
+text = "project manager: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits6" unique_id=435371202]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits7" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2069118239]
+z_index = 1
+layout_mode = 2
+text = "head of marketing: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits7" unique_id=991893141]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits9" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2072316660]
+z_index = 1
+layout_mode = 2
+text = "qa tester: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits9" unique_id=507935255]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits10" type="Label" parent="CenterContainer/VBoxContainer" unique_id=286321571]
+z_index = 1
+layout_mode = 2
+text = "3d modeling: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits10" unique_id=881773840]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits11" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1666954626]
+z_index = 1
+layout_mode = 2
+text = "github setup: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits11" unique_id=1601231651]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits13" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1465869019]
+z_index = 1
+layout_mode = 2
+text = "creative director: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits13" unique_id=1812419922]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits14" type="Label" parent="CenterContainer/VBoxContainer" unique_id=104472416]
+z_index = 1
+layout_mode = 2
+text = "unpaid intern: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits14" unique_id=1243377382]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits15" type="Label" parent="CenterContainer/VBoxContainer" unique_id=873492947]
+z_index = 1
+layout_mode = 2
+text = "gd script implementation: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits15" unique_id=1426287174]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits12" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1625265063]
+z_index = 1
+layout_mode = 2
+text = "writing the credits: peter read"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits12" unique_id=1613148972]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="credits8" type="Label" parent="CenterContainer/VBoxContainer" unique_id=226180455]
+z_index = 1
+layout_mode = 2
+text = "sepcial thanks to kat
+ for teaching me how to use 
+mouse based camera"
+label_settings = SubResource("LabelSettings_oap8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer/credits8" unique_id=1874730401]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
