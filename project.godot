@@ -15,6 +15,10 @@ run/main_scene="uid://cuxhfhvqrn062"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+SettingsManager="*uid://bpxy5ujamsjru"
+
 [file_customization]
 
 folder_colors={

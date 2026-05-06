@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bn10dqbfuwpr1"]
+
+[ext_resource type="Script" uid="uid://d2bji62slijep" path="res://scenes/scripts/options.gd" id="1_ad3a0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ad3a0"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="options" type="Control" unique_id=1970624418]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ad3a0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=520707883]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 1, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1581151488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=787211416]
+layout_mode = 2
+
+[node name="sense background" type="ColorRect" parent="CenterContainer/VBoxContainer" unique_id=1026340860]
+custom_minimum_size = Vector2(425, 100)
+layout_mode = 2
+
+[node name="veiw sense slider" type="HSlider" parent="CenterContainer/VBoxContainer/sense background" unique_id=1270139158]
+z_index = 1
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+value = 50.0
+rounded = true
+
+[node name="sense label" type="Label" parent="CenterContainer/VBoxContainer/sense background" unique_id=1703508319]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "sensitivity: 50"
+label_settings = SubResource("LabelSettings_ad3a0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="speedrun timer button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1600862209]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Speedrun timer"
+
+[node name="normalise diagonals button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1180814508]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "normalise diagonals"
+
+[node name="return button" type="Button" parent="." unique_id=572237472]
+layout_mode = 1
+offset_right = 271.0
+offset_bottom = 31.0
+text = "RETURN TO MAIN MENU"
+
+[connection signal="value_changed" from="CenterContainer/VBoxContainer/sense background/veiw sense slider" to="." method="_on_veiw_sense_slider_value_changed"]
+[connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]

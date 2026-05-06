@@ -1,5 +1,7 @@
 extends Camera2D
 
+"""i did not write most of this code, i got it from a tutorial. i dont know how it works and disabled it but it has to exist""" 
+
 var xpos = position.x
 var ypos = position.y
 var defaultpos = Vector2(position.x, position.y)
