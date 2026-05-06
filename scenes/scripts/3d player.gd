@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var sensitivity = 0.005
+var sensitivity = (SettingsManager.sensitivity/50 *  0.005) + 0.001
 @onready var head: Node3D = $"head"
 @onready var player_camera: Camera3D = $head/Camera3D
 
