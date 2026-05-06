@@ -62,6 +62,9 @@ func _physics_process(delta: float) -> void:
 #	if input_rotate:
 #		rotate_y(-(input_rotate * rotsense * delta))
 
+	if Input.is_action_just_pressed("debug"):
+		doublejumpenabled = true
+
 	move_and_slide()
 
 #jump code

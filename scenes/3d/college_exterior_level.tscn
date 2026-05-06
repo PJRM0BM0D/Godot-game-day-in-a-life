@@ -109,6 +109,17 @@ data = PackedVector3Array(-3, 2.5, 2.225, 3, 2.5, 2.225, -3, -2.5, 2.225, 3, 2.5
 [sub_resource type="ViewportTexture" id="ViewportTexture_ldpyp"]
 viewport_path = NodePath("door blocked hint")
 
+[sub_resource type="BoxMesh" id="BoxMesh_8o4pm"]
+material = ExtResource("4_6piu2")
+size = Vector3(15, 1, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ldpyp"]
+data = PackedVector3Array(-7.5, 0.5, 10, 7.5, 0.5, 10, -7.5, -0.5, 10, 7.5, 0.5, 10, 7.5, -0.5, 10, -7.5, -0.5, 10, 7.5, 0.5, -10, -7.5, 0.5, -10, 7.5, -0.5, -10, -7.5, 0.5, -10, -7.5, -0.5, -10, 7.5, -0.5, -10, 7.5, 0.5, 10, 7.5, 0.5, -10, 7.5, -0.5, 10, 7.5, 0.5, -10, 7.5, -0.5, -10, 7.5, -0.5, 10, -7.5, 0.5, -10, -7.5, 0.5, 10, -7.5, -0.5, -10, -7.5, 0.5, 10, -7.5, -0.5, 10, -7.5, -0.5, -10, 7.5, 0.5, 10, -7.5, 0.5, 10, 7.5, 0.5, -10, -7.5, 0.5, 10, -7.5, 0.5, -10, 7.5, 0.5, -10, -7.5, -0.5, 10, 7.5, -0.5, 10, -7.5, -0.5, -10, 7.5, -0.5, 10, 7.5, -0.5, -10, -7.5, -0.5, -10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_88gcu"]
+material = ExtResource("4_6piu2")
+size = Vector3(1, 20, 20)
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1wt3m"]
 height = 2.4536133
 
@@ -769,6 +780,30 @@ shape = SubResource("ConcavePolygonShape3D_pfji7")
 [node name="platform 3d" parent="geometry/platforms" unique_id=1286736453 instance=ExtResource("4_cbe6s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5231905, 0.44474983, 0)
 
+[node name="platform 3d22" parent="geometry/platforms" unique_id=17920193 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.74941, 3.2785134, 3.4837484)
+
+[node name="platform 3d23" parent="geometry/platforms" unique_id=57533190 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.74941, 6.908416, 12.297015)
+
+[node name="platform 3d24" parent="geometry/platforms" unique_id=340658950 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.295444, 8.002076, 12.297015)
+
+[node name="platform 3d25" parent="geometry/platforms" unique_id=1884670792 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.588516, 10.986706, 8.907556)
+
+[node name="platform 3d26" parent="geometry/platforms" unique_id=775555765 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.236294, 10.986706, 8.907556)
+
+[node name="platform 3d27" parent="geometry/platforms" unique_id=2053644306 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.236294, 14.311012, 12.090597)
+
+[node name="platform 3d28" parent="geometry/platforms" unique_id=718299348 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.976257, 17.103748, 12.090597)
+
+[node name="platform 3d29" parent="geometry/platforms" unique_id=1352260703 instance=ExtResource("4_cbe6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.698277, 20.094385, 12.090597)
+
 [node name="platform 3d2" parent="geometry/platforms" unique_id=433695349 instance=ExtResource("4_cbe6s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.73599, 1.3169384, 0)
 
@@ -865,6 +900,22 @@ shape = SubResource("ConcavePolygonShape3D_rkrw7")
 [node name="Sprite3D" type="Sprite3D" parent="geometry/blocked door" unique_id=1257113020]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.0628471, 0, 0)
 texture = SubResource("ViewportTexture_ldpyp")
+
+[node name="class floor" type="StaticBody3D" parent="geometry" unique_id=652800032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.90594, 20.436739, 7.467986)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/class floor" unique_id=318457947]
+mesh = SubResource("BoxMesh_8o4pm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/class floor" unique_id=2112257137]
+shape = SubResource("ConcavePolygonShape3D_ldpyp")
+
+[node name="class floor2" type="StaticBody3D" parent="geometry" unique_id=2095749756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.390038, 12.412598, 7.467986)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/class floor2" unique_id=1159132404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.4531984, 0)
+mesh = SubResource("BoxMesh_88gcu")
 
 [node name="player" parent="." unique_id=439481167 instance=ExtResource("1_5qibc")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
