@@ -12,6 +12,7 @@
 [ext_resource type="Material" uid="uid://v7yx4c6njw41" path="res://assets/materials/woodmat.tres" id="5_6piu2"]
 [ext_resource type="PackedScene" uid="uid://cv7hqwfxaiuyp" path="res://scenes/3d/pepsi.tscn" id="5_odgis"]
 [ext_resource type="Material" uid="uid://qf3ekny536l1" path="res://assets/materials/glow.tres" id="6_1ot7s"]
+[ext_resource type="Texture2D" uid="uid://o32ow36yw7n" path="res://assets/warning.png" id="8_uy3t4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5qibc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -91,6 +92,22 @@ size = Vector3(0.25, 2, 2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_38nca"]
 data = PackedVector3Array(-0.125, 1, 1, 0.125, 1, 1, -0.125, -1, 1, 0.125, 1, 1, 0.125, -1, 1, -0.125, -1, 1, 0.125, 1, -1, -0.125, 1, -1, 0.125, -1, -1, -0.125, 1, -1, -0.125, -1, -1, 0.125, -1, -1, 0.125, 1, 1, 0.125, 1, -1, 0.125, -1, 1, 0.125, 1, -1, 0.125, -1, -1, 0.125, -1, 1, -0.125, 1, -1, -0.125, 1, 1, -0.125, -1, -1, -0.125, 1, 1, -0.125, -1, 1, -0.125, -1, -1, 0.125, 1, 1, -0.125, 1, 1, 0.125, 1, -1, -0.125, 1, 1, -0.125, 1, -1, 0.125, 1, -1, -0.125, -1, 1, 0.125, -1, 1, -0.125, -1, -1, 0.125, -1, 1, 0.125, -1, -1, -0.125, -1, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8o4pm"]
+albedo_texture = ExtResource("8_uy3t4")
+uv1_scale = Vector3(0.675, 0.675, 0.675)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_rkrw7"]
+material = SubResource("StandardMaterial3D_8o4pm")
+size = Vector3(6, 5, 4.45)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rkrw7"]
+data = PackedVector3Array(-3, 2.5, 2.225, 3, 2.5, 2.225, -3, -2.5, 2.225, 3, 2.5, 2.225, 3, -2.5, 2.225, -3, -2.5, 2.225, 3, 2.5, -2.225, -3, 2.5, -2.225, 3, -2.5, -2.225, -3, 2.5, -2.225, -3, -2.5, -2.225, 3, -2.5, -2.225, 3, 2.5, 2.225, 3, 2.5, -2.225, 3, -2.5, 2.225, 3, 2.5, -2.225, 3, -2.5, -2.225, 3, -2.5, 2.225, -3, 2.5, -2.225, -3, 2.5, 2.225, -3, -2.5, -2.225, -3, 2.5, 2.225, -3, -2.5, 2.225, -3, -2.5, -2.225, 3, 2.5, 2.225, -3, 2.5, 2.225, 3, 2.5, -2.225, -3, 2.5, 2.225, -3, 2.5, -2.225, 3, 2.5, -2.225, -3, -2.5, 2.225, 3, -2.5, 2.225, -3, -2.5, -2.225, 3, -2.5, 2.225, 3, -2.5, -2.225, -3, -2.5, -2.225)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ldpyp"]
+viewport_path = NodePath("door blocked hint")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1wt3m"]
 height = 2.4536133
@@ -834,6 +851,21 @@ mesh = SubResource("BoxMesh_1ot7s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5019169, 1.4736786)
 shape = SubResource("ConcavePolygonShape3D_38nca")
 
+[node name="blocked door" type="StaticBody3D" parent="geometry" unique_id=613458999]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 2.3, 8.168591)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/blocked door" unique_id=302097408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12680864, 0)
+mesh = SubResource("BoxMesh_rkrw7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/blocked door" unique_id=875969196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12680864, 0)
+shape = SubResource("ConcavePolygonShape3D_rkrw7")
+
+[node name="Sprite3D" type="Sprite3D" parent="geometry/blocked door" unique_id=1257113020]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.0628471, 0, 0)
+texture = SubResource("ViewportTexture_ldpyp")
+
 [node name="player" parent="." unique_id=439481167 instance=ExtResource("1_5qibc")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
@@ -903,5 +935,34 @@ layout_mode = 2
 text = "get a free glass of Double Jump COLA, if you climb our new product activation!
 Terms and Conditions apply, all rights reserved."
 label_settings = SubResource("LabelSettings_enp83")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="door blocked hint" type="SubViewport" parent="." unique_id=1689896459]
+size = Vector2i(384, 256)
+
+[node name="ColorRect" type="ColorRect" parent="door blocked hint" unique_id=562604355]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28, 0.28, 0.28, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="door blocked hint" unique_id=916129007]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="door blocked hint/CenterContainer" unique_id=1757146088]
+layout_mode = 2
+text = "The main entrance is currently under
+ maintanance, please find another
+entrance.
+
+University staff apologise for any 
+inconvinience caused."
 horizontal_alignment = 1
 vertical_alignment = 1
