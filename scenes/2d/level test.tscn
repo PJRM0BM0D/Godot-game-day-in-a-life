@@ -1,11 +1,13 @@
 [gd_scene format=4 uid="uid://c7jph8qp5ixyi"]
 
 [ext_resource type="Script" uid="uid://lvul2mttucat" path="res://scenes/scripts/level_test.gd" id="1_j3txl"]
+[ext_resource type="Texture2D" uid="uid://bman18x0lpukx" path="res://assets/house outside.png" id="2_3svye"]
 [ext_resource type="PackedScene" uid="uid://cbhiqt1libriv" path="res://scenes/2d/bus.tscn" id="2_an84l"]
 [ext_resource type="Texture2D" uid="uid://dp4bo73vli8fb" path="res://assets/road sprites.png" id="2_eywp4"]
 [ext_resource type="Texture2D" uid="uid://dmm1xf3lg0by3" path="res://assets/tree.png" id="2_ierey"]
 [ext_resource type="Texture2D" uid="uid://c7nbr3pci74a3" path="res://assets/large bush.png" id="3_84yot"]
 [ext_resource type="PackedScene" uid="uid://c6nqyhggkl8va" path="res://scenes/2d/obstacle.tscn" id="3_an84l"]
+[ext_resource type="Texture2D" uid="uid://ccon350eqv558" path="res://assets/bus stop.png" id="3_w76wy"]
 [ext_resource type="Texture2D" uid="uid://bwojdgr5qs4wo" path="res://assets/small bush.png" id="4_3svye"]
 [ext_resource type="PackedScene" uid="uid://bkojeq2hohqqj" path="res://scenes/2d/level_exit.tscn" id="4_w1im6"]
 
@@ -29,1601 +31,2341 @@ script = ExtResource("1_j3txl")
 z_index = -1
 
 [node name="sky" type="ColorRect" parent="background" unique_id=1347468820]
-offset_left = -19376.0
-offset_top = -7856.0
-offset_right = 17800.0
-offset_bottom = 7312.0
+offset_left = -18648.0
+offset_top = -7592.0
+offset_right = 18528.0
+offset_bottom = 7576.0
 color = Color(0, 0.7490196, 1, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="background" unique_id=178279860]
+[node name="Sprite2D" type="Sprite2D" parent="background" unique_id=30729853]
+position = Vector2(360, 448)
+texture = ExtResource("2_3svye")
+
+[node name="Sprite2D" type="Sprite2D" parent="background/Sprite2D" unique_id=673615005]
+position = Vector2(-56, 32)
+texture = ExtResource("3_w76wy")
+
+[node name="trees n stuff" type="Node2D" parent="background" unique_id=1212548654]
+
+[node name="Sprite2D" type="Sprite2D" parent="background/trees n stuff" unique_id=178279860]
 texture_filter = 1
 position = Vector2(688, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D2" type="Sprite2D" parent="background" unique_id=1902642713]
+[node name="Sprite2D2" type="Sprite2D" parent="background/trees n stuff" unique_id=1902642713]
 texture_filter = 1
 position = Vector2(792, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D3" type="Sprite2D" parent="background" unique_id=1417796279]
+[node name="Sprite2D3" type="Sprite2D" parent="background/trees n stuff" unique_id=1417796279]
 texture_filter = 1
 position = Vector2(912, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D4" type="Sprite2D" parent="background" unique_id=1626818552]
+[node name="Sprite2D4" type="Sprite2D" parent="background/trees n stuff" unique_id=1626818552]
 texture_filter = 1
 position = Vector2(1088, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D5" type="Sprite2D" parent="background" unique_id=983750294]
+[node name="Sprite2D5" type="Sprite2D" parent="background/trees n stuff" unique_id=983750294]
 texture_filter = 1
 position = Vector2(1216, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D6" type="Sprite2D" parent="background" unique_id=1012946681]
+[node name="Sprite2D6" type="Sprite2D" parent="background/trees n stuff" unique_id=1012946681]
 position = Vector2(984, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D7" type="Sprite2D" parent="background" unique_id=887094820]
+[node name="Sprite2D7" type="Sprite2D" parent="background/trees n stuff" unique_id=887094820]
 texture_filter = 1
 position = Vector2(1120, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D8" type="Sprite2D" parent="background" unique_id=240842555]
+[node name="Sprite2D8" type="Sprite2D" parent="background/trees n stuff" unique_id=240842555]
 texture_filter = 1
 position = Vector2(1048, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D9" type="Sprite2D" parent="background" unique_id=316019193]
+[node name="Sprite2D9" type="Sprite2D" parent="background/trees n stuff" unique_id=316019193]
 texture_filter = 1
 position = Vector2(848, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D10" type="Sprite2D" parent="background" unique_id=1208641998]
+[node name="Sprite2D10" type="Sprite2D" parent="background/trees n stuff" unique_id=1208641998]
 texture_filter = 1
 position = Vector2(624, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D11" type="Sprite2D" parent="background" unique_id=754074607]
+[node name="Sprite2D11" type="Sprite2D" parent="background/trees n stuff" unique_id=754074607]
 texture_filter = 1
 position = Vector2(880, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D12" type="Sprite2D" parent="background" unique_id=745238553]
+[node name="Sprite2D12" type="Sprite2D" parent="background/trees n stuff" unique_id=745238553]
 texture_filter = 1
 position = Vector2(928, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D13" type="Sprite2D" parent="background" unique_id=1244761844]
+[node name="Sprite2D13" type="Sprite2D" parent="background/trees n stuff" unique_id=1244761844]
 texture_filter = 1
 position = Vector2(832, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D14" type="Sprite2D" parent="background" unique_id=971095229]
+[node name="Sprite2D14" type="Sprite2D" parent="background/trees n stuff" unique_id=971095229]
 texture_filter = 1
 position = Vector2(808, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D15" type="Sprite2D" parent="background" unique_id=1273139159]
+[node name="Sprite2D15" type="Sprite2D" parent="background/trees n stuff" unique_id=1273139159]
 texture_filter = 1
 position = Vector2(968, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D16" type="Sprite2D" parent="background" unique_id=712671087]
+[node name="Sprite2D16" type="Sprite2D" parent="background/trees n stuff" unique_id=712671087]
 texture_filter = 1
 position = Vector2(1008, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D17" type="Sprite2D" parent="background" unique_id=1339797796]
+[node name="Sprite2D17" type="Sprite2D" parent="background/trees n stuff" unique_id=1339797796]
 texture_filter = 1
 position = Vector2(1072, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D18" type="Sprite2D" parent="background" unique_id=1688099556]
+[node name="Sprite2D18" type="Sprite2D" parent="background/trees n stuff" unique_id=1688099556]
 texture_filter = 1
 position = Vector2(1160, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D19" type="Sprite2D" parent="background" unique_id=62264515]
+[node name="Sprite2D19" type="Sprite2D" parent="background/trees n stuff" unique_id=62264515]
 texture_filter = 1
 position = Vector2(1032, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D20" type="Sprite2D" parent="background" unique_id=2019662459]
+[node name="Sprite2D20" type="Sprite2D" parent="background/trees n stuff" unique_id=2019662459]
 texture_filter = 1
 position = Vector2(936, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D21" type="Sprite2D" parent="background" unique_id=760649189]
+[node name="Sprite2D21" type="Sprite2D" parent="background/trees n stuff" unique_id=760649189]
 texture_filter = 1
 position = Vector2(824, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D22" type="Sprite2D" parent="background" unique_id=1079477297]
+[node name="Sprite2D22" type="Sprite2D" parent="background/trees n stuff" unique_id=1079477297]
 texture_filter = 1
 position = Vector2(768, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D23" type="Sprite2D" parent="background" unique_id=928076573]
+[node name="Sprite2D23" type="Sprite2D" parent="background/trees n stuff" unique_id=928076573]
 texture_filter = 1
 position = Vector2(752, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D24" type="Sprite2D" parent="background" unique_id=268215229]
+[node name="Sprite2D24" type="Sprite2D" parent="background/trees n stuff" unique_id=268215229]
 texture_filter = 1
 position = Vector2(736, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D25" type="Sprite2D" parent="background" unique_id=1415746127]
+[node name="Sprite2D25" type="Sprite2D" parent="background/trees n stuff" unique_id=1415746127]
 texture_filter = 1
 position = Vector2(744, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D26" type="Sprite2D" parent="background" unique_id=1246658288]
+[node name="Sprite2D26" type="Sprite2D" parent="background/trees n stuff" unique_id=1246658288]
 texture_filter = 1
 position = Vector2(704, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D27" type="Sprite2D" parent="background" unique_id=525262540]
+[node name="Sprite2D27" type="Sprite2D" parent="background/trees n stuff" unique_id=525262540]
 texture_filter = 1
 position = Vector2(672, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D28" type="Sprite2D" parent="background" unique_id=627635896]
+[node name="Sprite2D28" type="Sprite2D" parent="background/trees n stuff" unique_id=627635896]
 texture_filter = 1
 position = Vector2(656, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D29" type="Sprite2D" parent="background" unique_id=614139801]
+[node name="Sprite2D29" type="Sprite2D" parent="background/trees n stuff" unique_id=614139801]
 texture_filter = 1
 position = Vector2(664, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D30" type="Sprite2D" parent="background" unique_id=1180906228]
+[node name="Sprite2D30" type="Sprite2D" parent="background/trees n stuff" unique_id=1180906228]
 texture_filter = 1
 position = Vector2(600, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D31" type="Sprite2D" parent="background" unique_id=1453853521]
+[node name="Sprite2D31" type="Sprite2D" parent="background/trees n stuff" unique_id=1453853521]
 texture_filter = 1
 position = Vector2(1184, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D32" type="Sprite2D" parent="background" unique_id=160568354]
+[node name="Sprite2D32" type="Sprite2D" parent="background/trees n stuff" unique_id=160568354]
 texture_filter = 1
 position = Vector2(1224, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D33" type="Sprite2D" parent="background" unique_id=137911876]
+[node name="Sprite2D33" type="Sprite2D" parent="background/trees n stuff" unique_id=137911876]
 texture_filter = 1
 position = Vector2(1344, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D34" type="Sprite2D" parent="background" unique_id=751847756]
+[node name="Sprite2D34" type="Sprite2D" parent="background/trees n stuff" unique_id=751847756]
 texture_filter = 1
 position = Vector2(1448, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D35" type="Sprite2D" parent="background" unique_id=1930426508]
+[node name="Sprite2D35" type="Sprite2D" parent="background/trees n stuff" unique_id=1930426508]
 texture_filter = 1
 position = Vector2(1568, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D36" type="Sprite2D" parent="background" unique_id=1895061523]
+[node name="Sprite2D36" type="Sprite2D" parent="background/trees n stuff" unique_id=1895061523]
 texture_filter = 1
 position = Vector2(1744, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D37" type="Sprite2D" parent="background" unique_id=251544187]
+[node name="Sprite2D37" type="Sprite2D" parent="background/trees n stuff" unique_id=251544187]
 texture_filter = 1
 position = Vector2(1872, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D38" type="Sprite2D" parent="background" unique_id=957211835]
+[node name="Sprite2D38" type="Sprite2D" parent="background/trees n stuff" unique_id=957211835]
 position = Vector2(1640, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D39" type="Sprite2D" parent="background" unique_id=1741770445]
+[node name="Sprite2D39" type="Sprite2D" parent="background/trees n stuff" unique_id=1741770445]
 texture_filter = 1
 position = Vector2(1776, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D40" type="Sprite2D" parent="background" unique_id=126029047]
+[node name="Sprite2D40" type="Sprite2D" parent="background/trees n stuff" unique_id=126029047]
 texture_filter = 1
 position = Vector2(1704, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D41" type="Sprite2D" parent="background" unique_id=419765820]
+[node name="Sprite2D41" type="Sprite2D" parent="background/trees n stuff" unique_id=419765820]
 texture_filter = 1
 position = Vector2(1504, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D42" type="Sprite2D" parent="background" unique_id=989792013]
+[node name="Sprite2D42" type="Sprite2D" parent="background/trees n stuff" unique_id=989792013]
 texture_filter = 1
 position = Vector2(1280, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D43" type="Sprite2D" parent="background" unique_id=1123471635]
+[node name="Sprite2D43" type="Sprite2D" parent="background/trees n stuff" unique_id=1123471635]
 texture_filter = 1
 position = Vector2(1536, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D44" type="Sprite2D" parent="background" unique_id=776250646]
+[node name="Sprite2D44" type="Sprite2D" parent="background/trees n stuff" unique_id=776250646]
 texture_filter = 1
 position = Vector2(1584, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D45" type="Sprite2D" parent="background" unique_id=360676830]
+[node name="Sprite2D45" type="Sprite2D" parent="background/trees n stuff" unique_id=360676830]
 texture_filter = 1
 position = Vector2(1488, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D46" type="Sprite2D" parent="background" unique_id=1472837783]
+[node name="Sprite2D46" type="Sprite2D" parent="background/trees n stuff" unique_id=1472837783]
 texture_filter = 1
 position = Vector2(1464, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D47" type="Sprite2D" parent="background" unique_id=586924026]
+[node name="Sprite2D47" type="Sprite2D" parent="background/trees n stuff" unique_id=586924026]
 texture_filter = 1
 position = Vector2(1624, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D48" type="Sprite2D" parent="background" unique_id=842760343]
+[node name="Sprite2D48" type="Sprite2D" parent="background/trees n stuff" unique_id=842760343]
 texture_filter = 1
 position = Vector2(1664, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D49" type="Sprite2D" parent="background" unique_id=672138941]
+[node name="Sprite2D49" type="Sprite2D" parent="background/trees n stuff" unique_id=672138941]
 texture_filter = 1
 position = Vector2(1728, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D50" type="Sprite2D" parent="background" unique_id=1353595158]
+[node name="Sprite2D50" type="Sprite2D" parent="background/trees n stuff" unique_id=1353595158]
 texture_filter = 1
 position = Vector2(1816, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D51" type="Sprite2D" parent="background" unique_id=1489006637]
+[node name="Sprite2D51" type="Sprite2D" parent="background/trees n stuff" unique_id=1489006637]
 texture_filter = 1
 position = Vector2(1688, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D52" type="Sprite2D" parent="background" unique_id=1885320741]
+[node name="Sprite2D52" type="Sprite2D" parent="background/trees n stuff" unique_id=1885320741]
 texture_filter = 1
 position = Vector2(1592, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D53" type="Sprite2D" parent="background" unique_id=54722165]
+[node name="Sprite2D53" type="Sprite2D" parent="background/trees n stuff" unique_id=54722165]
 texture_filter = 1
 position = Vector2(1480, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D54" type="Sprite2D" parent="background" unique_id=609804447]
+[node name="Sprite2D54" type="Sprite2D" parent="background/trees n stuff" unique_id=609804447]
 texture_filter = 1
 position = Vector2(1424, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D55" type="Sprite2D" parent="background" unique_id=705093780]
+[node name="Sprite2D55" type="Sprite2D" parent="background/trees n stuff" unique_id=705093780]
 texture_filter = 1
 position = Vector2(1408, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D56" type="Sprite2D" parent="background" unique_id=278905260]
+[node name="Sprite2D56" type="Sprite2D" parent="background/trees n stuff" unique_id=278905260]
 texture_filter = 1
 position = Vector2(1392, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D57" type="Sprite2D" parent="background" unique_id=1394779319]
+[node name="Sprite2D57" type="Sprite2D" parent="background/trees n stuff" unique_id=1394779319]
 texture_filter = 1
 position = Vector2(1400, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D58" type="Sprite2D" parent="background" unique_id=53028083]
+[node name="Sprite2D58" type="Sprite2D" parent="background/trees n stuff" unique_id=53028083]
 texture_filter = 1
 position = Vector2(1360, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D59" type="Sprite2D" parent="background" unique_id=677623572]
+[node name="Sprite2D59" type="Sprite2D" parent="background/trees n stuff" unique_id=677623572]
 texture_filter = 1
 position = Vector2(1328, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D60" type="Sprite2D" parent="background" unique_id=830595825]
+[node name="Sprite2D60" type="Sprite2D" parent="background/trees n stuff" unique_id=830595825]
 texture_filter = 1
 position = Vector2(1312, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D61" type="Sprite2D" parent="background" unique_id=705937038]
+[node name="Sprite2D61" type="Sprite2D" parent="background/trees n stuff" unique_id=705937038]
 texture_filter = 1
 position = Vector2(1320, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D62" type="Sprite2D" parent="background" unique_id=1494771686]
+[node name="Sprite2D62" type="Sprite2D" parent="background/trees n stuff" unique_id=1494771686]
 texture_filter = 1
 position = Vector2(1256, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D63" type="Sprite2D" parent="background" unique_id=454639751]
+[node name="Sprite2D63" type="Sprite2D" parent="background/trees n stuff" unique_id=454639751]
 texture_filter = 1
 position = Vector2(1840, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D64" type="Sprite2D" parent="background" unique_id=460054827]
+[node name="Sprite2D64" type="Sprite2D" parent="background/trees n stuff" unique_id=460054827]
 texture_filter = 1
 position = Vector2(1880, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D65" type="Sprite2D" parent="background" unique_id=139195293]
+[node name="Sprite2D65" type="Sprite2D" parent="background/trees n stuff" unique_id=139195293]
 texture_filter = 1
 position = Vector2(2000, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D66" type="Sprite2D" parent="background" unique_id=921827834]
+[node name="Sprite2D66" type="Sprite2D" parent="background/trees n stuff" unique_id=921827834]
 texture_filter = 1
 position = Vector2(2104, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D67" type="Sprite2D" parent="background" unique_id=587049103]
+[node name="Sprite2D67" type="Sprite2D" parent="background/trees n stuff" unique_id=587049103]
 texture_filter = 1
 position = Vector2(2224, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D68" type="Sprite2D" parent="background" unique_id=118737717]
+[node name="Sprite2D68" type="Sprite2D" parent="background/trees n stuff" unique_id=118737717]
 texture_filter = 1
 position = Vector2(2400, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D69" type="Sprite2D" parent="background" unique_id=1893441901]
+[node name="Sprite2D69" type="Sprite2D" parent="background/trees n stuff" unique_id=1893441901]
 texture_filter = 1
 position = Vector2(2528, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D70" type="Sprite2D" parent="background" unique_id=1727228157]
+[node name="Sprite2D70" type="Sprite2D" parent="background/trees n stuff" unique_id=1727228157]
 position = Vector2(2296, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D71" type="Sprite2D" parent="background" unique_id=1100028003]
+[node name="Sprite2D71" type="Sprite2D" parent="background/trees n stuff" unique_id=1100028003]
 texture_filter = 1
 position = Vector2(2432, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D72" type="Sprite2D" parent="background" unique_id=1646386472]
+[node name="Sprite2D72" type="Sprite2D" parent="background/trees n stuff" unique_id=1646386472]
 texture_filter = 1
 position = Vector2(2360, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D73" type="Sprite2D" parent="background" unique_id=1610702427]
+[node name="Sprite2D73" type="Sprite2D" parent="background/trees n stuff" unique_id=1610702427]
 texture_filter = 1
 position = Vector2(2160, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D74" type="Sprite2D" parent="background" unique_id=1621996981]
+[node name="Sprite2D74" type="Sprite2D" parent="background/trees n stuff" unique_id=1621996981]
 texture_filter = 1
 position = Vector2(1936, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D75" type="Sprite2D" parent="background" unique_id=1712180226]
+[node name="Sprite2D75" type="Sprite2D" parent="background/trees n stuff" unique_id=1712180226]
 texture_filter = 1
 position = Vector2(2192, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D76" type="Sprite2D" parent="background" unique_id=302466037]
+[node name="Sprite2D76" type="Sprite2D" parent="background/trees n stuff" unique_id=302466037]
 texture_filter = 1
 position = Vector2(2240, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D77" type="Sprite2D" parent="background" unique_id=1002745018]
+[node name="Sprite2D77" type="Sprite2D" parent="background/trees n stuff" unique_id=1002745018]
 texture_filter = 1
 position = Vector2(2144, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D78" type="Sprite2D" parent="background" unique_id=697794454]
+[node name="Sprite2D78" type="Sprite2D" parent="background/trees n stuff" unique_id=697794454]
 texture_filter = 1
 position = Vector2(2120, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D79" type="Sprite2D" parent="background" unique_id=570564308]
+[node name="Sprite2D79" type="Sprite2D" parent="background/trees n stuff" unique_id=570564308]
 texture_filter = 1
 position = Vector2(2280, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D80" type="Sprite2D" parent="background" unique_id=336231605]
+[node name="Sprite2D80" type="Sprite2D" parent="background/trees n stuff" unique_id=336231605]
 texture_filter = 1
 position = Vector2(2320, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D81" type="Sprite2D" parent="background" unique_id=27016238]
+[node name="Sprite2D81" type="Sprite2D" parent="background/trees n stuff" unique_id=27016238]
 texture_filter = 1
 position = Vector2(2384, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D82" type="Sprite2D" parent="background" unique_id=372560857]
+[node name="Sprite2D82" type="Sprite2D" parent="background/trees n stuff" unique_id=372560857]
 texture_filter = 1
 position = Vector2(2472, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D83" type="Sprite2D" parent="background" unique_id=1717173445]
+[node name="Sprite2D83" type="Sprite2D" parent="background/trees n stuff" unique_id=1717173445]
 texture_filter = 1
 position = Vector2(2344, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D84" type="Sprite2D" parent="background" unique_id=258798346]
+[node name="Sprite2D84" type="Sprite2D" parent="background/trees n stuff" unique_id=258798346]
 texture_filter = 1
 position = Vector2(2248, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D85" type="Sprite2D" parent="background" unique_id=1627453894]
+[node name="Sprite2D85" type="Sprite2D" parent="background/trees n stuff" unique_id=1627453894]
 texture_filter = 1
 position = Vector2(2136, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D86" type="Sprite2D" parent="background" unique_id=1024024955]
+[node name="Sprite2D86" type="Sprite2D" parent="background/trees n stuff" unique_id=1024024955]
 texture_filter = 1
 position = Vector2(2080, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D87" type="Sprite2D" parent="background" unique_id=1979327448]
+[node name="Sprite2D87" type="Sprite2D" parent="background/trees n stuff" unique_id=1979327448]
 texture_filter = 1
 position = Vector2(2064, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D88" type="Sprite2D" parent="background" unique_id=1571468726]
+[node name="Sprite2D88" type="Sprite2D" parent="background/trees n stuff" unique_id=1571468726]
 texture_filter = 1
 position = Vector2(2048, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D89" type="Sprite2D" parent="background" unique_id=1588886134]
+[node name="Sprite2D89" type="Sprite2D" parent="background/trees n stuff" unique_id=1588886134]
 texture_filter = 1
 position = Vector2(2056, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D90" type="Sprite2D" parent="background" unique_id=872810797]
+[node name="Sprite2D90" type="Sprite2D" parent="background/trees n stuff" unique_id=872810797]
 texture_filter = 1
 position = Vector2(2016, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D91" type="Sprite2D" parent="background" unique_id=1263495539]
+[node name="Sprite2D91" type="Sprite2D" parent="background/trees n stuff" unique_id=1263495539]
 texture_filter = 1
 position = Vector2(1984, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D92" type="Sprite2D" parent="background" unique_id=194082129]
+[node name="Sprite2D92" type="Sprite2D" parent="background/trees n stuff" unique_id=194082129]
 texture_filter = 1
 position = Vector2(1968, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D93" type="Sprite2D" parent="background" unique_id=1469231325]
+[node name="Sprite2D93" type="Sprite2D" parent="background/trees n stuff" unique_id=1469231325]
 texture_filter = 1
 position = Vector2(1976, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D94" type="Sprite2D" parent="background" unique_id=1541669563]
+[node name="Sprite2D94" type="Sprite2D" parent="background/trees n stuff" unique_id=1541669563]
 texture_filter = 1
 position = Vector2(1912, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D95" type="Sprite2D" parent="background" unique_id=1851551183]
+[node name="Sprite2D95" type="Sprite2D" parent="background/trees n stuff" unique_id=1851551183]
 texture_filter = 1
 position = Vector2(2496, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D96" type="Sprite2D" parent="background" unique_id=1365643574]
+[node name="Sprite2D96" type="Sprite2D" parent="background/trees n stuff" unique_id=1365643574]
 texture_filter = 1
 position = Vector2(2536, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D97" type="Sprite2D" parent="background" unique_id=1686954570]
+[node name="Sprite2D97" type="Sprite2D" parent="background/trees n stuff" unique_id=1686954570]
 texture_filter = 1
 position = Vector2(2680, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D98" type="Sprite2D" parent="background" unique_id=507525602]
+[node name="Sprite2D98" type="Sprite2D" parent="background/trees n stuff" unique_id=507525602]
 texture_filter = 1
 position = Vector2(2784, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D99" type="Sprite2D" parent="background" unique_id=61242631]
+[node name="Sprite2D99" type="Sprite2D" parent="background/trees n stuff" unique_id=61242631]
 texture_filter = 1
 position = Vector2(2904, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D100" type="Sprite2D" parent="background" unique_id=1829000743]
+[node name="Sprite2D100" type="Sprite2D" parent="background/trees n stuff" unique_id=1829000743]
 texture_filter = 1
 position = Vector2(3080, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D101" type="Sprite2D" parent="background" unique_id=2079320441]
+[node name="Sprite2D101" type="Sprite2D" parent="background/trees n stuff" unique_id=2079320441]
 texture_filter = 1
 position = Vector2(3208, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D102" type="Sprite2D" parent="background" unique_id=2067608983]
+[node name="Sprite2D102" type="Sprite2D" parent="background/trees n stuff" unique_id=2067608983]
 position = Vector2(2976, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D103" type="Sprite2D" parent="background" unique_id=1451669385]
+[node name="Sprite2D103" type="Sprite2D" parent="background/trees n stuff" unique_id=1451669385]
 texture_filter = 1
 position = Vector2(3112, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D104" type="Sprite2D" parent="background" unique_id=695916143]
+[node name="Sprite2D104" type="Sprite2D" parent="background/trees n stuff" unique_id=695916143]
 texture_filter = 1
 position = Vector2(3040, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D105" type="Sprite2D" parent="background" unique_id=1673423029]
+[node name="Sprite2D105" type="Sprite2D" parent="background/trees n stuff" unique_id=1673423029]
 texture_filter = 1
 position = Vector2(2840, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D106" type="Sprite2D" parent="background" unique_id=214882316]
+[node name="Sprite2D106" type="Sprite2D" parent="background/trees n stuff" unique_id=214882316]
 texture_filter = 1
 position = Vector2(2616, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D107" type="Sprite2D" parent="background" unique_id=28321705]
+[node name="Sprite2D107" type="Sprite2D" parent="background/trees n stuff" unique_id=28321705]
 texture_filter = 1
 position = Vector2(2872, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D108" type="Sprite2D" parent="background" unique_id=2003634754]
+[node name="Sprite2D108" type="Sprite2D" parent="background/trees n stuff" unique_id=2003634754]
 texture_filter = 1
 position = Vector2(2920, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D109" type="Sprite2D" parent="background" unique_id=2042662947]
+[node name="Sprite2D109" type="Sprite2D" parent="background/trees n stuff" unique_id=2042662947]
 texture_filter = 1
 position = Vector2(2824, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D110" type="Sprite2D" parent="background" unique_id=860692585]
+[node name="Sprite2D110" type="Sprite2D" parent="background/trees n stuff" unique_id=860692585]
 texture_filter = 1
 position = Vector2(2800, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D111" type="Sprite2D" parent="background" unique_id=135134411]
+[node name="Sprite2D111" type="Sprite2D" parent="background/trees n stuff" unique_id=135134411]
 texture_filter = 1
 position = Vector2(2960, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D112" type="Sprite2D" parent="background" unique_id=864403376]
+[node name="Sprite2D112" type="Sprite2D" parent="background/trees n stuff" unique_id=864403376]
 texture_filter = 1
 position = Vector2(3000, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D113" type="Sprite2D" parent="background" unique_id=56107669]
+[node name="Sprite2D113" type="Sprite2D" parent="background/trees n stuff" unique_id=56107669]
 texture_filter = 1
 position = Vector2(3064, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D114" type="Sprite2D" parent="background" unique_id=970301703]
+[node name="Sprite2D114" type="Sprite2D" parent="background/trees n stuff" unique_id=970301703]
 texture_filter = 1
 position = Vector2(3152, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D115" type="Sprite2D" parent="background" unique_id=887350826]
+[node name="Sprite2D115" type="Sprite2D" parent="background/trees n stuff" unique_id=887350826]
 texture_filter = 1
 position = Vector2(3024, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D116" type="Sprite2D" parent="background" unique_id=1186536652]
+[node name="Sprite2D116" type="Sprite2D" parent="background/trees n stuff" unique_id=1186536652]
 texture_filter = 1
 position = Vector2(2928, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D117" type="Sprite2D" parent="background" unique_id=2001713615]
+[node name="Sprite2D117" type="Sprite2D" parent="background/trees n stuff" unique_id=2001713615]
 texture_filter = 1
 position = Vector2(2816, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D118" type="Sprite2D" parent="background" unique_id=1498319063]
+[node name="Sprite2D118" type="Sprite2D" parent="background/trees n stuff" unique_id=1498319063]
 texture_filter = 1
 position = Vector2(2760, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D119" type="Sprite2D" parent="background" unique_id=194029377]
+[node name="Sprite2D119" type="Sprite2D" parent="background/trees n stuff" unique_id=194029377]
 texture_filter = 1
 position = Vector2(2744, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D120" type="Sprite2D" parent="background" unique_id=526116081]
+[node name="Sprite2D120" type="Sprite2D" parent="background/trees n stuff" unique_id=526116081]
 texture_filter = 1
 position = Vector2(2728, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D121" type="Sprite2D" parent="background" unique_id=3680703]
+[node name="Sprite2D121" type="Sprite2D" parent="background/trees n stuff" unique_id=3680703]
 texture_filter = 1
 position = Vector2(2736, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D122" type="Sprite2D" parent="background" unique_id=1013730004]
+[node name="Sprite2D122" type="Sprite2D" parent="background/trees n stuff" unique_id=1013730004]
 texture_filter = 1
 position = Vector2(2696, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D123" type="Sprite2D" parent="background" unique_id=44602447]
+[node name="Sprite2D123" type="Sprite2D" parent="background/trees n stuff" unique_id=44602447]
 texture_filter = 1
 position = Vector2(2664, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D124" type="Sprite2D" parent="background" unique_id=209653641]
+[node name="Sprite2D124" type="Sprite2D" parent="background/trees n stuff" unique_id=209653641]
 texture_filter = 1
 position = Vector2(2648, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D125" type="Sprite2D" parent="background" unique_id=208920486]
+[node name="Sprite2D125" type="Sprite2D" parent="background/trees n stuff" unique_id=208920486]
 texture_filter = 1
 position = Vector2(2656, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D126" type="Sprite2D" parent="background" unique_id=2075119412]
+[node name="Sprite2D126" type="Sprite2D" parent="background/trees n stuff" unique_id=2075119412]
 texture_filter = 1
 position = Vector2(2592, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D127" type="Sprite2D" parent="background" unique_id=1626354849]
+[node name="Sprite2D127" type="Sprite2D" parent="background/trees n stuff" unique_id=1626354849]
 texture_filter = 1
 position = Vector2(3176, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D128" type="Sprite2D" parent="background" unique_id=895627854]
+[node name="Sprite2D128" type="Sprite2D" parent="background/trees n stuff" unique_id=895627854]
 texture_filter = 1
 position = Vector2(3216, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D129" type="Sprite2D" parent="background" unique_id=628732134]
+[node name="Sprite2D129" type="Sprite2D" parent="background/trees n stuff" unique_id=628732134]
 texture_filter = 1
 position = Vector2(3328, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D130" type="Sprite2D" parent="background" unique_id=2025012563]
+[node name="Sprite2D130" type="Sprite2D" parent="background/trees n stuff" unique_id=2025012563]
 texture_filter = 1
 position = Vector2(3432, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D131" type="Sprite2D" parent="background" unique_id=1302632423]
+[node name="Sprite2D131" type="Sprite2D" parent="background/trees n stuff" unique_id=1302632423]
 texture_filter = 1
 position = Vector2(3552, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D132" type="Sprite2D" parent="background" unique_id=1192348317]
+[node name="Sprite2D132" type="Sprite2D" parent="background/trees n stuff" unique_id=1192348317]
 texture_filter = 1
 position = Vector2(3728, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D133" type="Sprite2D" parent="background" unique_id=1104936571]
+[node name="Sprite2D133" type="Sprite2D" parent="background/trees n stuff" unique_id=1104936571]
 texture_filter = 1
 position = Vector2(3856, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D134" type="Sprite2D" parent="background" unique_id=969016806]
+[node name="Sprite2D134" type="Sprite2D" parent="background/trees n stuff" unique_id=969016806]
 position = Vector2(3624, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D135" type="Sprite2D" parent="background" unique_id=984689062]
+[node name="Sprite2D135" type="Sprite2D" parent="background/trees n stuff" unique_id=984689062]
 texture_filter = 1
 position = Vector2(3760, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D136" type="Sprite2D" parent="background" unique_id=1148869627]
+[node name="Sprite2D136" type="Sprite2D" parent="background/trees n stuff" unique_id=1148869627]
 texture_filter = 1
 position = Vector2(3688, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D137" type="Sprite2D" parent="background" unique_id=522075506]
+[node name="Sprite2D137" type="Sprite2D" parent="background/trees n stuff" unique_id=522075506]
 texture_filter = 1
 position = Vector2(3488, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D138" type="Sprite2D" parent="background" unique_id=1268249293]
+[node name="Sprite2D138" type="Sprite2D" parent="background/trees n stuff" unique_id=1268249293]
 texture_filter = 1
 position = Vector2(3264, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D139" type="Sprite2D" parent="background" unique_id=1747094710]
+[node name="Sprite2D139" type="Sprite2D" parent="background/trees n stuff" unique_id=1747094710]
 texture_filter = 1
 position = Vector2(3520, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D140" type="Sprite2D" parent="background" unique_id=1370393812]
+[node name="Sprite2D140" type="Sprite2D" parent="background/trees n stuff" unique_id=1370393812]
 texture_filter = 1
 position = Vector2(3568, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D141" type="Sprite2D" parent="background" unique_id=1065878443]
+[node name="Sprite2D141" type="Sprite2D" parent="background/trees n stuff" unique_id=1065878443]
 texture_filter = 1
 position = Vector2(3472, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D142" type="Sprite2D" parent="background" unique_id=1421602514]
+[node name="Sprite2D142" type="Sprite2D" parent="background/trees n stuff" unique_id=1421602514]
 texture_filter = 1
 position = Vector2(3448, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D143" type="Sprite2D" parent="background" unique_id=2102778501]
+[node name="Sprite2D143" type="Sprite2D" parent="background/trees n stuff" unique_id=2102778501]
 texture_filter = 1
 position = Vector2(3608, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D144" type="Sprite2D" parent="background" unique_id=1772220711]
+[node name="Sprite2D144" type="Sprite2D" parent="background/trees n stuff" unique_id=1772220711]
 texture_filter = 1
 position = Vector2(3648, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D145" type="Sprite2D" parent="background" unique_id=1756494609]
+[node name="Sprite2D145" type="Sprite2D" parent="background/trees n stuff" unique_id=1756494609]
 texture_filter = 1
 position = Vector2(3712, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D146" type="Sprite2D" parent="background" unique_id=2033517170]
+[node name="Sprite2D146" type="Sprite2D" parent="background/trees n stuff" unique_id=2033517170]
 texture_filter = 1
 position = Vector2(3800, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D147" type="Sprite2D" parent="background" unique_id=1667507696]
+[node name="Sprite2D147" type="Sprite2D" parent="background/trees n stuff" unique_id=1667507696]
 texture_filter = 1
 position = Vector2(3672, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D148" type="Sprite2D" parent="background" unique_id=729887366]
+[node name="Sprite2D148" type="Sprite2D" parent="background/trees n stuff" unique_id=729887366]
 texture_filter = 1
 position = Vector2(3576, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D149" type="Sprite2D" parent="background" unique_id=612023336]
+[node name="Sprite2D149" type="Sprite2D" parent="background/trees n stuff" unique_id=612023336]
 texture_filter = 1
 position = Vector2(3464, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D150" type="Sprite2D" parent="background" unique_id=1455877920]
+[node name="Sprite2D150" type="Sprite2D" parent="background/trees n stuff" unique_id=1455877920]
 texture_filter = 1
 position = Vector2(3408, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D151" type="Sprite2D" parent="background" unique_id=1052502536]
+[node name="Sprite2D151" type="Sprite2D" parent="background/trees n stuff" unique_id=1052502536]
 texture_filter = 1
 position = Vector2(3392, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D152" type="Sprite2D" parent="background" unique_id=92100152]
+[node name="Sprite2D152" type="Sprite2D" parent="background/trees n stuff" unique_id=92100152]
 texture_filter = 1
 position = Vector2(3376, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D153" type="Sprite2D" parent="background" unique_id=1004377042]
+[node name="Sprite2D153" type="Sprite2D" parent="background/trees n stuff" unique_id=1004377042]
 texture_filter = 1
 position = Vector2(3384, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D154" type="Sprite2D" parent="background" unique_id=409665342]
+[node name="Sprite2D154" type="Sprite2D" parent="background/trees n stuff" unique_id=409665342]
 texture_filter = 1
 position = Vector2(3344, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D155" type="Sprite2D" parent="background" unique_id=1992550295]
+[node name="Sprite2D155" type="Sprite2D" parent="background/trees n stuff" unique_id=1992550295]
 texture_filter = 1
 position = Vector2(3312, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D156" type="Sprite2D" parent="background" unique_id=1673074065]
+[node name="Sprite2D156" type="Sprite2D" parent="background/trees n stuff" unique_id=1673074065]
 texture_filter = 1
 position = Vector2(3296, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D157" type="Sprite2D" parent="background" unique_id=2048530397]
+[node name="Sprite2D157" type="Sprite2D" parent="background/trees n stuff" unique_id=2048530397]
 texture_filter = 1
 position = Vector2(3304, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D158" type="Sprite2D" parent="background" unique_id=1207611807]
+[node name="Sprite2D158" type="Sprite2D" parent="background/trees n stuff" unique_id=1207611807]
 texture_filter = 1
 position = Vector2(3240, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D159" type="Sprite2D" parent="background" unique_id=1887805622]
+[node name="Sprite2D159" type="Sprite2D" parent="background/trees n stuff" unique_id=1887805622]
 texture_filter = 1
 position = Vector2(3824, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D160" type="Sprite2D" parent="background" unique_id=1388734836]
+[node name="Sprite2D160" type="Sprite2D" parent="background/trees n stuff" unique_id=1388734836]
 texture_filter = 1
 position = Vector2(3864, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D161" type="Sprite2D" parent="background" unique_id=465307812]
+[node name="Sprite2D161" type="Sprite2D" parent="background/trees n stuff" unique_id=465307812]
 texture_filter = 1
 position = Vector2(-2600, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D162" type="Sprite2D" parent="background" unique_id=1954999880]
+[node name="Sprite2D162" type="Sprite2D" parent="background/trees n stuff" unique_id=1954999880]
 texture_filter = 1
 position = Vector2(-2496, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D163" type="Sprite2D" parent="background" unique_id=113312359]
+[node name="Sprite2D163" type="Sprite2D" parent="background/trees n stuff" unique_id=113312359]
 texture_filter = 1
 position = Vector2(-2376, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D164" type="Sprite2D" parent="background" unique_id=1836067725]
+[node name="Sprite2D164" type="Sprite2D" parent="background/trees n stuff" unique_id=1836067725]
 texture_filter = 1
 position = Vector2(-2200, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D165" type="Sprite2D" parent="background" unique_id=603809147]
+[node name="Sprite2D165" type="Sprite2D" parent="background/trees n stuff" unique_id=603809147]
 texture_filter = 1
 position = Vector2(-2072, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D166" type="Sprite2D" parent="background" unique_id=946243864]
+[node name="Sprite2D166" type="Sprite2D" parent="background/trees n stuff" unique_id=946243864]
 position = Vector2(-2304, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D167" type="Sprite2D" parent="background" unique_id=411903151]
+[node name="Sprite2D167" type="Sprite2D" parent="background/trees n stuff" unique_id=411903151]
 texture_filter = 1
 position = Vector2(-2168, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D168" type="Sprite2D" parent="background" unique_id=83504303]
+[node name="Sprite2D168" type="Sprite2D" parent="background/trees n stuff" unique_id=83504303]
 texture_filter = 1
 position = Vector2(-2240, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D169" type="Sprite2D" parent="background" unique_id=1465199897]
+[node name="Sprite2D169" type="Sprite2D" parent="background/trees n stuff" unique_id=1465199897]
 texture_filter = 1
 position = Vector2(-2440, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D170" type="Sprite2D" parent="background" unique_id=1674287703]
+[node name="Sprite2D170" type="Sprite2D" parent="background/trees n stuff" unique_id=1674287703]
 texture_filter = 1
 position = Vector2(-2664, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D171" type="Sprite2D" parent="background" unique_id=2072468453]
+[node name="Sprite2D171" type="Sprite2D" parent="background/trees n stuff" unique_id=2072468453]
 texture_filter = 1
 position = Vector2(-2408, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D172" type="Sprite2D" parent="background" unique_id=474577348]
+[node name="Sprite2D172" type="Sprite2D" parent="background/trees n stuff" unique_id=474577348]
 texture_filter = 1
 position = Vector2(-2360, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D173" type="Sprite2D" parent="background" unique_id=1105899624]
+[node name="Sprite2D173" type="Sprite2D" parent="background/trees n stuff" unique_id=1105899624]
 texture_filter = 1
 position = Vector2(-2456, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D174" type="Sprite2D" parent="background" unique_id=158895920]
+[node name="Sprite2D174" type="Sprite2D" parent="background/trees n stuff" unique_id=158895920]
 texture_filter = 1
 position = Vector2(-2480, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D175" type="Sprite2D" parent="background" unique_id=736824016]
+[node name="Sprite2D175" type="Sprite2D" parent="background/trees n stuff" unique_id=736824016]
 texture_filter = 1
 position = Vector2(-2320, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D176" type="Sprite2D" parent="background" unique_id=963010155]
+[node name="Sprite2D176" type="Sprite2D" parent="background/trees n stuff" unique_id=963010155]
 texture_filter = 1
 position = Vector2(-2280, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D177" type="Sprite2D" parent="background" unique_id=1467286536]
+[node name="Sprite2D177" type="Sprite2D" parent="background/trees n stuff" unique_id=1467286536]
 texture_filter = 1
 position = Vector2(-2216, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D178" type="Sprite2D" parent="background" unique_id=82092825]
+[node name="Sprite2D178" type="Sprite2D" parent="background/trees n stuff" unique_id=82092825]
 texture_filter = 1
 position = Vector2(-2128, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D179" type="Sprite2D" parent="background" unique_id=685546567]
+[node name="Sprite2D179" type="Sprite2D" parent="background/trees n stuff" unique_id=685546567]
 texture_filter = 1
 position = Vector2(-2256, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D180" type="Sprite2D" parent="background" unique_id=1064724252]
+[node name="Sprite2D180" type="Sprite2D" parent="background/trees n stuff" unique_id=1064724252]
 texture_filter = 1
 position = Vector2(-2352, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D181" type="Sprite2D" parent="background" unique_id=1480168458]
+[node name="Sprite2D181" type="Sprite2D" parent="background/trees n stuff" unique_id=1480168458]
 texture_filter = 1
 position = Vector2(-2464, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D182" type="Sprite2D" parent="background" unique_id=1984098058]
+[node name="Sprite2D182" type="Sprite2D" parent="background/trees n stuff" unique_id=1984098058]
 texture_filter = 1
 position = Vector2(-2520, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D183" type="Sprite2D" parent="background" unique_id=172792784]
+[node name="Sprite2D183" type="Sprite2D" parent="background/trees n stuff" unique_id=172792784]
 texture_filter = 1
 position = Vector2(-2536, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D184" type="Sprite2D" parent="background" unique_id=1697205864]
+[node name="Sprite2D184" type="Sprite2D" parent="background/trees n stuff" unique_id=1697205864]
 texture_filter = 1
 position = Vector2(-2552, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D185" type="Sprite2D" parent="background" unique_id=1418804754]
+[node name="Sprite2D185" type="Sprite2D" parent="background/trees n stuff" unique_id=1418804754]
 texture_filter = 1
 position = Vector2(-2544, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D186" type="Sprite2D" parent="background" unique_id=777230975]
+[node name="Sprite2D186" type="Sprite2D" parent="background/trees n stuff" unique_id=777230975]
 texture_filter = 1
 position = Vector2(-2584, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D187" type="Sprite2D" parent="background" unique_id=665588534]
+[node name="Sprite2D187" type="Sprite2D" parent="background/trees n stuff" unique_id=665588534]
 texture_filter = 1
 position = Vector2(-2616, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D188" type="Sprite2D" parent="background" unique_id=104093901]
+[node name="Sprite2D188" type="Sprite2D" parent="background/trees n stuff" unique_id=104093901]
 texture_filter = 1
 position = Vector2(-2632, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D189" type="Sprite2D" parent="background" unique_id=1520887361]
+[node name="Sprite2D189" type="Sprite2D" parent="background/trees n stuff" unique_id=1520887361]
 texture_filter = 1
 position = Vector2(-2624, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D190" type="Sprite2D" parent="background" unique_id=1536669719]
+[node name="Sprite2D190" type="Sprite2D" parent="background/trees n stuff" unique_id=1536669719]
 texture_filter = 1
 position = Vector2(-2688, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D191" type="Sprite2D" parent="background" unique_id=40389212]
+[node name="Sprite2D191" type="Sprite2D" parent="background/trees n stuff" unique_id=40389212]
 texture_filter = 1
 position = Vector2(-2104, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D192" type="Sprite2D" parent="background" unique_id=239714031]
+[node name="Sprite2D192" type="Sprite2D" parent="background/trees n stuff" unique_id=239714031]
 texture_filter = 1
 position = Vector2(-2064, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D193" type="Sprite2D" parent="background" unique_id=2117301005]
+[node name="Sprite2D193" type="Sprite2D" parent="background/trees n stuff" unique_id=2117301005]
 texture_filter = 1
 position = Vector2(-1944, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D194" type="Sprite2D" parent="background" unique_id=676536165]
+[node name="Sprite2D194" type="Sprite2D" parent="background/trees n stuff" unique_id=676536165]
 texture_filter = 1
 position = Vector2(-1840, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D195" type="Sprite2D" parent="background" unique_id=1423148668]
+[node name="Sprite2D195" type="Sprite2D" parent="background/trees n stuff" unique_id=1423148668]
 texture_filter = 1
 position = Vector2(-1720, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D196" type="Sprite2D" parent="background" unique_id=816281409]
+[node name="Sprite2D196" type="Sprite2D" parent="background/trees n stuff" unique_id=816281409]
 texture_filter = 1
 position = Vector2(-1544, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D197" type="Sprite2D" parent="background" unique_id=180117814]
+[node name="Sprite2D197" type="Sprite2D" parent="background/trees n stuff" unique_id=180117814]
 texture_filter = 1
 position = Vector2(-1416, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D198" type="Sprite2D" parent="background" unique_id=714176517]
+[node name="Sprite2D198" type="Sprite2D" parent="background/trees n stuff" unique_id=714176517]
 position = Vector2(-1648, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D199" type="Sprite2D" parent="background" unique_id=7552533]
+[node name="Sprite2D199" type="Sprite2D" parent="background/trees n stuff" unique_id=7552533]
 texture_filter = 1
 position = Vector2(-1512, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D200" type="Sprite2D" parent="background" unique_id=483234747]
+[node name="Sprite2D200" type="Sprite2D" parent="background/trees n stuff" unique_id=483234747]
 texture_filter = 1
 position = Vector2(-1584, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D201" type="Sprite2D" parent="background" unique_id=1928502169]
+[node name="Sprite2D201" type="Sprite2D" parent="background/trees n stuff" unique_id=1928502169]
 texture_filter = 1
 position = Vector2(-1784, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D202" type="Sprite2D" parent="background" unique_id=674295754]
+[node name="Sprite2D202" type="Sprite2D" parent="background/trees n stuff" unique_id=674295754]
 texture_filter = 1
 position = Vector2(-2008, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D203" type="Sprite2D" parent="background" unique_id=546652007]
+[node name="Sprite2D203" type="Sprite2D" parent="background/trees n stuff" unique_id=546652007]
 texture_filter = 1
 position = Vector2(-1752, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D204" type="Sprite2D" parent="background" unique_id=1774267927]
+[node name="Sprite2D204" type="Sprite2D" parent="background/trees n stuff" unique_id=1774267927]
 texture_filter = 1
 position = Vector2(-1704, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D205" type="Sprite2D" parent="background" unique_id=969710468]
+[node name="Sprite2D205" type="Sprite2D" parent="background/trees n stuff" unique_id=969710468]
 texture_filter = 1
 position = Vector2(-1800, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D206" type="Sprite2D" parent="background" unique_id=1569719401]
+[node name="Sprite2D206" type="Sprite2D" parent="background/trees n stuff" unique_id=1569719401]
 texture_filter = 1
 position = Vector2(-1824, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D207" type="Sprite2D" parent="background" unique_id=1189658886]
+[node name="Sprite2D207" type="Sprite2D" parent="background/trees n stuff" unique_id=1189658886]
 texture_filter = 1
 position = Vector2(-1664, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D208" type="Sprite2D" parent="background" unique_id=2107447422]
+[node name="Sprite2D208" type="Sprite2D" parent="background/trees n stuff" unique_id=2107447422]
 texture_filter = 1
 position = Vector2(-1624, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D209" type="Sprite2D" parent="background" unique_id=514590967]
+[node name="Sprite2D209" type="Sprite2D" parent="background/trees n stuff" unique_id=514590967]
 texture_filter = 1
 position = Vector2(-1560, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D210" type="Sprite2D" parent="background" unique_id=2014373632]
+[node name="Sprite2D210" type="Sprite2D" parent="background/trees n stuff" unique_id=2014373632]
 texture_filter = 1
 position = Vector2(-1472, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D211" type="Sprite2D" parent="background" unique_id=1021580833]
+[node name="Sprite2D211" type="Sprite2D" parent="background/trees n stuff" unique_id=1021580833]
 texture_filter = 1
 position = Vector2(-1600, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D212" type="Sprite2D" parent="background" unique_id=1837643596]
+[node name="Sprite2D212" type="Sprite2D" parent="background/trees n stuff" unique_id=1837643596]
 texture_filter = 1
 position = Vector2(-1696, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D213" type="Sprite2D" parent="background" unique_id=1724727529]
+[node name="Sprite2D213" type="Sprite2D" parent="background/trees n stuff" unique_id=1724727529]
 texture_filter = 1
 position = Vector2(-1808, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D214" type="Sprite2D" parent="background" unique_id=841860184]
+[node name="Sprite2D214" type="Sprite2D" parent="background/trees n stuff" unique_id=841860184]
 texture_filter = 1
 position = Vector2(-1864, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D215" type="Sprite2D" parent="background" unique_id=387649316]
+[node name="Sprite2D215" type="Sprite2D" parent="background/trees n stuff" unique_id=387649316]
 texture_filter = 1
 position = Vector2(-1880, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D216" type="Sprite2D" parent="background" unique_id=1534673572]
+[node name="Sprite2D216" type="Sprite2D" parent="background/trees n stuff" unique_id=1534673572]
 texture_filter = 1
 position = Vector2(-1896, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D217" type="Sprite2D" parent="background" unique_id=1214096113]
+[node name="Sprite2D217" type="Sprite2D" parent="background/trees n stuff" unique_id=1214096113]
 texture_filter = 1
 position = Vector2(-1888, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D218" type="Sprite2D" parent="background" unique_id=1807245852]
+[node name="Sprite2D218" type="Sprite2D" parent="background/trees n stuff" unique_id=1807245852]
 texture_filter = 1
 position = Vector2(-1928, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D219" type="Sprite2D" parent="background" unique_id=326992108]
+[node name="Sprite2D219" type="Sprite2D" parent="background/trees n stuff" unique_id=326992108]
 texture_filter = 1
 position = Vector2(-1960, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D220" type="Sprite2D" parent="background" unique_id=523235254]
+[node name="Sprite2D220" type="Sprite2D" parent="background/trees n stuff" unique_id=523235254]
 texture_filter = 1
 position = Vector2(-1976, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D221" type="Sprite2D" parent="background" unique_id=580358798]
+[node name="Sprite2D221" type="Sprite2D" parent="background/trees n stuff" unique_id=580358798]
 texture_filter = 1
 position = Vector2(-1968, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D222" type="Sprite2D" parent="background" unique_id=1034510300]
+[node name="Sprite2D222" type="Sprite2D" parent="background/trees n stuff" unique_id=1034510300]
 texture_filter = 1
 position = Vector2(-2032, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D223" type="Sprite2D" parent="background" unique_id=2024829546]
+[node name="Sprite2D223" type="Sprite2D" parent="background/trees n stuff" unique_id=2024829546]
 texture_filter = 1
 position = Vector2(-1448, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D224" type="Sprite2D" parent="background" unique_id=48014496]
+[node name="Sprite2D224" type="Sprite2D" parent="background/trees n stuff" unique_id=48014496]
 texture_filter = 1
 position = Vector2(-1408, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D225" type="Sprite2D" parent="background" unique_id=1376354020]
+[node name="Sprite2D225" type="Sprite2D" parent="background/trees n stuff" unique_id=1376354020]
 texture_filter = 1
 position = Vector2(-1288, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D226" type="Sprite2D" parent="background" unique_id=682952943]
+[node name="Sprite2D226" type="Sprite2D" parent="background/trees n stuff" unique_id=682952943]
 texture_filter = 1
 position = Vector2(-1184, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D227" type="Sprite2D" parent="background" unique_id=1946535424]
+[node name="Sprite2D227" type="Sprite2D" parent="background/trees n stuff" unique_id=1946535424]
 texture_filter = 1
 position = Vector2(-1064, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D228" type="Sprite2D" parent="background" unique_id=1386349890]
+[node name="Sprite2D228" type="Sprite2D" parent="background/trees n stuff" unique_id=1386349890]
 texture_filter = 1
 position = Vector2(-888, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D229" type="Sprite2D" parent="background" unique_id=255814816]
+[node name="Sprite2D229" type="Sprite2D" parent="background/trees n stuff" unique_id=255814816]
 texture_filter = 1
 position = Vector2(-760, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D230" type="Sprite2D" parent="background" unique_id=690588804]
+[node name="Sprite2D230" type="Sprite2D" parent="background/trees n stuff" unique_id=690588804]
 position = Vector2(-992, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D231" type="Sprite2D" parent="background" unique_id=1766732879]
+[node name="Sprite2D231" type="Sprite2D" parent="background/trees n stuff" unique_id=1766732879]
 texture_filter = 1
 position = Vector2(-856, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D232" type="Sprite2D" parent="background" unique_id=2009477977]
+[node name="Sprite2D232" type="Sprite2D" parent="background/trees n stuff" unique_id=2009477977]
 texture_filter = 1
 position = Vector2(-928, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D233" type="Sprite2D" parent="background" unique_id=1315471822]
+[node name="Sprite2D233" type="Sprite2D" parent="background/trees n stuff" unique_id=1315471822]
 texture_filter = 1
 position = Vector2(-1128, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D234" type="Sprite2D" parent="background" unique_id=425961461]
+[node name="Sprite2D234" type="Sprite2D" parent="background/trees n stuff" unique_id=425961461]
 texture_filter = 1
 position = Vector2(-1352, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D235" type="Sprite2D" parent="background" unique_id=1190635470]
+[node name="Sprite2D235" type="Sprite2D" parent="background/trees n stuff" unique_id=1190635470]
 texture_filter = 1
 position = Vector2(-1096, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D236" type="Sprite2D" parent="background" unique_id=1318730257]
+[node name="Sprite2D236" type="Sprite2D" parent="background/trees n stuff" unique_id=1318730257]
 texture_filter = 1
 position = Vector2(-1048, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D237" type="Sprite2D" parent="background" unique_id=1129119425]
+[node name="Sprite2D237" type="Sprite2D" parent="background/trees n stuff" unique_id=1129119425]
 texture_filter = 1
 position = Vector2(-1144, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D238" type="Sprite2D" parent="background" unique_id=1411934539]
+[node name="Sprite2D238" type="Sprite2D" parent="background/trees n stuff" unique_id=1411934539]
 texture_filter = 1
 position = Vector2(-1168, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D239" type="Sprite2D" parent="background" unique_id=1713376337]
+[node name="Sprite2D239" type="Sprite2D" parent="background/trees n stuff" unique_id=1713376337]
 texture_filter = 1
 position = Vector2(-1008, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D240" type="Sprite2D" parent="background" unique_id=1483658532]
+[node name="Sprite2D240" type="Sprite2D" parent="background/trees n stuff" unique_id=1483658532]
 texture_filter = 1
 position = Vector2(-968, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D241" type="Sprite2D" parent="background" unique_id=1561084361]
+[node name="Sprite2D241" type="Sprite2D" parent="background/trees n stuff" unique_id=1561084361]
 texture_filter = 1
 position = Vector2(-904, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D242" type="Sprite2D" parent="background" unique_id=807139107]
+[node name="Sprite2D242" type="Sprite2D" parent="background/trees n stuff" unique_id=807139107]
 texture_filter = 1
 position = Vector2(-816, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D243" type="Sprite2D" parent="background" unique_id=1035338813]
+[node name="Sprite2D243" type="Sprite2D" parent="background/trees n stuff" unique_id=1035338813]
 texture_filter = 1
 position = Vector2(-944, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D244" type="Sprite2D" parent="background" unique_id=905498011]
+[node name="Sprite2D244" type="Sprite2D" parent="background/trees n stuff" unique_id=905498011]
 texture_filter = 1
 position = Vector2(-1040, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D245" type="Sprite2D" parent="background" unique_id=776446013]
+[node name="Sprite2D245" type="Sprite2D" parent="background/trees n stuff" unique_id=776446013]
 texture_filter = 1
 position = Vector2(-1152, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D246" type="Sprite2D" parent="background" unique_id=955707001]
+[node name="Sprite2D246" type="Sprite2D" parent="background/trees n stuff" unique_id=955707001]
 texture_filter = 1
 position = Vector2(-1208, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D247" type="Sprite2D" parent="background" unique_id=1762807697]
+[node name="Sprite2D247" type="Sprite2D" parent="background/trees n stuff" unique_id=1762807697]
 texture_filter = 1
 position = Vector2(-1224, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D248" type="Sprite2D" parent="background" unique_id=1051559808]
+[node name="Sprite2D248" type="Sprite2D" parent="background/trees n stuff" unique_id=1051559808]
 texture_filter = 1
 position = Vector2(-1240, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D249" type="Sprite2D" parent="background" unique_id=1579540243]
+[node name="Sprite2D249" type="Sprite2D" parent="background/trees n stuff" unique_id=1579540243]
 texture_filter = 1
 position = Vector2(-1232, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D250" type="Sprite2D" parent="background" unique_id=875450686]
+[node name="Sprite2D250" type="Sprite2D" parent="background/trees n stuff" unique_id=875450686]
 texture_filter = 1
 position = Vector2(-1272, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D251" type="Sprite2D" parent="background" unique_id=406134964]
+[node name="Sprite2D251" type="Sprite2D" parent="background/trees n stuff" unique_id=406134964]
 texture_filter = 1
 position = Vector2(-1304, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D252" type="Sprite2D" parent="background" unique_id=1905267382]
+[node name="Sprite2D252" type="Sprite2D" parent="background/trees n stuff" unique_id=1905267382]
 texture_filter = 1
 position = Vector2(-1320, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D253" type="Sprite2D" parent="background" unique_id=1562880286]
+[node name="Sprite2D253" type="Sprite2D" parent="background/trees n stuff" unique_id=1562880286]
 texture_filter = 1
 position = Vector2(-1312, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D254" type="Sprite2D" parent="background" unique_id=1964576547]
+[node name="Sprite2D254" type="Sprite2D" parent="background/trees n stuff" unique_id=1964576547]
 texture_filter = 1
 position = Vector2(-1376, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D255" type="Sprite2D" parent="background" unique_id=437325456]
+[node name="Sprite2D255" type="Sprite2D" parent="background/trees n stuff" unique_id=437325456]
 texture_filter = 1
 position = Vector2(-792, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D256" type="Sprite2D" parent="background" unique_id=1991841495]
+[node name="Sprite2D256" type="Sprite2D" parent="background/trees n stuff" unique_id=1991841495]
 texture_filter = 1
 position = Vector2(-752, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D257" type="Sprite2D" parent="background" unique_id=1967416392]
+[node name="Sprite2D257" type="Sprite2D" parent="background/trees n stuff" unique_id=1967416392]
 texture_filter = 1
 position = Vector2(-608, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D258" type="Sprite2D" parent="background" unique_id=636998006]
+[node name="Sprite2D258" type="Sprite2D" parent="background/trees n stuff" unique_id=636998006]
 texture_filter = 1
 position = Vector2(-504, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D259" type="Sprite2D" parent="background" unique_id=1981760479]
+[node name="Sprite2D259" type="Sprite2D" parent="background/trees n stuff" unique_id=1981760479]
 texture_filter = 1
 position = Vector2(-384, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D260" type="Sprite2D" parent="background" unique_id=430869241]
+[node name="Sprite2D260" type="Sprite2D" parent="background/trees n stuff" unique_id=430869241]
 texture_filter = 1
 position = Vector2(-208, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D261" type="Sprite2D" parent="background" unique_id=878492292]
+[node name="Sprite2D261" type="Sprite2D" parent="background/trees n stuff" unique_id=878492292]
 texture_filter = 1
 position = Vector2(-80, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D262" type="Sprite2D" parent="background" unique_id=65584960]
+[node name="Sprite2D262" type="Sprite2D" parent="background/trees n stuff" unique_id=65584960]
 position = Vector2(-312, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D263" type="Sprite2D" parent="background" unique_id=2111776149]
+[node name="Sprite2D263" type="Sprite2D" parent="background/trees n stuff" unique_id=2111776149]
 texture_filter = 1
 position = Vector2(-176, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D264" type="Sprite2D" parent="background" unique_id=1433912370]
+[node name="Sprite2D264" type="Sprite2D" parent="background/trees n stuff" unique_id=1433912370]
 texture_filter = 1
 position = Vector2(-248, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D265" type="Sprite2D" parent="background" unique_id=2069383911]
+[node name="Sprite2D265" type="Sprite2D" parent="background/trees n stuff" unique_id=2069383911]
 texture_filter = 1
 position = Vector2(-448, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D266" type="Sprite2D" parent="background" unique_id=376238054]
+[node name="Sprite2D266" type="Sprite2D" parent="background/trees n stuff" unique_id=376238054]
 texture_filter = 1
 position = Vector2(-672, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D267" type="Sprite2D" parent="background" unique_id=817894772]
+[node name="Sprite2D267" type="Sprite2D" parent="background/trees n stuff" unique_id=817894772]
 texture_filter = 1
 position = Vector2(-416, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D268" type="Sprite2D" parent="background" unique_id=384187660]
+[node name="Sprite2D268" type="Sprite2D" parent="background/trees n stuff" unique_id=384187660]
 texture_filter = 1
 position = Vector2(-368, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D269" type="Sprite2D" parent="background" unique_id=890463546]
+[node name="Sprite2D269" type="Sprite2D" parent="background/trees n stuff" unique_id=890463546]
 texture_filter = 1
 position = Vector2(-464, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D270" type="Sprite2D" parent="background" unique_id=534482957]
+[node name="Sprite2D270" type="Sprite2D" parent="background/trees n stuff" unique_id=534482957]
 texture_filter = 1
 position = Vector2(-488, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D271" type="Sprite2D" parent="background" unique_id=139089715]
+[node name="Sprite2D271" type="Sprite2D" parent="background/trees n stuff" unique_id=139089715]
 texture_filter = 1
 position = Vector2(-328, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D272" type="Sprite2D" parent="background" unique_id=260734919]
+[node name="Sprite2D272" type="Sprite2D" parent="background/trees n stuff" unique_id=260734919]
 texture_filter = 1
 position = Vector2(-288, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D273" type="Sprite2D" parent="background" unique_id=975214589]
+[node name="Sprite2D273" type="Sprite2D" parent="background/trees n stuff" unique_id=975214589]
 texture_filter = 1
 position = Vector2(-224, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D274" type="Sprite2D" parent="background" unique_id=557171347]
+[node name="Sprite2D274" type="Sprite2D" parent="background/trees n stuff" unique_id=557171347]
 texture_filter = 1
 position = Vector2(-136, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D275" type="Sprite2D" parent="background" unique_id=1426860826]
+[node name="Sprite2D275" type="Sprite2D" parent="background/trees n stuff" unique_id=1426860826]
 texture_filter = 1
 position = Vector2(-264, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D276" type="Sprite2D" parent="background" unique_id=815034307]
+[node name="Sprite2D276" type="Sprite2D" parent="background/trees n stuff" unique_id=815034307]
 texture_filter = 1
 position = Vector2(-360, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D277" type="Sprite2D" parent="background" unique_id=1914360307]
+[node name="Sprite2D277" type="Sprite2D" parent="background/trees n stuff" unique_id=1914360307]
 texture_filter = 1
 position = Vector2(-472, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D278" type="Sprite2D" parent="background" unique_id=1953528749]
+[node name="Sprite2D278" type="Sprite2D" parent="background/trees n stuff" unique_id=1953528749]
 texture_filter = 1
 position = Vector2(-528, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D279" type="Sprite2D" parent="background" unique_id=2116402850]
+[node name="Sprite2D279" type="Sprite2D" parent="background/trees n stuff" unique_id=2116402850]
 texture_filter = 1
 position = Vector2(-544, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D280" type="Sprite2D" parent="background" unique_id=489597126]
+[node name="Sprite2D280" type="Sprite2D" parent="background/trees n stuff" unique_id=489597126]
 texture_filter = 1
 position = Vector2(-560, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D281" type="Sprite2D" parent="background" unique_id=1550936412]
+[node name="Sprite2D281" type="Sprite2D" parent="background/trees n stuff" unique_id=1550936412]
 texture_filter = 1
 position = Vector2(-552, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D282" type="Sprite2D" parent="background" unique_id=401162936]
+[node name="Sprite2D282" type="Sprite2D" parent="background/trees n stuff" unique_id=401162936]
 texture_filter = 1
 position = Vector2(-592, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D283" type="Sprite2D" parent="background" unique_id=523054351]
+[node name="Sprite2D283" type="Sprite2D" parent="background/trees n stuff" unique_id=523054351]
 texture_filter = 1
 position = Vector2(-624, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D284" type="Sprite2D" parent="background" unique_id=1467701724]
+[node name="Sprite2D284" type="Sprite2D" parent="background/trees n stuff" unique_id=1467701724]
 texture_filter = 1
 position = Vector2(-640, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D285" type="Sprite2D" parent="background" unique_id=1482048007]
+[node name="Sprite2D285" type="Sprite2D" parent="background/trees n stuff" unique_id=1482048007]
 texture_filter = 1
 position = Vector2(-632, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D286" type="Sprite2D" parent="background" unique_id=2019522209]
+[node name="Sprite2D286" type="Sprite2D" parent="background/trees n stuff" unique_id=2019522209]
 texture_filter = 1
 position = Vector2(-696, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D287" type="Sprite2D" parent="background" unique_id=967037428]
+[node name="Sprite2D287" type="Sprite2D" parent="background/trees n stuff" unique_id=967037428]
 texture_filter = 1
 position = Vector2(-112, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D288" type="Sprite2D" parent="background" unique_id=11118315]
+[node name="Sprite2D288" type="Sprite2D" parent="background/trees n stuff" unique_id=11118315]
 texture_filter = 1
 position = Vector2(-72, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D289" type="Sprite2D" parent="background" unique_id=1602152799]
+[node name="Sprite2D289" type="Sprite2D" parent="background/trees n stuff" unique_id=1602152799]
 texture_filter = 1
 position = Vector2(40, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D290" type="Sprite2D" parent="background" unique_id=810804236]
+[node name="Sprite2D290" type="Sprite2D" parent="background/trees n stuff" unique_id=810804236]
 texture_filter = 1
 position = Vector2(144, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D291" type="Sprite2D" parent="background" unique_id=316511699]
+[node name="Sprite2D291" type="Sprite2D" parent="background/trees n stuff" unique_id=316511699]
 texture_filter = 1
 position = Vector2(264, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D292" type="Sprite2D" parent="background" unique_id=1208908176]
-texture_filter = 1
-position = Vector2(440, 472)
-texture = ExtResource("2_ierey")
-
-[node name="Sprite2D293" type="Sprite2D" parent="background" unique_id=1350071951]
+[node name="Sprite2D293" type="Sprite2D" parent="background/trees n stuff" unique_id=1350071951]
 texture_filter = 1
 position = Vector2(568, 472)
 texture = ExtResource("2_ierey")
 
-[node name="Sprite2D294" type="Sprite2D" parent="background" unique_id=1061236182]
-position = Vector2(336, 472)
-texture = ExtResource("3_84yot")
-
-[node name="Sprite2D295" type="Sprite2D" parent="background" unique_id=663854993]
+[node name="Sprite2D295" type="Sprite2D" parent="background/trees n stuff" unique_id=663854993]
 texture_filter = 1
 position = Vector2(472, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D296" type="Sprite2D" parent="background" unique_id=1877414865]
-texture_filter = 1
-position = Vector2(400, 472)
-texture = ExtResource("3_84yot")
-
-[node name="Sprite2D297" type="Sprite2D" parent="background" unique_id=754221607]
+[node name="Sprite2D297" type="Sprite2D" parent="background/trees n stuff" unique_id=754221607]
 texture_filter = 1
 position = Vector2(200, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D298" type="Sprite2D" parent="background" unique_id=29328463]
+[node name="Sprite2D298" type="Sprite2D" parent="background/trees n stuff" unique_id=29328463]
 texture_filter = 1
 position = Vector2(-24, 472)
 texture = ExtResource("3_84yot")
 
-[node name="Sprite2D299" type="Sprite2D" parent="background" unique_id=1025342520]
+[node name="Sprite2D299" type="Sprite2D" parent="background/trees n stuff" unique_id=1025342520]
 texture_filter = 1
 position = Vector2(232, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D300" type="Sprite2D" parent="background" unique_id=1652848544]
+[node name="Sprite2D300" type="Sprite2D" parent="background/trees n stuff" unique_id=1652848544]
 texture_filter = 1
 position = Vector2(280, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D301" type="Sprite2D" parent="background" unique_id=1703654599]
+[node name="Sprite2D301" type="Sprite2D" parent="background/trees n stuff" unique_id=1703654599]
 texture_filter = 1
 position = Vector2(184, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D302" type="Sprite2D" parent="background" unique_id=1178096041]
+[node name="Sprite2D302" type="Sprite2D" parent="background/trees n stuff" unique_id=1178096041]
 texture_filter = 1
 position = Vector2(160, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D303" type="Sprite2D" parent="background" unique_id=1113815560]
-texture_filter = 1
-position = Vector2(320, 504)
-texture = ExtResource("4_3svye")
-
-[node name="Sprite2D304" type="Sprite2D" parent="background" unique_id=400927738]
-texture_filter = 1
-position = Vector2(360, 504)
-texture = ExtResource("4_3svye")
-
-[node name="Sprite2D305" type="Sprite2D" parent="background" unique_id=2068273238]
-texture_filter = 1
-position = Vector2(424, 504)
-texture = ExtResource("4_3svye")
-
-[node name="Sprite2D306" type="Sprite2D" parent="background" unique_id=330171791]
+[node name="Sprite2D306" type="Sprite2D" parent="background/trees n stuff" unique_id=330171791]
 texture_filter = 1
 position = Vector2(512, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D307" type="Sprite2D" parent="background" unique_id=878461019]
-texture_filter = 1
-position = Vector2(384, 512)
-texture = ExtResource("4_3svye")
-
-[node name="Sprite2D308" type="Sprite2D" parent="background" unique_id=66618913]
+[node name="Sprite2D308" type="Sprite2D" parent="background/trees n stuff" unique_id=66618913]
 texture_filter = 1
 position = Vector2(288, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D309" type="Sprite2D" parent="background" unique_id=1920835479]
+[node name="Sprite2D309" type="Sprite2D" parent="background/trees n stuff" unique_id=1920835479]
 texture_filter = 1
 position = Vector2(176, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D310" type="Sprite2D" parent="background" unique_id=1720053296]
+[node name="Sprite2D310" type="Sprite2D" parent="background/trees n stuff" unique_id=1720053296]
 texture_filter = 1
 position = Vector2(120, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D311" type="Sprite2D" parent="background" unique_id=156078490]
+[node name="Sprite2D311" type="Sprite2D" parent="background/trees n stuff" unique_id=156078490]
 texture_filter = 1
 position = Vector2(104, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D312" type="Sprite2D" parent="background" unique_id=1476860029]
+[node name="Sprite2D312" type="Sprite2D" parent="background/trees n stuff" unique_id=1476860029]
 texture_filter = 1
 position = Vector2(88, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D313" type="Sprite2D" parent="background" unique_id=204597907]
+[node name="Sprite2D313" type="Sprite2D" parent="background/trees n stuff" unique_id=204597907]
 texture_filter = 1
 position = Vector2(96, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D314" type="Sprite2D" parent="background" unique_id=1552678292]
+[node name="Sprite2D314" type="Sprite2D" parent="background/trees n stuff" unique_id=1552678292]
 texture_filter = 1
 position = Vector2(56, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D315" type="Sprite2D" parent="background" unique_id=338282743]
+[node name="Sprite2D315" type="Sprite2D" parent="background/trees n stuff" unique_id=338282743]
 texture_filter = 1
 position = Vector2(24, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D316" type="Sprite2D" parent="background" unique_id=158007322]
+[node name="Sprite2D316" type="Sprite2D" parent="background/trees n stuff" unique_id=158007322]
 texture_filter = 1
 position = Vector2(8, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D317" type="Sprite2D" parent="background" unique_id=1684669643]
+[node name="Sprite2D317" type="Sprite2D" parent="background/trees n stuff" unique_id=1684669643]
 texture_filter = 1
 position = Vector2(16, 496)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D318" type="Sprite2D" parent="background" unique_id=731674819]
+[node name="Sprite2D318" type="Sprite2D" parent="background/trees n stuff" unique_id=731674819]
 texture_filter = 1
 position = Vector2(-48, 504)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D319" type="Sprite2D" parent="background" unique_id=2125074737]
+[node name="Sprite2D319" type="Sprite2D" parent="background/trees n stuff" unique_id=2125074737]
 texture_filter = 1
 position = Vector2(536, 512)
 texture = ExtResource("4_3svye")
 
-[node name="Sprite2D320" type="Sprite2D" parent="background" unique_id=1186838200]
+[node name="Sprite2D320" type="Sprite2D" parent="background/trees n stuff" unique_id=1186838200]
 texture_filter = 1
 position = Vector2(576, 504)
 texture = ExtResource("4_3svye")
+
+[node name="Sprite2D292" type="Sprite2D" parent="background/trees n stuff" unique_id=1054489428]
+texture_filter = 1
+position = Vector2(3296, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D294" type="Sprite2D" parent="background/trees n stuff" unique_id=34763367]
+texture_filter = 1
+position = Vector2(3880, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D296" type="Sprite2D" parent="background/trees n stuff" unique_id=1529825033]
+texture_filter = 1
+position = Vector2(3920, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D303" type="Sprite2D" parent="background/trees n stuff" unique_id=1776026043]
+texture_filter = 1
+position = Vector2(4040, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D304" type="Sprite2D" parent="background/trees n stuff" unique_id=341892186]
+texture_filter = 1
+position = Vector2(4144, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D305" type="Sprite2D" parent="background/trees n stuff" unique_id=298579455]
+texture_filter = 1
+position = Vector2(4264, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D307" type="Sprite2D" parent="background/trees n stuff" unique_id=1558693927]
+texture_filter = 1
+position = Vector2(4440, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D321" type="Sprite2D" parent="background/trees n stuff" unique_id=2055554944]
+texture_filter = 1
+position = Vector2(4568, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D322" type="Sprite2D" parent="background/trees n stuff" unique_id=2125496026]
+position = Vector2(4336, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D323" type="Sprite2D" parent="background/trees n stuff" unique_id=143994724]
+texture_filter = 1
+position = Vector2(4472, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D324" type="Sprite2D" parent="background/trees n stuff" unique_id=295860324]
+texture_filter = 1
+position = Vector2(4400, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D325" type="Sprite2D" parent="background/trees n stuff" unique_id=1563607109]
+texture_filter = 1
+position = Vector2(4200, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D326" type="Sprite2D" parent="background/trees n stuff" unique_id=2116978331]
+texture_filter = 1
+position = Vector2(3976, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D327" type="Sprite2D" parent="background/trees n stuff" unique_id=2136602526]
+texture_filter = 1
+position = Vector2(4232, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D328" type="Sprite2D" parent="background/trees n stuff" unique_id=167884336]
+texture_filter = 1
+position = Vector2(4280, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D329" type="Sprite2D" parent="background/trees n stuff" unique_id=247708930]
+texture_filter = 1
+position = Vector2(4184, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D330" type="Sprite2D" parent="background/trees n stuff" unique_id=615638209]
+texture_filter = 1
+position = Vector2(4160, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D331" type="Sprite2D" parent="background/trees n stuff" unique_id=196891257]
+texture_filter = 1
+position = Vector2(4320, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D332" type="Sprite2D" parent="background/trees n stuff" unique_id=1313521670]
+texture_filter = 1
+position = Vector2(4360, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D333" type="Sprite2D" parent="background/trees n stuff" unique_id=796776442]
+texture_filter = 1
+position = Vector2(4424, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D334" type="Sprite2D" parent="background/trees n stuff" unique_id=279989161]
+texture_filter = 1
+position = Vector2(4512, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D335" type="Sprite2D" parent="background/trees n stuff" unique_id=1781966426]
+texture_filter = 1
+position = Vector2(4384, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D336" type="Sprite2D" parent="background/trees n stuff" unique_id=327144361]
+texture_filter = 1
+position = Vector2(4288, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D337" type="Sprite2D" parent="background/trees n stuff" unique_id=320921098]
+texture_filter = 1
+position = Vector2(4176, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D338" type="Sprite2D" parent="background/trees n stuff" unique_id=1295543304]
+texture_filter = 1
+position = Vector2(4120, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D339" type="Sprite2D" parent="background/trees n stuff" unique_id=459392067]
+texture_filter = 1
+position = Vector2(4104, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D340" type="Sprite2D" parent="background/trees n stuff" unique_id=550724695]
+texture_filter = 1
+position = Vector2(4088, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D341" type="Sprite2D" parent="background/trees n stuff" unique_id=1452262059]
+texture_filter = 1
+position = Vector2(4096, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D342" type="Sprite2D" parent="background/trees n stuff" unique_id=1094099104]
+texture_filter = 1
+position = Vector2(4056, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D343" type="Sprite2D" parent="background/trees n stuff" unique_id=637166378]
+texture_filter = 1
+position = Vector2(4024, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D344" type="Sprite2D" parent="background/trees n stuff" unique_id=1381686397]
+texture_filter = 1
+position = Vector2(4008, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D345" type="Sprite2D" parent="background/trees n stuff" unique_id=251300971]
+texture_filter = 1
+position = Vector2(4016, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D346" type="Sprite2D" parent="background/trees n stuff" unique_id=280188332]
+texture_filter = 1
+position = Vector2(3952, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D347" type="Sprite2D" parent="background/trees n stuff" unique_id=368671262]
+texture_filter = 1
+position = Vector2(4536, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D348" type="Sprite2D" parent="background/trees n stuff" unique_id=360879820]
+texture_filter = 1
+position = Vector2(4576, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D349" type="Sprite2D" parent="background/trees n stuff" unique_id=1729882521]
+texture_filter = 1
+position = Vector2(4696, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D350" type="Sprite2D" parent="background/trees n stuff" unique_id=1392085476]
+texture_filter = 1
+position = Vector2(4800, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D351" type="Sprite2D" parent="background/trees n stuff" unique_id=1302551498]
+texture_filter = 1
+position = Vector2(4920, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D352" type="Sprite2D" parent="background/trees n stuff" unique_id=1310906073]
+texture_filter = 1
+position = Vector2(5096, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D353" type="Sprite2D" parent="background/trees n stuff" unique_id=1252580493]
+texture_filter = 1
+position = Vector2(5224, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D354" type="Sprite2D" parent="background/trees n stuff" unique_id=269182710]
+position = Vector2(4992, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D355" type="Sprite2D" parent="background/trees n stuff" unique_id=269107649]
+texture_filter = 1
+position = Vector2(5128, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D356" type="Sprite2D" parent="background/trees n stuff" unique_id=616623472]
+texture_filter = 1
+position = Vector2(5056, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D357" type="Sprite2D" parent="background/trees n stuff" unique_id=1938685061]
+texture_filter = 1
+position = Vector2(4856, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D358" type="Sprite2D" parent="background/trees n stuff" unique_id=1528586945]
+texture_filter = 1
+position = Vector2(4632, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D359" type="Sprite2D" parent="background/trees n stuff" unique_id=1353447085]
+texture_filter = 1
+position = Vector2(4888, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D360" type="Sprite2D" parent="background/trees n stuff" unique_id=463716693]
+texture_filter = 1
+position = Vector2(4936, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D361" type="Sprite2D" parent="background/trees n stuff" unique_id=1817995956]
+texture_filter = 1
+position = Vector2(4840, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D362" type="Sprite2D" parent="background/trees n stuff" unique_id=1445288560]
+texture_filter = 1
+position = Vector2(4816, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D363" type="Sprite2D" parent="background/trees n stuff" unique_id=1064134495]
+texture_filter = 1
+position = Vector2(4976, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D364" type="Sprite2D" parent="background/trees n stuff" unique_id=2113356269]
+texture_filter = 1
+position = Vector2(5016, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D365" type="Sprite2D" parent="background/trees n stuff" unique_id=1504697613]
+texture_filter = 1
+position = Vector2(5080, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D366" type="Sprite2D" parent="background/trees n stuff" unique_id=2045956490]
+texture_filter = 1
+position = Vector2(5168, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D367" type="Sprite2D" parent="background/trees n stuff" unique_id=698858548]
+texture_filter = 1
+position = Vector2(5040, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D368" type="Sprite2D" parent="background/trees n stuff" unique_id=991912214]
+texture_filter = 1
+position = Vector2(4944, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D369" type="Sprite2D" parent="background/trees n stuff" unique_id=663596629]
+texture_filter = 1
+position = Vector2(4832, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D370" type="Sprite2D" parent="background/trees n stuff" unique_id=1009408120]
+texture_filter = 1
+position = Vector2(4776, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D371" type="Sprite2D" parent="background/trees n stuff" unique_id=1978102744]
+texture_filter = 1
+position = Vector2(4760, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D372" type="Sprite2D" parent="background/trees n stuff" unique_id=932497183]
+texture_filter = 1
+position = Vector2(4744, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D373" type="Sprite2D" parent="background/trees n stuff" unique_id=399308340]
+texture_filter = 1
+position = Vector2(4752, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D374" type="Sprite2D" parent="background/trees n stuff" unique_id=1404144750]
+texture_filter = 1
+position = Vector2(4712, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D375" type="Sprite2D" parent="background/trees n stuff" unique_id=1100221805]
+texture_filter = 1
+position = Vector2(4680, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D376" type="Sprite2D" parent="background/trees n stuff" unique_id=1970990390]
+texture_filter = 1
+position = Vector2(4664, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D377" type="Sprite2D" parent="background/trees n stuff" unique_id=1410439310]
+texture_filter = 1
+position = Vector2(4672, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D378" type="Sprite2D" parent="background/trees n stuff" unique_id=1509435970]
+texture_filter = 1
+position = Vector2(4608, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D379" type="Sprite2D" parent="background/trees n stuff" unique_id=1503919787]
+texture_filter = 1
+position = Vector2(5192, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D380" type="Sprite2D" parent="background/trees n stuff" unique_id=1862373638]
+texture_filter = 1
+position = Vector2(5232, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D381" type="Sprite2D" parent="background/trees n stuff" unique_id=1068785616]
+texture_filter = 1
+position = Vector2(5376, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D382" type="Sprite2D" parent="background/trees n stuff" unique_id=968280892]
+texture_filter = 1
+position = Vector2(5480, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D383" type="Sprite2D" parent="background/trees n stuff" unique_id=983494802]
+texture_filter = 1
+position = Vector2(5600, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D384" type="Sprite2D" parent="background/trees n stuff" unique_id=1494142184]
+texture_filter = 1
+position = Vector2(5776, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D385" type="Sprite2D" parent="background/trees n stuff" unique_id=1002698534]
+texture_filter = 1
+position = Vector2(5904, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D386" type="Sprite2D" parent="background/trees n stuff" unique_id=1658996911]
+position = Vector2(5672, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D387" type="Sprite2D" parent="background/trees n stuff" unique_id=1119763030]
+texture_filter = 1
+position = Vector2(5808, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D388" type="Sprite2D" parent="background/trees n stuff" unique_id=124147946]
+texture_filter = 1
+position = Vector2(5736, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D389" type="Sprite2D" parent="background/trees n stuff" unique_id=1869914420]
+texture_filter = 1
+position = Vector2(5536, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D390" type="Sprite2D" parent="background/trees n stuff" unique_id=1743296809]
+texture_filter = 1
+position = Vector2(5312, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D391" type="Sprite2D" parent="background/trees n stuff" unique_id=1349653634]
+texture_filter = 1
+position = Vector2(5568, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D392" type="Sprite2D" parent="background/trees n stuff" unique_id=903426257]
+texture_filter = 1
+position = Vector2(5616, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D393" type="Sprite2D" parent="background/trees n stuff" unique_id=1434443109]
+texture_filter = 1
+position = Vector2(5520, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D394" type="Sprite2D" parent="background/trees n stuff" unique_id=742702362]
+texture_filter = 1
+position = Vector2(5496, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D395" type="Sprite2D" parent="background/trees n stuff" unique_id=1898518507]
+texture_filter = 1
+position = Vector2(5656, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D396" type="Sprite2D" parent="background/trees n stuff" unique_id=350589817]
+texture_filter = 1
+position = Vector2(5696, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D397" type="Sprite2D" parent="background/trees n stuff" unique_id=2084340007]
+texture_filter = 1
+position = Vector2(5760, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D398" type="Sprite2D" parent="background/trees n stuff" unique_id=587012351]
+texture_filter = 1
+position = Vector2(5848, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D399" type="Sprite2D" parent="background/trees n stuff" unique_id=1485320006]
+texture_filter = 1
+position = Vector2(5720, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D400" type="Sprite2D" parent="background/trees n stuff" unique_id=879677044]
+texture_filter = 1
+position = Vector2(5624, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D401" type="Sprite2D" parent="background/trees n stuff" unique_id=540007750]
+texture_filter = 1
+position = Vector2(5512, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D402" type="Sprite2D" parent="background/trees n stuff" unique_id=312567121]
+texture_filter = 1
+position = Vector2(5456, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D403" type="Sprite2D" parent="background/trees n stuff" unique_id=499060813]
+texture_filter = 1
+position = Vector2(5440, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D404" type="Sprite2D" parent="background/trees n stuff" unique_id=1967983306]
+texture_filter = 1
+position = Vector2(5424, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D405" type="Sprite2D" parent="background/trees n stuff" unique_id=64505127]
+texture_filter = 1
+position = Vector2(5432, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D406" type="Sprite2D" parent="background/trees n stuff" unique_id=1820916339]
+texture_filter = 1
+position = Vector2(5392, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D407" type="Sprite2D" parent="background/trees n stuff" unique_id=1604244544]
+texture_filter = 1
+position = Vector2(5360, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D408" type="Sprite2D" parent="background/trees n stuff" unique_id=501530385]
+texture_filter = 1
+position = Vector2(5344, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D409" type="Sprite2D" parent="background/trees n stuff" unique_id=1095322418]
+texture_filter = 1
+position = Vector2(5352, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D410" type="Sprite2D" parent="background/trees n stuff" unique_id=100046225]
+texture_filter = 1
+position = Vector2(5288, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D411" type="Sprite2D" parent="background/trees n stuff" unique_id=1506764107]
+texture_filter = 1
+position = Vector2(5872, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D412" type="Sprite2D" parent="background/trees n stuff" unique_id=448552444]
+texture_filter = 1
+position = Vector2(5912, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D413" type="Sprite2D" parent="background/trees n stuff" unique_id=246881709]
+texture_filter = 1
+position = Vector2(6024, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D414" type="Sprite2D" parent="background/trees n stuff" unique_id=1995016183]
+texture_filter = 1
+position = Vector2(6128, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D415" type="Sprite2D" parent="background/trees n stuff" unique_id=1701474932]
+texture_filter = 1
+position = Vector2(6248, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D416" type="Sprite2D" parent="background/trees n stuff" unique_id=1509237531]
+texture_filter = 1
+position = Vector2(6552, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D417" type="Sprite2D" parent="background/trees n stuff" unique_id=1198469361]
+texture_filter = 1
+position = Vector2(6456, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D418" type="Sprite2D" parent="background/trees n stuff" unique_id=1664468599]
+texture_filter = 1
+position = Vector2(6184, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D419" type="Sprite2D" parent="background/trees n stuff" unique_id=162623310]
+texture_filter = 1
+position = Vector2(5960, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D420" type="Sprite2D" parent="background/trees n stuff" unique_id=1842425018]
+texture_filter = 1
+position = Vector2(6216, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D421" type="Sprite2D" parent="background/trees n stuff" unique_id=460803936]
+texture_filter = 1
+position = Vector2(6264, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D422" type="Sprite2D" parent="background/trees n stuff" unique_id=354138807]
+texture_filter = 1
+position = Vector2(6168, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D423" type="Sprite2D" parent="background/trees n stuff" unique_id=1625992897]
+texture_filter = 1
+position = Vector2(6144, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D424" type="Sprite2D" parent="background/trees n stuff" unique_id=319420053]
+texture_filter = 1
+position = Vector2(6496, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D425" type="Sprite2D" parent="background/trees n stuff" unique_id=1728034113]
+texture_filter = 1
+position = Vector2(6272, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D426" type="Sprite2D" parent="background/trees n stuff" unique_id=2058602509]
+texture_filter = 1
+position = Vector2(6160, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D427" type="Sprite2D" parent="background/trees n stuff" unique_id=2059365300]
+texture_filter = 1
+position = Vector2(6104, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D428" type="Sprite2D" parent="background/trees n stuff" unique_id=1331733609]
+texture_filter = 1
+position = Vector2(6088, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D429" type="Sprite2D" parent="background/trees n stuff" unique_id=1174935361]
+texture_filter = 1
+position = Vector2(6072, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D430" type="Sprite2D" parent="background/trees n stuff" unique_id=1468402974]
+texture_filter = 1
+position = Vector2(6080, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D431" type="Sprite2D" parent="background/trees n stuff" unique_id=421393309]
+texture_filter = 1
+position = Vector2(6040, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D432" type="Sprite2D" parent="background/trees n stuff" unique_id=269577015]
+texture_filter = 1
+position = Vector2(6008, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D433" type="Sprite2D" parent="background/trees n stuff" unique_id=860494196]
+texture_filter = 1
+position = Vector2(5992, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D434" type="Sprite2D" parent="background/trees n stuff" unique_id=385185211]
+texture_filter = 1
+position = Vector2(6000, 496)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D435" type="Sprite2D" parent="background/trees n stuff" unique_id=264639484]
+texture_filter = 1
+position = Vector2(5936, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D436" type="Sprite2D" parent="background/trees n stuff" unique_id=520697530]
+texture_filter = 1
+position = Vector2(6520, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D437" type="Sprite2D" parent="background/trees n stuff" unique_id=1889550719]
+texture_filter = 1
+position = Vector2(6560, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D438" type="Sprite2D" parent="background/trees n stuff" unique_id=1283177463]
+texture_filter = 1
+position = Vector2(6832, 472)
+texture = ExtResource("2_ierey")
+
+[node name="Sprite2D439" type="Sprite2D" parent="background/trees n stuff" unique_id=1462129577]
+texture_filter = 1
+position = Vector2(6736, 472)
+texture = ExtResource("3_84yot")
+
+[node name="Sprite2D440" type="Sprite2D" parent="background/trees n stuff" unique_id=664625166]
+texture_filter = 1
+position = Vector2(6776, 504)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D441" type="Sprite2D" parent="background/trees n stuff" unique_id=2023438743]
+texture_filter = 1
+position = Vector2(6800, 512)
+texture = ExtResource("4_3svye")
+
+[node name="Sprite2D442" type="Sprite2D" parent="background/trees n stuff" unique_id=851416751]
+texture_filter = 1
+position = Vector2(6840, 504)
+texture = ExtResource("4_3svye")
+
+[node name="stuck text" type="Label" parent="background" unique_id=187144482]
+z_index = 2
+offset_left = 3440.0
+offset_top = 552.0
+offset_right = 3608.0
+offset_bottom = 591.0
+text = "help! we are stuck!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="background" unique_id=1582611557]
+offset_left = 3392.0
+offset_top = 512.0
+offset_right = 3680.0
+offset_bottom = 544.0
+color = Color(0.1188, 0.1188, 0.18, 1)
+
+[node name="Label2" type="Label" parent="." unique_id=116621850]
+offset_left = 2144.0
+offset_top = 392.0
+offset_right = 2241.0
+offset_bottom = 456.0
+text = "car-pooling
+V"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=772131215]
+offset_left = -552.0
+offset_top = 368.0
+offset_right = -455.0
+offset_bottom = 432.0
+text = "new dublin city law:
+all traffic jams must be stacked vertically to reduce supermacs drive thru queue times"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="." unique_id=1471228687]
+z_index = 1
+offset_left = 128.0
+offset_top = 528.0
+offset_right = 791.0
+offset_bottom = 592.0
+text = "[WASD] to move
+[SPACE] to jump"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=2059012683]
+offset_left = 2608.0
+offset_top = 392.0
+offset_right = 2727.0
+offset_bottom = 456.0
+text = "weird car crash
+V"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=1021065224]
+z_index = 2
+offset_left = 4240.0
+offset_top = 384.0
+offset_right = 4384.0
+offset_bottom = 440.0
+text = "what?
+its still faster than walking"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="." unique_id=1352048338]
+offset_left = 5416.0
+offset_top = 352.0
+offset_right = 5620.0
+offset_bottom = 408.0
+text = "car-pooling-pooling
+V"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="." unique_id=46381174]
+z_index = 5
+offset_left = 6784.0
+offset_top = 528.0
+offset_right = 6988.0
+offset_bottom = 584.0
+text = "we stole their sign 
+>:)"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="." unique_id=424107688]
+offset_left = 6775.9995
+offset_top = 488.0001
+offset_right = 6979.9995
+offset_bottom = 544.0001
+rotation = -0.2617994
+text = "car hill"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=649558029]
+offset_left = 3232.0
+offset_top = 392.0
+offset_right = 3376.0
+offset_bottom = 448.0
+color = Color(0.16, 0.16, 0.16, 1)
+
+[node name="Label4" type="Label" parent="ColorRect" unique_id=1027815697]
+layout_mode = 0
+offset_right = 144.0
+offset_bottom = 56.0
+text = "warning!
+road works ahead"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=732871762]
+offset_left = 7584.0
+offset_top = 384.0
+offset_right = 7728.0
+offset_bottom = 440.0
+color = Color(0.16, 0.16, 0.16, 1)
+
+[node name="Label4" type="Label" parent="ColorRect2" unique_id=1042503826]
+layout_mode = 0
+offset_right = 144.0
+offset_bottom = 56.0
+text = "TU Grangegorman"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="bus" parent="." unique_id=953621829 instance=ExtResource("2_an84l")]
 position = Vector2(480, 464)
@@ -1634,7 +2376,7 @@ tile_map_data = PackedByteArray("AAAGABAAAQABAAAAAAAHABAAAQABAAAAAAAIABAAAQABAAA
 tile_set = SubResource("TileSet_4qvyi")
 
 [node name="level exit" parent="." unique_id=1072067619 instance=ExtResource("4_w1im6")]
-position = Vector2(-368, 480)
+position = Vector2(7656, 480)
 
 [node name="obstacles" type="Node2D" parent="." unique_id=1674990547]
 
@@ -1727,8 +2469,223 @@ position = Vector2(4288, 336)
 collision_layer = 4
 collision_mask = 4
 
+[node name="obstacle30" parent="obstacles" unique_id=1319785616 instance=ExtResource("3_an84l")]
+position = Vector2(4320, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle32" parent="obstacles" unique_id=1741103147 instance=ExtResource("3_an84l")]
+position = Vector2(4256, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle33" parent="obstacles" unique_id=792942018 instance=ExtResource("3_an84l")]
+position = Vector2(4224, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle34" parent="obstacles" unique_id=880749672 instance=ExtResource("3_an84l")]
+position = Vector2(4192, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle35" parent="obstacles" unique_id=1597032621 instance=ExtResource("3_an84l")]
+position = Vector2(4384, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle36" parent="obstacles" unique_id=1905629349 instance=ExtResource("3_an84l")]
+position = Vector2(4416, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle37" parent="obstacles" unique_id=1443048581 instance=ExtResource("3_an84l")]
+position = Vector2(4448, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle31" parent="obstacles" unique_id=1365008571 instance=ExtResource("3_an84l")]
+position = Vector2(4352, 336)
+collision_layer = 4
+collision_mask = 4
+
 [node name="obstacle17" parent="obstacles" unique_id=1957198250 instance=ExtResource("3_an84l")]
 position = Vector2(4784, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle18" parent="obstacles" unique_id=639244382 instance=ExtResource("3_an84l")]
+position = Vector2(4816, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle19" parent="obstacles" unique_id=38798935 instance=ExtResource("3_an84l")]
+position = Vector2(4848, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle20" parent="obstacles" unique_id=2069765376 instance=ExtResource("3_an84l")]
+position = Vector2(5520, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle21" parent="obstacles" unique_id=467821875 instance=ExtResource("3_an84l")]
+position = Vector2(5520, 464)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle22" parent="obstacles" unique_id=1200907479 instance=ExtResource("3_an84l")]
+position = Vector2(5520, 432)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle38" parent="obstacles" unique_id=1358797688 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 464)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle39" parent="obstacles" unique_id=2067035669 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 432)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle40" parent="obstacles" unique_id=1664899846 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 400)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle41" parent="obstacles" unique_id=2116026539 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 368)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle42" parent="obstacles" unique_id=752004253 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle43" parent="obstacles" unique_id=106960692 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 304)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle44" parent="obstacles" unique_id=1676842234 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 272)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle45" parent="obstacles" unique_id=1899309362 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 240)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle46" parent="obstacles" unique_id=1075235525 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 208)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle47" parent="obstacles" unique_id=1511140554 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 176)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle48" parent="obstacles" unique_id=1182441318 instance=ExtResource("3_an84l")]
+position = Vector2(-592, 144)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle49" parent="obstacles" unique_id=1747334563 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle50" parent="obstacles" unique_id=350548722 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 464)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle51" parent="obstacles" unique_id=1915454693 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 432)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle52" parent="obstacles" unique_id=933091251 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 400)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle53" parent="obstacles" unique_id=1647785099 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 368)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle54" parent="obstacles" unique_id=642474339 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 336)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle55" parent="obstacles" unique_id=1797307041 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 304)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle56" parent="obstacles" unique_id=1411915681 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 272)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle57" parent="obstacles" unique_id=979086848 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 240)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle58" parent="obstacles" unique_id=160067887 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 208)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle59" parent="obstacles" unique_id=1877394807 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 176)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle60" parent="obstacles" unique_id=886456546 instance=ExtResource("3_an84l")]
+position = Vector2(8016, 144)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle23" parent="obstacles" unique_id=1173178316 instance=ExtResource("3_an84l")]
+position = Vector2(6224, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle24" parent="obstacles" unique_id=765224541 instance=ExtResource("3_an84l")]
+position = Vector2(6256, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle25" parent="obstacles" unique_id=1689344863 instance=ExtResource("3_an84l")]
+position = Vector2(6288, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle26" parent="obstacles" unique_id=1324968339 instance=ExtResource("3_an84l")]
+position = Vector2(6256, 464)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle27" parent="obstacles" unique_id=578257910 instance=ExtResource("3_an84l")]
+position = Vector2(6848, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle28" parent="obstacles" unique_id=982603808 instance=ExtResource("3_an84l")]
+position = Vector2(6912, 496)
+collision_layer = 4
+collision_mask = 4
+
+[node name="obstacle29" parent="obstacles" unique_id=192087148 instance=ExtResource("3_an84l")]
+position = Vector2(6880, 496)
 collision_layer = 4
 collision_mask = 4
 
@@ -1749,4 +2706,47 @@ collision_mask = 4
 [connection signal="reset" from="obstacles/obstacle14" to="." method="_on_obstacle_reset"]
 [connection signal="reset" from="obstacles/obstacle15" to="." method="_on_obstacle_reset"]
 [connection signal="reset" from="obstacles/obstacle16" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle30" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle32" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle33" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle34" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle35" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle36" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle37" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle31" to="." method="_on_obstacle_reset"]
 [connection signal="reset" from="obstacles/obstacle17" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle18" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle19" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle20" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle21" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle22" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle38" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle39" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle40" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle41" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle42" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle43" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle44" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle45" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle46" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle47" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle48" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle49" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle50" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle51" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle52" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle53" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle54" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle55" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle56" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle57" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle58" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle59" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle60" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle23" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle24" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle25" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle26" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle27" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle28" to="." method="_on_obstacle_reset"]
+[connection signal="reset" from="obstacles/obstacle29" to="." method="_on_obstacle_reset"]
