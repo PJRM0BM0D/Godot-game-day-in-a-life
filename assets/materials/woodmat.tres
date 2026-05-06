@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://v7yx4c6njw41"]
+
+[ext_resource type="Texture2D" uid="uid://je6ln3njn7rr" path="res://assets/wood floors.png" id="1_bby5j"]
+
+[resource]
+albedo_texture = ExtResource("1_bby5j")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true

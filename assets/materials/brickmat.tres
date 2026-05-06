@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqfpnqgr51ju0"]
+
+[ext_resource type="Texture2D" uid="uid://tcnj4nqn8umr" path="res://assets/brick wall.png" id="1_wo5n1"]
+
+[resource]
+albedo_texture = ExtResource("1_wo5n1")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
+uv1_world_triplanar = true
