@@ -183,6 +183,19 @@ size = Vector3(22, 1, 8)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pwjp3"]
 data = PackedVector3Array(-11, 0.5, 4, 11, 0.5, 4, -11, -0.5, 4, 11, 0.5, 4, 11, -0.5, 4, -11, -0.5, 4, 11, 0.5, -4, -11, 0.5, -4, 11, -0.5, -4, -11, 0.5, -4, -11, -0.5, -4, 11, -0.5, -4, 11, 0.5, 4, 11, 0.5, -4, 11, -0.5, 4, 11, 0.5, -4, 11, -0.5, -4, 11, -0.5, 4, -11, 0.5, -4, -11, 0.5, 4, -11, -0.5, -4, -11, 0.5, 4, -11, -0.5, 4, -11, -0.5, -4, 11, 0.5, 4, -11, 0.5, 4, 11, 0.5, -4, -11, 0.5, 4, -11, 0.5, -4, 11, 0.5, -4, -11, -0.5, 4, 11, -0.5, 4, -11, -0.5, -4, 11, -0.5, 4, 11, -0.5, -4, -11, -0.5, -4)
 
+[sub_resource type="BoxMesh" id="BoxMesh_icxe7"]
+material = ExtResource("3_kui8i")
+size = Vector3(0.5, 2, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oa771"]
+data = PackedVector3Array(-0.25, 1, 1.5, 0.25, 1, 1.5, -0.25, -1, 1.5, 0.25, 1, 1.5, 0.25, -1, 1.5, -0.25, -1, 1.5, 0.25, 1, -1.5, -0.25, 1, -1.5, 0.25, -1, -1.5, -0.25, 1, -1.5, -0.25, -1, -1.5, 0.25, -1, -1.5, 0.25, 1, 1.5, 0.25, 1, -1.5, 0.25, -1, 1.5, 0.25, 1, -1.5, 0.25, -1, -1.5, 0.25, -1, 1.5, -0.25, 1, -1.5, -0.25, 1, 1.5, -0.25, -1, -1.5, -0.25, 1, 1.5, -0.25, -1, 1.5, -0.25, -1, -1.5, 0.25, 1, 1.5, -0.25, 1, 1.5, 0.25, 1, -1.5, -0.25, 1, 1.5, -0.25, 1, -1.5, 0.25, 1, -1.5, -0.25, -1, 1.5, 0.25, -1, 1.5, -0.25, -1, -1.5, 0.25, -1, 1.5, 0.25, -1, -1.5, -0.25, -1, -1.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8o4pm"]
+size = Vector2(8, 4)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rkrw7"]
+viewport_path = NodePath("slides")
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1wt3m"]
 height = 2.4536133
 
@@ -201,6 +214,9 @@ viewport_path = NodePath("cola text")
 
 [sub_resource type="LabelSettings" id="LabelSettings_enp83"]
 font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_ldpyp"]
+font_size = 64
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_8o4pm"]
 viewport_path = NodePath("lecturer text")
@@ -231,6 +247,7 @@ shadow_enabled = true
 [node name="geometry" type="Node3D" parent="." unique_id=1077130386]
 
 [node name="ground" type="StaticBody3D" parent="geometry" unique_id=56474042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.6272316)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/ground" unique_id=1386828615]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.816544, 0, 0)
@@ -1162,6 +1179,36 @@ mesh = SubResource("BoxMesh_m28ef")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/StaticBody3D6" unique_id=1846709702]
 shape = SubResource("ConcavePolygonShape3D_pwjp3")
 
+[node name="StaticBody3D7" type="StaticBody3D" parent="geometry" unique_id=873926249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.172176, 8.241197, 43.194412)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/StaticBody3D7" unique_id=403114253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10047531, 0.08198261, -0.51795197)
+mesh = SubResource("BoxMesh_icxe7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/StaticBody3D7" unique_id=785758428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10047531, 0.08198261, -0.51795197)
+shape = SubResource("ConcavePolygonShape3D_oa771")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="geometry" unique_id=1635143109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.51288, 8.241197, 43.194412)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/StaticBody3D8" unique_id=1851998597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10047531, 0.08198261, -0.51795197)
+mesh = SubResource("BoxMesh_icxe7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/StaticBody3D8" unique_id=888286480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10047531, 0.08198261, -0.51795197)
+shape = SubResource("ConcavePolygonShape3D_oa771")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry" unique_id=823634333]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 60.105724, 25.592447, -2.2125225)
+mesh = SubResource("PlaneMesh_8o4pm")
+
+[node name="Sprite3D" type="Sprite3D" parent="geometry/MeshInstance3D" unique_id=2102901539]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.1, 0)
+texture = SubResource("ViewportTexture_rkrw7")
+
 [node name="player" parent="." unique_id=439481167 instance=ExtResource("1_5qibc")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
@@ -1312,6 +1359,24 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="stairs text/CenterContainer" unique_id=1838221146]
 layout_mode = 2
 text = "the stairs to get here were open the whole time!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slides" type="SubViewport" parent="." unique_id=1880179294]
+transparent_bg = true
+size = Vector2i(384, 256)
+
+[node name="CenterContainer" type="CenterContainer" parent="slides" unique_id=1141004323]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="slides/CenterContainer" unique_id=1219833576]
+layout_mode = 2
+text = "LECTURE"
+label_settings = SubResource("LabelSettings_ldpyp")
 horizontal_alignment = 1
 vertical_alignment = 1
 
