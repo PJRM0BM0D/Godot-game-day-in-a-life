@@ -6,7 +6,7 @@ var normalise = true
 @onready var head: Node3D = $"head"
 @onready var player_camera: Camera3D = $head/Camera3D
 
-const SPEED = 8.0
+const SPEED = 5.0
 const JUMP_VELOCITY = 6.5
 #const rotsense = 0
 

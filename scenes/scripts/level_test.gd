@@ -6,7 +6,7 @@ var loadingscreen = preload("res://scenes/ui/loading_screen.tscn")
 
 var doreset = bool(false)
 
-var stopwatch : float = 0
+var stopwatch : float = SettingsManager.time_elapsed
 var dostopwatch : bool = SettingsManager.speedrun_timer
 
 
@@ -18,6 +18,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if doreset:
+		print(stopwatch)
+		SettingsManager.time_elapsed = stopwatch
 		get_tree().reload_current_scene()
 	if dostopwatch:
 		stopwatch += delta
@@ -30,6 +32,7 @@ func change():
 func _on_level_exit_body_entered(body: Node2D) -> void:
 	#print("start")
 	print(stopwatch)
+	SettingsManager.time_elapsed = stopwatch
 	var instance = loadingscreen.instantiate()
 	add_child(instance)
 	var loader = get_node("loading screen")

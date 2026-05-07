@@ -1469,4 +1469,10 @@ mesh = SubResource("BoxMesh_sr5xl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58281994, -0.21373355, 0.13533974)
 mesh = SubResource("BoxMesh_ocrod")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1297951463]
+
+[node name="speedrun timer" type="Label" parent="CanvasLayer" unique_id=1447651922]
+offset_right = 190.0
+offset_bottom = 23.0
+
 [connection signal="body_entered" from="exit collider" to="." method="_on_exit_collider_body_entered"]

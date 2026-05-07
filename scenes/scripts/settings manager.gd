@@ -3,6 +3,7 @@ extends Node
 var sensitivity : float = 50
 var normalise_diagonals : bool = true
 var speedrun_timer : bool = false
+var time_elapsed: float = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

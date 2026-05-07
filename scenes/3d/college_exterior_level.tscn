@@ -212,6 +212,9 @@ size = Vector3(0.5, 2, 3)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oa771"]
 data = PackedVector3Array(-0.25, 1, 1.5, 0.25, 1, 1.5, -0.25, -1, 1.5, 0.25, 1, 1.5, 0.25, -1, 1.5, -0.25, -1, 1.5, 0.25, 1, -1.5, -0.25, 1, -1.5, 0.25, -1, -1.5, -0.25, 1, -1.5, -0.25, -1, -1.5, 0.25, -1, -1.5, 0.25, 1, 1.5, 0.25, 1, -1.5, 0.25, -1, 1.5, 0.25, 1, -1.5, 0.25, -1, -1.5, 0.25, -1, 1.5, -0.25, 1, -1.5, -0.25, 1, 1.5, -0.25, -1, -1.5, -0.25, 1, 1.5, -0.25, -1, 1.5, -0.25, -1, -1.5, 0.25, 1, 1.5, -0.25, 1, 1.5, 0.25, 1, -1.5, -0.25, 1, 1.5, -0.25, 1, -1.5, 0.25, 1, -1.5, -0.25, -1, 1.5, 0.25, -1, 1.5, -0.25, -1, -1.5, 0.25, -1, 1.5, 0.25, -1, -1.5, -0.25, -1, -1.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7875n"]
+size = Vector3(10, 4, 5)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_8o4pm"]
 size = Vector2(8, 4)
 
@@ -1686,6 +1689,15 @@ mesh = SubResource("BoxMesh_icxe7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/StaticBody3D8" unique_id=888286480]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10047531, 0.08198261, -0.51795197)
 shape = SubResource("ConcavePolygonShape3D_oa771")
+
+[node name="end level area" type="Area3D" parent="geometry" unique_id=326771576]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 60.105724, 21.15024, -1.1502624)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/end level area" unique_id=1823757118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.7634907)
+shape = SubResource("BoxShape3D_7875n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="geometry" unique_id=823634333]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 60.105724, 25.592447, -2.2125225)
@@ -3263,6 +3275,14 @@ mesh = SubResource("CylinderMesh_38nca")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4065456, 0)
 mesh = SubResource("CylinderMesh_enp83")
 
+[node name="arrow2" type="MeshInstance3D" parent="pepsi" unique_id=1511982824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.803528, 6.488693, 0)
+mesh = SubResource("CylinderMesh_38nca")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="pepsi/arrow2" unique_id=213298601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4065456, 0)
+mesh = SubResource("CylinderMesh_enp83")
+
 [node name="cola advertiser" type="Sprite3D" parent="." unique_id=1330763062]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7810793, 1.1092511, -3.7186284)
 pixel_size = 0.035
@@ -3615,3 +3635,5 @@ mesh = SubResource("BoxMesh_pwjp3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=895950564]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04139328, 8.130093, 2.924057)
 shape = SubResource("ConcavePolygonShape3D_jsq7a")
+
+[connection signal="body_entered" from="geometry/end level area" to="." method="_on_end_level_area_body_entered"]
