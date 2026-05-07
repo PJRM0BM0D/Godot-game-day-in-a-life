@@ -2689,6 +2689,12 @@ position = Vector2(6880, 496)
 collision_layer = 4
 collision_mask = 4
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=770798851]
+
+[node name="speedrun timer" type="Label" parent="CanvasLayer" unique_id=1148953280]
+offset_right = 190.0
+offset_bottom = 23.0
+
 [connection signal="body_entered" from="level exit" to="." method="_on_level_exit_body_entered"]
 [connection signal="reset" from="obstacles/obstacle" to="." method="_on_obstacle_reset"]
 [connection signal="reset" from="obstacles/obstacle2" to="." method="_on_obstacle_reset"]

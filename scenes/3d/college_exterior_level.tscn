@@ -15,7 +15,7 @@
 [ext_resource type="Material" uid="uid://qf3ekny536l1" path="res://assets/materials/glow.tres" id="6_1ot7s"]
 [ext_resource type="Texture2D" uid="uid://o32ow36yw7n" path="res://assets/warning.png" id="8_uy3t4"]
 [ext_resource type="Texture2D" uid="uid://bdbt6v2r6b602" path="res://assets/stairs.png" id="9_8o4pm"]
-[ext_resource type="Texture2D" uid="uid://pxtn87hb37gt" path="res://assets/grass.png" id="10_7875n"]
+[ext_resource type="Material" uid="uid://umhax4oymoix" path="res://assets/materials/grass.tres" id="10_7875n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5qibc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,6 +29,14 @@ background_mode = 2
 sky = SubResource("Sky_ubeli")
 tonemap_mode = 2
 glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.48749998, 0.71500003, 0.75, 1)
+fog_density = 0.2
+fog_sky_affect = 0.58
+fog_depth_curve = 5.2780294
+fog_depth_begin = 100.0
+fog_depth_end = 1016.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wt3m"]
 albedo_texture = ExtResource("1_ireko")
@@ -210,15 +218,8 @@ size = Vector2(8, 4)
 [sub_resource type="ViewportTexture" id="ViewportTexture_rkrw7"]
 viewport_path = NodePath("slides")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkrw7"]
-albedo_texture = ExtResource("10_7875n")
-subsurf_scatter_strength = 1.0
-uv1_scale = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-uv1_world_triplanar = true
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_ldpyp"]
-material = SubResource("StandardMaterial3D_rkrw7")
+material = ExtResource("10_7875n")
 size = Vector2(32, 50)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pdeik"]
@@ -226,6 +227,19 @@ data = PackedVector3Array(16, 0, 25, -16, 0, 25, 16, 0, -25, -16, 0, 25, -16, 0,
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7b1sa"]
 height = 6.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_oa771"]
+material = ExtResource("10_7875n")
+size = Vector3(30, 0.25, 30)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_7875n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jsq7a"]
+material = ExtResource("4_6piu2")
+size = Vector3(8, 0.25, 200)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7b1sa"]
+data = PackedVector3Array(-4, 0.125, 100, 4, 0.125, 100, -4, -0.125, 100, 4, 0.125, 100, 4, -0.125, 100, -4, -0.125, 100, 4, 0.125, -100, -4, 0.125, -100, 4, -0.125, -100, -4, 0.125, -100, -4, -0.125, -100, 4, -0.125, -100, 4, 0.125, 100, 4, 0.125, -100, 4, -0.125, 100, 4, 0.125, -100, 4, -0.125, -100, 4, -0.125, 100, -4, 0.125, -100, -4, 0.125, 100, -4, -0.125, -100, -4, 0.125, 100, -4, -0.125, 100, -4, -0.125, -100, 4, 0.125, 100, -4, 0.125, 100, 4, 0.125, -100, -4, 0.125, 100, -4, 0.125, -100, 4, 0.125, -100, -4, -0.125, 100, 4, -0.125, 100, -4, -0.125, -100, 4, -0.125, 100, 4, -0.125, -100, -4, -0.125, -100)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1wt3m"]
 height = 2.4536133
@@ -378,6 +392,237 @@ mesh = SubResource("BoxMesh_8ij1w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
 shape = SubResource("ConcavePolygonShape3D_8ij1w")
 
+[node name="sneaky wall4" type="StaticBody3D" parent="geometry/big wall" unique_id=1990787020]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.829365, 0.17760468, 32.80882)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall4" unique_id=904443580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall4" unique_id=1574297085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall5" type="StaticBody3D" parent="geometry/big wall" unique_id=1679649616]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.829365, 0.17760468, 17.86222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall5" unique_id=1874542958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall5" unique_id=831105437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall6" type="StaticBody3D" parent="geometry/big wall" unique_id=1137341576]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, 32.80882)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall6" unique_id=1688632147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall6" unique_id=1153991199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall7" type="StaticBody3D" parent="geometry/big wall" unique_id=737675700]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, 17.86222)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall7" unique_id=1230661963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall7" unique_id=1239513473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall8" type="StaticBody3D" parent="geometry/big wall" unique_id=365491489]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, 62.666145)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall8" unique_id=74061627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall8" unique_id=311716201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall9" type="StaticBody3D" parent="geometry/big wall" unique_id=612483799]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, 47.719547)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall9" unique_id=78919632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall9" unique_id=105084171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall10" type="StaticBody3D" parent="geometry/big wall" unique_id=1485531295]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, 92.489044)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall10" unique_id=669708664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall10" unique_id=634461321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall11" type="StaticBody3D" parent="geometry/big wall" unique_id=1893549280]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, 77.54245)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall11" unique_id=2016937908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall11" unique_id=968773507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall12" type="StaticBody3D" parent="geometry/big wall" unique_id=761428652]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, -56.252903)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall12" unique_id=450812137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall12" unique_id=1533702728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall13" type="StaticBody3D" parent="geometry/big wall" unique_id=1755264006]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, -71.1995)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall13" unique_id=1243805085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall13" unique_id=1693168926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall18" type="StaticBody3D" parent="geometry/big wall" unique_id=1267074390]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, -85.892456)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall18" unique_id=1428886593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall18" unique_id=295474087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall19" type="StaticBody3D" parent="geometry/big wall" unique_id=1003565493]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, -100.83905)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall19" unique_id=2107033138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall19" unique_id=1028364485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall14" type="StaticBody3D" parent="geometry/big wall" unique_id=617188420]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, -26.395576)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall14" unique_id=939658111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall14" unique_id=1330869178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall15" type="StaticBody3D" parent="geometry/big wall" unique_id=1932458872]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, -41.342175)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall15" unique_id=334497172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall15" unique_id=1195226438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall16" type="StaticBody3D" parent="geometry/big wall" unique_id=746373314]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, 3.4273224)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall16" unique_id=539567028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall16" unique_id=580968848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall17" type="StaticBody3D" parent="geometry/big wall" unique_id=1708774549]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8421125, 0.17760468, -11.519272)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall17" unique_id=455582337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall17" unique_id=914838535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall23" type="StaticBody3D" parent="geometry/big wall" unique_id=330818735]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7710819, 0.17760468, -11.519272)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall23" unique_id=794446777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall23" unique_id=1690907919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall24" type="StaticBody3D" parent="geometry/big wall" unique_id=23748790]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7710819, 0.17760468, -26.465307)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall24" unique_id=659970444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall24" unique_id=408538293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall25" type="StaticBody3D" parent="geometry/big wall" unique_id=1200215018]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7710819, 0.17760468, -41.409576)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall25" unique_id=1758431614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall25" unique_id=1478270949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall26" type="StaticBody3D" parent="geometry/big wall" unique_id=1673827353]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7710819, 0.17760468, -56.28336)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall26" unique_id=126369580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall26" unique_id=665184128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall27" type="StaticBody3D" parent="geometry/big wall" unique_id=547187891]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7710819, 0.17760468, -71.190765)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall27" unique_id=880436303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall27" unique_id=104905117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
 [node name="sneaky wall3" type="StaticBody3D" parent="geometry/big wall" unique_id=669085203]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.075624, 0.17760468, 40.44301)
 
@@ -386,6 +631,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686
 mesh = SubResource("BoxMesh_8ij1w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall3" unique_id=810961166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall20" type="StaticBody3D" parent="geometry/big wall" unique_id=116974853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.616863, 0.17760468, -45.042206)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall20" unique_id=1768533134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall20" unique_id=550258491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall21" type="StaticBody3D" parent="geometry/big wall" unique_id=977001669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.634192, 0.17760468, -45.042206)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall21" unique_id=22153918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall21" unique_id=1698155268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+shape = SubResource("ConcavePolygonShape3D_8ij1w")
+
+[node name="sneaky wall22" type="StaticBody3D" parent="geometry/big wall" unique_id=1694982051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6279545, 0.17760468, -45.042206)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/sneaky wall22" unique_id=1266490661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
+mesh = SubResource("BoxMesh_8ij1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/sneaky wall22" unique_id=1336092756]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14245224, 2.1245441, 0.2686615)
 shape = SubResource("ConcavePolygonShape3D_8ij1w")
 
@@ -559,6 +837,142 @@ shape = SubResource("ConcavePolygonShape3D_uy3t4")
 mesh = SubResource("BoxMesh_pfji7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame25/windowglass" unique_id=392011201]
+shape = SubResource("ConcavePolygonShape3D_7875n")
+
+[node name="window frame34" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=93455537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.153105, 10.452097, 67.50483)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame34" unique_id=1490836640]
+mesh = SubResource("BoxMesh_blqbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame34" unique_id=1417139888]
+shape = SubResource("ConcavePolygonShape3D_uy3t4")
+
+[node name="windowglass" type="StaticBody3D" parent="geometry/big wall/windows/window frame34" unique_id=2092714079]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame34/windowglass" unique_id=2041119325]
+mesh = SubResource("BoxMesh_pfji7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame34/windowglass" unique_id=1589951664]
+shape = SubResource("ConcavePolygonShape3D_7875n")
+
+[node name="window frame35" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=962559329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.153105, 0.15000343, 76.060646)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame35" unique_id=1423455801]
+mesh = SubResource("BoxMesh_blqbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame35" unique_id=976632552]
+shape = SubResource("ConcavePolygonShape3D_uy3t4")
+
+[node name="windowglass" type="StaticBody3D" parent="geometry/big wall/windows/window frame35" unique_id=410160682]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame35/windowglass" unique_id=311354531]
+mesh = SubResource("BoxMesh_pfji7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame35/windowglass" unique_id=410655901]
+shape = SubResource("ConcavePolygonShape3D_7875n")
+
+[node name="window frame36" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=920867184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.153105, 0.15000343, 80.51701)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame36" unique_id=237171627]
+mesh = SubResource("BoxMesh_blqbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame36" unique_id=660219544]
+shape = SubResource("ConcavePolygonShape3D_uy3t4")
+
+[node name="windowglass" type="StaticBody3D" parent="geometry/big wall/windows/window frame36" unique_id=485083420]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame36/windowglass" unique_id=882539297]
+mesh = SubResource("BoxMesh_pfji7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame36/windowglass" unique_id=124278317]
+shape = SubResource("ConcavePolygonShape3D_7875n")
+
+[node name="window frame37" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=821959054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.153105, 0.15000343, 91.43761)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame37" unique_id=781783725]
+mesh = SubResource("BoxMesh_blqbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame37" unique_id=1720004734]
+shape = SubResource("ConcavePolygonShape3D_uy3t4")
+
+[node name="windowglass" type="StaticBody3D" parent="geometry/big wall/windows/window frame37" unique_id=2011143649]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame37/windowglass" unique_id=895762553]
+mesh = SubResource("BoxMesh_pfji7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame37/windowglass" unique_id=466578730]
+shape = SubResource("ConcavePolygonShape3D_7875n")
+
+[node name="window frame38" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=1829773153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.153105, 9.708237, 80.51972)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame38" unique_id=485740349]
+mesh = SubResource("BoxMesh_blqbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame38" unique_id=1702288147]
+shape = SubResource("ConcavePolygonShape3D_uy3t4")
+
+[node name="windowglass" type="StaticBody3D" parent="geometry/big wall/windows/window frame38" unique_id=707718596]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame38/windowglass" unique_id=1878864651]
+mesh = SubResource("BoxMesh_pfji7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame38/windowglass" unique_id=2120942567]
+shape = SubResource("ConcavePolygonShape3D_7875n")
+
+[node name="window frame39" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=138024786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.153105, -10.814374, 86.41676)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame39" unique_id=466567279]
+mesh = SubResource("BoxMesh_blqbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame39" unique_id=2083273975]
+shape = SubResource("ConcavePolygonShape3D_uy3t4")
+
+[node name="windowglass" type="StaticBody3D" parent="geometry/big wall/windows/window frame39" unique_id=1696492673]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame39/windowglass" unique_id=1107281986]
+mesh = SubResource("BoxMesh_pfji7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame39/windowglass" unique_id=1119184871]
+shape = SubResource("ConcavePolygonShape3D_7875n")
+
+[node name="window frame40" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=112683932]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -14.153105, -12.444199, 79.16169)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame40" unique_id=1333991219]
+mesh = SubResource("BoxMesh_blqbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame40" unique_id=1485014027]
+shape = SubResource("ConcavePolygonShape3D_uy3t4")
+
+[node name="windowglass" type="StaticBody3D" parent="geometry/big wall/windows/window frame40" unique_id=1765700605]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame40/windowglass" unique_id=121581902]
+mesh = SubResource("BoxMesh_pfji7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame40/windowglass" unique_id=1589179870]
+shape = SubResource("ConcavePolygonShape3D_7875n")
+
+[node name="window frame41" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=509320501]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -14.153105, 11.153828, 89.34947)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame41" unique_id=1096158285]
+mesh = SubResource("BoxMesh_blqbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame41" unique_id=538419291]
+shape = SubResource("ConcavePolygonShape3D_uy3t4")
+
+[node name="windowglass" type="StaticBody3D" parent="geometry/big wall/windows/window frame41" unique_id=930044614]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/big wall/windows/window frame41/windowglass" unique_id=211748228]
+mesh = SubResource("BoxMesh_pfji7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/big wall/windows/window frame41/windowglass" unique_id=1717785811]
 shape = SubResource("ConcavePolygonShape3D_7875n")
 
 [node name="window frame26" type="StaticBody3D" parent="geometry/big wall/windows" unique_id=1446764800]
@@ -1451,11 +1865,1382 @@ texture = ExtResource("4_pfji7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
 shape = SubResource("CylinderShape3D_7b1sa")
 
+[node name="grassy area 2" type="Node3D" parent="geometry" unique_id=476206896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.835, -0.001, -28.59618)
+
+[node name="grass" type="StaticBody3D" parent="geometry/grassy area 2" unique_id=2007736919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1007957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/grassy area 2/grass" unique_id=42596656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066946, 0, 0)
+mesh = SubResource("BoxMesh_oa771")
+
+[node name="tree" type="Sprite3D" parent="geometry/grassy area 2" unique_id=2135622551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.380563, 4.6879764, -6.9120026)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree" unique_id=1283231593]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree/StaticBody3D" unique_id=1613684613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree2" type="Sprite3D" parent="geometry/grassy area 2" unique_id=1761117185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78008, 4.6879764, -3.7367516)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree2" unique_id=920198479]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree2/StaticBody3D" unique_id=1088362014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree3" type="Sprite3D" parent="geometry/grassy area 2" unique_id=785993894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1021976, 4.6879764, -7.6315346)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree3" unique_id=1827627305]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree3/StaticBody3D" unique_id=1161459925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree4" type="Sprite3D" parent="geometry/grassy area 2" unique_id=917607507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8931961, 4.6879764, -0.741848)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree4" unique_id=1658400294]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree4/StaticBody3D" unique_id=1335189410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree5" type="Sprite3D" parent="geometry/grassy area 2" unique_id=925878674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.185055, 4.6879773, -2.7537804)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree5" unique_id=1378953506]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree5/StaticBody3D" unique_id=1585308976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree6" type="Sprite3D" parent="geometry/grassy area 2" unique_id=732317725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.808257, 4.6879764, 6.96838)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree6" unique_id=1225424929]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree6/StaticBody3D" unique_id=390272020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree7" type="Sprite3D" parent="geometry/grassy area 2" unique_id=40038536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9477625, 4.6879773, 5.3156776)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree7" unique_id=444096862]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree7/StaticBody3D" unique_id=718531995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree8" type="Sprite3D" parent="geometry/grassy area 2" unique_id=305237531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.825061, 4.6879783, 2.8909492)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree8" unique_id=1075518618]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree8/StaticBody3D" unique_id=1711551019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree9" type="Sprite3D" parent="geometry/grassy area 2" unique_id=2006123621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6732216, 4.6879783, 11.71706)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree9" unique_id=666548713]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree9/StaticBody3D" unique_id=893297806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree10" type="Sprite3D" parent="geometry/grassy area 2" unique_id=2055529230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.149852, 4.6879783, 13.953075)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree10" unique_id=473235055]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree10/StaticBody3D" unique_id=2024076438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree11" type="Sprite3D" parent="geometry/grassy area 2" unique_id=961652571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.17689, 4.6879783, 5.290737)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree11" unique_id=1007296482]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree11/StaticBody3D" unique_id=341897329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree12" type="Sprite3D" parent="geometry/grassy area 2" unique_id=1267112203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8564005, 4.6879783, 7.857052)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 2/tree12" unique_id=790017482]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 2/tree12/StaticBody3D" unique_id=421705920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="grassy area 2" type="Node3D" parent="geometry/grassy area 2" unique_id=1930207789]
+
+[node name="grassy area 3" type="Node3D" parent="geometry" unique_id=925743313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.835, -0.001, -65.3062)
+
+[node name="grass" type="StaticBody3D" parent="geometry/grassy area 3" unique_id=1221809807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1007957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/grassy area 3/grass" unique_id=1471431014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066946, 0, 0)
+mesh = SubResource("BoxMesh_oa771")
+
+[node name="tree" type="Sprite3D" parent="geometry/grassy area 3" unique_id=577637168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.380563, 4.6879764, -6.9120026)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree" unique_id=2035697701]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree/StaticBody3D" unique_id=1757087043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree2" type="Sprite3D" parent="geometry/grassy area 3" unique_id=1111091303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78008, 4.6879764, -3.7367516)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree2" unique_id=1562367558]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree2/StaticBody3D" unique_id=185337561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree3" type="Sprite3D" parent="geometry/grassy area 3" unique_id=1639244788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1021976, 4.6879764, -7.6315346)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree3" unique_id=670678681]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree3/StaticBody3D" unique_id=857707737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree4" type="Sprite3D" parent="geometry/grassy area 3" unique_id=791875523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8931961, 4.6879764, -0.741848)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree4" unique_id=1755190384]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree4/StaticBody3D" unique_id=1187876887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree5" type="Sprite3D" parent="geometry/grassy area 3" unique_id=506449885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.185055, 4.6879773, -2.7537804)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree5" unique_id=1924093837]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree5/StaticBody3D" unique_id=1048433181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree6" type="Sprite3D" parent="geometry/grassy area 3" unique_id=1176800378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.808257, 4.6879764, 6.96838)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree6" unique_id=71073185]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree6/StaticBody3D" unique_id=451600107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree7" type="Sprite3D" parent="geometry/grassy area 3" unique_id=1334132790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9477625, 4.6879773, 5.3156776)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree7" unique_id=421666697]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree7/StaticBody3D" unique_id=1876804457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree8" type="Sprite3D" parent="geometry/grassy area 3" unique_id=1646710489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.825061, 4.6879783, 2.8909492)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree8" unique_id=1663945897]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree8/StaticBody3D" unique_id=1223327966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree9" type="Sprite3D" parent="geometry/grassy area 3" unique_id=1623734912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6732216, 4.6879783, 11.71706)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree9" unique_id=24515367]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree9/StaticBody3D" unique_id=1618384009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree10" type="Sprite3D" parent="geometry/grassy area 3" unique_id=604099556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.149852, 4.6879783, 13.953075)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree10" unique_id=648726391]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree10/StaticBody3D" unique_id=1498989827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree11" type="Sprite3D" parent="geometry/grassy area 3" unique_id=926428909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.17689, 4.6879783, 5.290737)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree11" unique_id=1754076438]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree11/StaticBody3D" unique_id=464074738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree12" type="Sprite3D" parent="geometry/grassy area 3" unique_id=806472040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8564005, 4.6879783, 7.857052)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 3/tree12" unique_id=513612655]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 3/tree12/StaticBody3D" unique_id=738127035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="grassy area 2" type="Node3D" parent="geometry/grassy area 3" unique_id=1374582935]
+
+[node name="grassy area 4" type="Node3D" parent="geometry" unique_id=617733931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.88522, -0.001, -65.3062)
+
+[node name="grass" type="StaticBody3D" parent="geometry/grassy area 4" unique_id=1378060259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1007957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/grassy area 4/grass" unique_id=1703364432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066946, 0, 0)
+mesh = SubResource("BoxMesh_oa771")
+
+[node name="tree" type="Sprite3D" parent="geometry/grassy area 4" unique_id=893748196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.380563, 4.6879764, -6.9120026)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree" unique_id=1298482690]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree/StaticBody3D" unique_id=477152905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree2" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1213563355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78008, 4.6879764, -3.7367516)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree2" unique_id=1294096793]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree2/StaticBody3D" unique_id=1086997408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree3" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1471449860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1021976, 4.6879764, -7.6315346)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree3" unique_id=461168295]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree3/StaticBody3D" unique_id=1827038060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree4" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1699711253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8931961, 4.6879764, -0.741848)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree4" unique_id=1004233270]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree4/StaticBody3D" unique_id=1918230980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree5" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1245492916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.185055, 4.6879773, -2.7537804)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree5" unique_id=962215928]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree5/StaticBody3D" unique_id=1727312063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree6" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1439065620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.808257, 4.6879764, 6.96838)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree6" unique_id=991535633]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree6/StaticBody3D" unique_id=487064374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree7" type="Sprite3D" parent="geometry/grassy area 4" unique_id=727189977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9477625, 4.6879773, 5.3156776)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree7" unique_id=1187239808]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree7/StaticBody3D" unique_id=1107292848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree8" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1690302187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.825061, 4.6879783, 2.8909492)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree8" unique_id=1434039285]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree8/StaticBody3D" unique_id=1420923589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree9" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1812232129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6732216, 4.6879783, 11.71706)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree9" unique_id=363330165]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree9/StaticBody3D" unique_id=1133841804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree10" type="Sprite3D" parent="geometry/grassy area 4" unique_id=682775356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.149852, 4.6879783, 13.953075)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree10" unique_id=2109826276]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree10/StaticBody3D" unique_id=195087709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree11" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1089193941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.17689, 4.6879783, 5.290737)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree11" unique_id=437616200]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree11/StaticBody3D" unique_id=16854759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree12" type="Sprite3D" parent="geometry/grassy area 4" unique_id=1377702115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8564005, 4.6879783, 7.857052)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 4/tree12" unique_id=2029698854]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 4/tree12/StaticBody3D" unique_id=81773071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="grassy area 2" type="Node3D" parent="geometry/grassy area 4" unique_id=829262079]
+
+[node name="grassy area 5" type="Node3D" parent="geometry" unique_id=376071275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.333813, -0.001, -65.3062)
+
+[node name="grass" type="StaticBody3D" parent="geometry/grassy area 5" unique_id=2101898144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1007957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/grassy area 5/grass" unique_id=1063692053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066946, 0, 0)
+mesh = SubResource("BoxMesh_oa771")
+
+[node name="tree" type="Sprite3D" parent="geometry/grassy area 5" unique_id=1374967967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.380563, 4.6879764, -6.9120026)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree" unique_id=787782624]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree/StaticBody3D" unique_id=1096021447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree2" type="Sprite3D" parent="geometry/grassy area 5" unique_id=1109609374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78008, 4.6879764, -3.7367516)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree2" unique_id=561166484]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree2/StaticBody3D" unique_id=1911372374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree3" type="Sprite3D" parent="geometry/grassy area 5" unique_id=1229372604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1021976, 4.6879764, -7.6315346)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree3" unique_id=1399055622]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree3/StaticBody3D" unique_id=673938946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree4" type="Sprite3D" parent="geometry/grassy area 5" unique_id=1106393279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8931961, 4.6879764, -0.741848)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree4" unique_id=542821994]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree4/StaticBody3D" unique_id=1910503312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree5" type="Sprite3D" parent="geometry/grassy area 5" unique_id=2052702332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.185055, 4.6879773, -2.7537804)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree5" unique_id=227501877]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree5/StaticBody3D" unique_id=682599806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree6" type="Sprite3D" parent="geometry/grassy area 5" unique_id=366027882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.808257, 4.6879764, 6.96838)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree6" unique_id=1921373203]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree6/StaticBody3D" unique_id=299454542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree7" type="Sprite3D" parent="geometry/grassy area 5" unique_id=865314825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9477625, 4.6879773, 5.3156776)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree7" unique_id=2003693441]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree7/StaticBody3D" unique_id=1212453257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree8" type="Sprite3D" parent="geometry/grassy area 5" unique_id=154966117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.825061, 4.6879783, 2.8909492)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree8" unique_id=2031459865]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree8/StaticBody3D" unique_id=1326523533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree9" type="Sprite3D" parent="geometry/grassy area 5" unique_id=123594586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6732216, 4.6879783, 11.71706)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree9" unique_id=1939212059]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree9/StaticBody3D" unique_id=100750715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree10" type="Sprite3D" parent="geometry/grassy area 5" unique_id=1116976264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.149852, 4.6879783, 13.953075)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree10" unique_id=1110661341]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree10/StaticBody3D" unique_id=1299265679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree11" type="Sprite3D" parent="geometry/grassy area 5" unique_id=1667256922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.17689, 4.6879783, 5.290737)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree11" unique_id=162756020]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree11/StaticBody3D" unique_id=1645680670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree12" type="Sprite3D" parent="geometry/grassy area 5" unique_id=207117349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8564005, 4.6879783, 7.857052)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 5/tree12" unique_id=1014221324]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 5/tree12/StaticBody3D" unique_id=936208471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="grassy area 2" type="Node3D" parent="geometry/grassy area 5" unique_id=326930041]
+
+[node name="grassy area 6" type="Node3D" parent="geometry" unique_id=2101800422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.333813, -0.001, -38.184505)
+
+[node name="grass" type="StaticBody3D" parent="geometry/grassy area 6" unique_id=1074508172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1007957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/grassy area 6/grass" unique_id=1325913044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066946, 0, 0)
+mesh = SubResource("BoxMesh_oa771")
+
+[node name="tree" type="Sprite3D" parent="geometry/grassy area 6" unique_id=493876448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.380563, 4.6879764, -6.9120026)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree" unique_id=1776378766]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree/StaticBody3D" unique_id=1902353576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree2" type="Sprite3D" parent="geometry/grassy area 6" unique_id=153527371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78008, 4.6879764, -3.7367516)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree2" unique_id=438034977]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree2/StaticBody3D" unique_id=2145012995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree3" type="Sprite3D" parent="geometry/grassy area 6" unique_id=480208645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1021976, 4.6879764, -7.6315346)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree3" unique_id=1362704135]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree3/StaticBody3D" unique_id=403184245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree4" type="Sprite3D" parent="geometry/grassy area 6" unique_id=378435871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8931961, 4.6879764, -0.741848)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree4" unique_id=69343150]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree4/StaticBody3D" unique_id=2091146231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree5" type="Sprite3D" parent="geometry/grassy area 6" unique_id=1414686808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.185055, 4.6879773, -2.7537804)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree5" unique_id=1243034947]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree5/StaticBody3D" unique_id=1889059145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree6" type="Sprite3D" parent="geometry/grassy area 6" unique_id=394272626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.808257, 4.6879764, 6.96838)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree6" unique_id=442355520]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree6/StaticBody3D" unique_id=1458106290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree7" type="Sprite3D" parent="geometry/grassy area 6" unique_id=2145682558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9477625, 4.6879773, 5.3156776)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree7" unique_id=1973942704]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree7/StaticBody3D" unique_id=696550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree8" type="Sprite3D" parent="geometry/grassy area 6" unique_id=2076751065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.825061, 4.6879783, 2.8909492)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree8" unique_id=1037857759]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree8/StaticBody3D" unique_id=1306102671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree9" type="Sprite3D" parent="geometry/grassy area 6" unique_id=324253282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6732216, 4.6879783, 11.71706)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree9" unique_id=309307841]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree9/StaticBody3D" unique_id=1620471087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree10" type="Sprite3D" parent="geometry/grassy area 6" unique_id=935818932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.149852, 4.6879783, 13.953075)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree10" unique_id=250368057]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree10/StaticBody3D" unique_id=1089534805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree11" type="Sprite3D" parent="geometry/grassy area 6" unique_id=1910174982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.17689, 4.6879783, 5.290737)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree11" unique_id=1314169987]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree11/StaticBody3D" unique_id=462766591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree12" type="Sprite3D" parent="geometry/grassy area 6" unique_id=897175159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8564005, 4.6879783, 7.857052)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 6/tree12" unique_id=581635577]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 6/tree12/StaticBody3D" unique_id=1824926603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="grassy area 2" type="Node3D" parent="geometry/grassy area 6" unique_id=1731782855]
+
+[node name="grassy area 7" type="Node3D" parent="geometry" unique_id=799642400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.333813, -0.001, -9.528273)
+
+[node name="grass" type="StaticBody3D" parent="geometry/grassy area 7" unique_id=1282561863]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1007957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/grassy area 7/grass" unique_id=1066933186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066946, 0, 0)
+mesh = SubResource("BoxMesh_oa771")
+
+[node name="tree" type="Sprite3D" parent="geometry/grassy area 7" unique_id=2027253435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.380563, 4.6879764, -6.9120026)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree" unique_id=785833350]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree/StaticBody3D" unique_id=2066516218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree2" type="Sprite3D" parent="geometry/grassy area 7" unique_id=1063009783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78008, 4.6879764, -3.7367516)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree2" unique_id=751125785]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree2/StaticBody3D" unique_id=1345290718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree3" type="Sprite3D" parent="geometry/grassy area 7" unique_id=1561790666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1021976, 4.6879764, -7.6315346)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree3" unique_id=803142058]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree3/StaticBody3D" unique_id=1176156959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree4" type="Sprite3D" parent="geometry/grassy area 7" unique_id=61352363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8931961, 4.6879764, -0.741848)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree4" unique_id=854429424]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree4/StaticBody3D" unique_id=832760799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree5" type="Sprite3D" parent="geometry/grassy area 7" unique_id=684359032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.185055, 4.6879773, -2.7537804)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree5" unique_id=1802204175]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree5/StaticBody3D" unique_id=658021587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree6" type="Sprite3D" parent="geometry/grassy area 7" unique_id=1073043986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.808257, 4.6879764, 6.96838)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree6" unique_id=669036550]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree6/StaticBody3D" unique_id=742631209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree7" type="Sprite3D" parent="geometry/grassy area 7" unique_id=162644160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9477625, 4.6879773, 5.3156776)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree7" unique_id=800679159]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree7/StaticBody3D" unique_id=319634206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree8" type="Sprite3D" parent="geometry/grassy area 7" unique_id=1590868802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.825061, 4.6879783, 2.8909492)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree8" unique_id=1156136053]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree8/StaticBody3D" unique_id=398255511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree9" type="Sprite3D" parent="geometry/grassy area 7" unique_id=632499171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6732216, 4.6879783, 11.71706)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree9" unique_id=681154273]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree9/StaticBody3D" unique_id=437830302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree10" type="Sprite3D" parent="geometry/grassy area 7" unique_id=1814876912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.149852, 4.6879783, 13.953075)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree10" unique_id=2049992457]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree10/StaticBody3D" unique_id=1306657310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree11" type="Sprite3D" parent="geometry/grassy area 7" unique_id=147706224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.17689, 4.6879783, 5.290737)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree11" unique_id=287346675]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree11/StaticBody3D" unique_id=1574603036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree12" type="Sprite3D" parent="geometry/grassy area 7" unique_id=46136403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8564005, 4.6879783, 7.857052)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 7/tree12" unique_id=160280231]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 7/tree12/StaticBody3D" unique_id=473088995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="grassy area 2" type="Node3D" parent="geometry/grassy area 7" unique_id=1283941873]
+
+[node name="grassy area 8" type="Node3D" parent="geometry" unique_id=968007591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.333813, -0.001, 11.814318)
+
+[node name="grass" type="StaticBody3D" parent="geometry/grassy area 8" unique_id=2039979066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1007957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/grassy area 8/grass" unique_id=86392682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066946, 0, 0)
+mesh = SubResource("BoxMesh_oa771")
+
+[node name="tree" type="Sprite3D" parent="geometry/grassy area 8" unique_id=40201178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.380563, 4.6879764, -6.9120026)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree" unique_id=83843742]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree/StaticBody3D" unique_id=244058544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree2" type="Sprite3D" parent="geometry/grassy area 8" unique_id=1747301621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78008, 4.6879764, -3.7367516)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree2" unique_id=380399698]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree2/StaticBody3D" unique_id=388950176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree3" type="Sprite3D" parent="geometry/grassy area 8" unique_id=850211337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1021976, 4.6879764, -7.6315346)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree3" unique_id=1441991882]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree3/StaticBody3D" unique_id=314278531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree4" type="Sprite3D" parent="geometry/grassy area 8" unique_id=616802573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8931961, 4.6879764, -0.741848)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree4" unique_id=1830833924]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree4/StaticBody3D" unique_id=433355162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree5" type="Sprite3D" parent="geometry/grassy area 8" unique_id=1580635887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.185055, 4.6879773, -2.7537804)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree5" unique_id=2109625990]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree5/StaticBody3D" unique_id=2000384146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree6" type="Sprite3D" parent="geometry/grassy area 8" unique_id=905387983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.808257, 4.6879764, 6.96838)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree6" unique_id=68336655]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree6/StaticBody3D" unique_id=655832970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree7" type="Sprite3D" parent="geometry/grassy area 8" unique_id=1631501434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9477625, 4.6879773, 5.3156776)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree7" unique_id=1335687380]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree7/StaticBody3D" unique_id=349733036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree8" type="Sprite3D" parent="geometry/grassy area 8" unique_id=1886246667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.825061, 4.6879783, 2.8909492)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree8" unique_id=573008069]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree8/StaticBody3D" unique_id=2078615593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree9" type="Sprite3D" parent="geometry/grassy area 8" unique_id=456804050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6732216, 4.6879783, 11.71706)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree9" unique_id=1778573164]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree9/StaticBody3D" unique_id=834758373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree10" type="Sprite3D" parent="geometry/grassy area 8" unique_id=1597714738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.149852, 4.6879783, 13.953075)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree10" unique_id=999976735]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree10/StaticBody3D" unique_id=2042691955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree11" type="Sprite3D" parent="geometry/grassy area 8" unique_id=1372091941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.17689, 4.6879783, 5.290737)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree11" unique_id=1078098726]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree11/StaticBody3D" unique_id=1063345553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree12" type="Sprite3D" parent="geometry/grassy area 8" unique_id=557834841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8564005, 4.6879783, 7.857052)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 8/tree12" unique_id=165110496]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 8/tree12/StaticBody3D" unique_id=190261958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="grassy area 2" type="Node3D" parent="geometry/grassy area 8" unique_id=249169165]
+
+[node name="grassy area 9" type="Node3D" parent="geometry" unique_id=217979340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.333813, -0.001, 40.2519)
+
+[node name="grass" type="StaticBody3D" parent="geometry/grassy area 9" unique_id=910204092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1007957)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/grassy area 9/grass" unique_id=95224937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2066946, 0, 0)
+mesh = SubResource("BoxMesh_oa771")
+
+[node name="tree" type="Sprite3D" parent="geometry/grassy area 9" unique_id=1289919892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.380563, 4.6879764, -6.9120026)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree" unique_id=542803834]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree/StaticBody3D" unique_id=356870468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree2" type="Sprite3D" parent="geometry/grassy area 9" unique_id=1270029801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78008, 4.6879764, -3.7367516)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree2" unique_id=2018393754]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree2/StaticBody3D" unique_id=1170361789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree3" type="Sprite3D" parent="geometry/grassy area 9" unique_id=842086954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1021976, 4.6879764, -7.6315346)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree3" unique_id=592692810]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree3/StaticBody3D" unique_id=1555297481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree4" type="Sprite3D" parent="geometry/grassy area 9" unique_id=2116994569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8931961, 4.6879764, -0.741848)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree4" unique_id=1301138611]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree4/StaticBody3D" unique_id=346758209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree5" type="Sprite3D" parent="geometry/grassy area 9" unique_id=155944822]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.185055, 4.6879773, -2.7537804)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree5" unique_id=1303194101]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree5/StaticBody3D" unique_id=1922854375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree6" type="Sprite3D" parent="geometry/grassy area 9" unique_id=1397956262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.808257, 4.6879764, 6.96838)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree6" unique_id=325429084]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree6/StaticBody3D" unique_id=86507947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree7" type="Sprite3D" parent="geometry/grassy area 9" unique_id=1707094238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9477625, 4.6879773, 5.3156776)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree7" unique_id=1870436744]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree7/StaticBody3D" unique_id=779851677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree8" type="Sprite3D" parent="geometry/grassy area 9" unique_id=1109299339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.825061, 4.6879783, 2.8909492)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree8" unique_id=940478089]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree8/StaticBody3D" unique_id=822814949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree9" type="Sprite3D" parent="geometry/grassy area 9" unique_id=1799261425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6732216, 4.6879783, 11.71706)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree9" unique_id=1272176875]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree9/StaticBody3D" unique_id=1781934668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree10" type="Sprite3D" parent="geometry/grassy area 9" unique_id=132118642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.149852, 4.6879783, 13.953075)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree10" unique_id=1625934292]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree10/StaticBody3D" unique_id=867101884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree11" type="Sprite3D" parent="geometry/grassy area 9" unique_id=198379490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.17689, 4.6879783, 5.290737)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree11" unique_id=1400368380]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree11/StaticBody3D" unique_id=451362132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="tree12" type="Sprite3D" parent="geometry/grassy area 9" unique_id=1171837941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8564005, 4.6879783, 7.857052)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 2
+texture = ExtResource("4_pfji7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/grassy area 9/tree12" unique_id=1457975698]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/grassy area 9/tree12/StaticBody3D" unique_id=256612648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6766396, 0)
+shape = SubResource("CylinderShape3D_7b1sa")
+
+[node name="grassy area 2" type="Node3D" parent="geometry/grassy area 9" unique_id=1792799835]
+
+[node name="edge of map" type="StaticBody3D" parent="geometry" unique_id=1288848591]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 10.606896, 13.573584, 67.82843)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/edge of map" unique_id=872777898]
+shape = SubResource("WorldBoundaryShape3D_7875n")
+
+[node name="edge of map2" type="StaticBody3D" parent="geometry" unique_id=704304426]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 10.606896, 13.573584, -44.32607)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/edge of map2" unique_id=1666504556]
+shape = SubResource("WorldBoundaryShape3D_7875n")
+
+[node name="edge of map3" type="StaticBody3D" parent="geometry" unique_id=1854659076]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -7.7095633, 13.573584, -1.0640526)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/edge of map3" unique_id=1767792867]
+shape = SubResource("WorldBoundaryShape3D_7875n")
+
+[node name="road" type="StaticBody3D" parent="geometry" unique_id=1469427592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0175514, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="geometry/road" unique_id=1125212390]
+mesh = SubResource("BoxMesh_jsq7a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/road" unique_id=1909005889]
+shape = SubResource("ConcavePolygonShape3D_7b1sa")
+
 [node name="player" parent="." unique_id=439481167 instance=ExtResource("1_5qibc")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.5634904, 0, 0)
 
 [node name="bus stop" type="Sprite3D" parent="." unique_id=2007053603]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1092511, 2.813172)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6036818, 1.1092511, 2.813172)
 pixel_size = 0.035
 billboard = 2
 texture_filter = 2

@@ -6,6 +6,10 @@ var loadingscreen = preload("res://scenes/ui/loading_screen.tscn")
 
 var doreset = bool(false)
 
+var stopwatch : float = 0
+var dostopwatch : bool = SettingsManager.speedrun_timer
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -15,6 +19,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if doreset:
 		get_tree().reload_current_scene()
+	if dostopwatch:
+		stopwatch += delta
+		$"CanvasLayer/speedrun timer".text = str(round(stopwatch))
 
 func change():
 	pass
@@ -22,6 +29,7 @@ func change():
 
 func _on_level_exit_body_entered(body: Node2D) -> void:
 	#print("start")
+	print(stopwatch)
 	var instance = loadingscreen.instantiate()
 	add_child(instance)
 	var loader = get_node("loading screen")

@@ -1,10 +1,12 @@
 extends CharacterBody3D
 
 var sensitivity = (SettingsManager.sensitivity/50 *  0.005) + 0.001
+var normalise = true
+
 @onready var head: Node3D = $"head"
 @onready var player_camera: Camera3D = $head/Camera3D
 
-const SPEED = 5.0
+const SPEED = 8.0
 const JUMP_VELOCITY = 6.5
 #const rotsense = 0
 
@@ -50,7 +52,11 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("strafe left", "strafe right", "forward", "backward")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction
+	if normalise == true:
+		direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	else:
+		direction =(transform.basis * Vector3(input_dir.x, 0, input_dir.y))
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
