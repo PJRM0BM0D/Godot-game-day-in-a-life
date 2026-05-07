@@ -16,3 +16,7 @@ the system i am most proud of is the deffered loading system. while loading on t
 another feature i quite enjoyed making is the settings system. it uses a global class that lets every scene access the settings , making the implementation of various settings possible with ease. the 3 avialable settings are view sensitivity, a speedrun timer to test your skill, and the option to not normalise movement on diagonals, a call back to the classic DOOM series of games.
 
 overall this project was really fun, and was made even better by being made in my favourite engine. it has been great fun to work on, and the end result feels very good.
+
+Links:
+https://pjrm0bm0d.itch.io/a-day-in-the-life-of-a-game-design-student
+https://github.com/PJRM0BM0D/Godot-game-day-in-a-life
