@@ -3636,4 +3636,10 @@ mesh = SubResource("BoxMesh_pwjp3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04139328, 8.130093, 2.924057)
 shape = SubResource("ConcavePolygonShape3D_jsq7a")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=173070229]
+
+[node name="speedrun timer" type="Label" parent="CanvasLayer" unique_id=2022977854]
+offset_right = 190.0
+offset_bottom = 23.0
+
 [connection signal="body_entered" from="geometry/end level area" to="." method="_on_end_level_area_body_entered"]

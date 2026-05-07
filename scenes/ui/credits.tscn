@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3cvfndhq60ng"]
 
 [ext_resource type="Script" uid="uid://dydocg7jhnxd2" path="res://scenes/scripts/credits.gd" id="1_oap8i"]
+[ext_resource type="Script" uid="uid://bicaahpg8fytd" path="res://scenes/ui/dissapear.gd" id="2_jkvjv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gcfse"]
 font_size = 60
@@ -328,5 +329,11 @@ layout_mode = 1
 offset_right = 271.0
 offset_bottom = 31.0
 text = "RETURN TO MAIN MENU"
+
+[node name="speedrun timer" type="Label" parent="." unique_id=800313471]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 23.0
+script = ExtResource("2_jkvjv")
 
 [connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]

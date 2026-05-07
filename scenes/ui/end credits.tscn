@@ -362,4 +362,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="speedrun timer" type="Label" parent="." unique_id=1772078263]
+layout_mode = 0
+offset_right = 190.0
+offset_bottom = 23.0
+
 [connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]
